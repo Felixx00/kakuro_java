@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Presentacion/Gestionarkakuro.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4e52472c7c0acb2528a61d2722b4b6d0.html">Presentacion</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Gestionarkakuro.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_gestionarkakuro_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>Presentacion;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.awt.Color;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.awt.Dimension;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.awt.EventQueue;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.awt.Font;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> java.awt.Image;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.awt.Toolkit;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> java.awt.event.ActionEvent;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> java.awt.event.ActionListener;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">import</span> javax.swing.JButton;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">import</span> javax.swing.JComboBox;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">import</span> javax.swing.JFrame;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">import</span> javax.swing.JLabel;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">import</span> javax.swing.JOptionPane;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">import</span> javax.swing.JPanel;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">import</span> javax.swing.SwingConstants;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">import</span> javax.swing.plaf.basic.BasicArrowButton;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html">   27</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_presentacion_1_1_gestionarkakuro.html">Gestionarkakuro</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">   29</a></span>&#160;    <span class="keyword">private</span> JFrame <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">   30</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="class_presentacion_1_1_ctrl_presentacion.html">CtrlPresentacion</a> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">   31</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">   32</a></span>&#160;    <span class="keyword">private</span> JLabel <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">logo</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">   33</a></span>&#160;    <span class="keyword">private</span> JLabel <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">fondo</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">   34</a></span>&#160;    <span class="keyword">private</span> JButton <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">generar</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">   35</a></span>&#160;    <span class="keyword">private</span> JButton <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">crear</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">   36</a></span>&#160;    <span class="keyword">private</span> JButton <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">   37</a></span>&#160;    <span class="keyword">private</span> JLabel <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">   38</a></span>&#160;    <span class="keyword">private</span> BasicArrowButton <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">retorno</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a0ce5742977cf3e208f2f5d49eceada86">   41</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a0ce5742977cf3e208f2f5d49eceada86">Gestionarkakuro</a>(<a class="code" href="class_presentacion_1_1_ctrl_presentacion.html">CtrlPresentacion</a> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>, String <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        this.CP = <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this.usuario = <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a62cba4a7a10596a47f87e1482774bba4">initialize</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> height = pantalla.height;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> width = pantalla.width;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setSize(width/2, height/2);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setLocationRelativeTo(<span class="keyword">null</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setResizable(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setSize(<span class="keyword">new</span> java.awt.Dimension(800, 600));    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a62cba4a7a10596a47f87e1482774bba4">   56</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a62cba4a7a10596a47f87e1482774bba4">initialize</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a> = <span class="keyword">new</span> JFrame(<span class="stringliteral">&quot;KAKURO&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        JPanel panel = <span class="keyword">new</span> JPanel();    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.getContentPane().add(panel);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        panel.setLayout(<span class="keyword">null</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">logo</a> = <span class="keyword">new</span> JLabel();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">logo</a>.setIcon(<span class="keyword">new</span> javax.swing.ImageIcon(<span class="stringliteral">&quot;Presentacion/img/logo.png&quot;</span>));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">logo</a>.setBounds(682, 26, 44, 53);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">logo</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        Image icon = Toolkit.getDefaultToolkit().getImage(<span class="stringliteral">&quot;Presentacion/img/icon.png&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.setIconImage(icon);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">retorno</a> = <span class="keyword">new</span> BasicArrowButton(BasicArrowButton.WEST);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">retorno</a>.addActionListener(<span class="keyword">new</span> ActionListener() {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a0bfb8cc8f47818ba0fe71c00aca559c2">retornoActionPerformed</a>(e);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        });</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">retorno</a>.setBounds(36, 30, 50, 25);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">retorno</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a> = <span class="keyword">new</span> JLabel(<span class="stringliteral">&quot;Gestionar kakuros&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a>.setHorizontalAlignment(SwingConstants.CENTER);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a>.setFont(<span class="keyword">new</span> Font(<span class="stringliteral">&quot;Segoe Print&quot;</span>, Font.PLAIN, 36));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a>.setBounds(0, 26, 784, 54);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">titulo</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">generar</a> = <span class="keyword">new</span> JButton(<span class="stringliteral">&quot;Generar kakuro&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">generar</a>.addActionListener(<span class="keyword">new</span> ActionListener() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a6b7e6daa35487f81140026b4e6b1d0f1">generarkakurosPerformed</a>(e);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        });</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">generar</a>.setBounds(100, 150, 594, 54);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">generar</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">crear</a> = <span class="keyword">new</span> JButton(<span class="stringliteral">&quot;Crear kakuro&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">crear</a>.addActionListener(<span class="keyword">new</span> ActionListener() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#afc8e8e831d7f9cc93d7b5f849ded23e6">crearActionPerformed</a>(e);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        });</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">crear</a>.setBounds(100, 250, 594, 54);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">crear</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a> = <span class="keyword">new</span> JButton(<span class="stringliteral">&quot;Eliminar kakuro&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a>.setForeground(Color.RED);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a>.addActionListener(<span class="keyword">new</span> ActionListener() {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a72268c0f5d3fbef6d66f8efca049e108">eliminarActionPerformed</a>(e);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        });</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a>.setBounds(100, 350, 594, 54);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">eliminar</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">fondo</a> = <span class="keyword">new</span> JLabel();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">fondo</a>.setIcon(<span class="keyword">new</span> javax.swing.ImageIcon(<span class="stringliteral">&quot;Presentacion/img/fondo.png&quot;</span>));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">fondo</a>.setBounds(0, 0, 784, 561);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        panel.add(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">fondo</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a0bfb8cc8f47818ba0fe71c00aca559c2">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a0bfb8cc8f47818ba0fe71c00aca559c2">retornoActionPerformed</a>(ActionEvent e) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="class_presentacion_1_1_pantalla_principal.html">PantallaPrincipal</a> P = <span class="keyword">new</span> <a class="code" href="class_presentacion_1_1_pantalla_principal.html">PantallaPrincipal</a>(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>, <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.dispose();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a6b7e6daa35487f81140026b4e6b1d0f1">  123</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a6b7e6daa35487f81140026b4e6b1d0f1">generarkakurosPerformed</a>(ActionEvent e) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          <a class="code" href="class_dominio_1_1_controladores_1_1_generar.html">Generar</a> G = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_generar.html">Generar</a>(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>, <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.dispose();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#afc8e8e831d7f9cc93d7b5f849ded23e6">  128</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#afc8e8e831d7f9cc93d7b5f849ded23e6">crearActionPerformed</a>(ActionEvent e) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <a class="code" href="class_presentacion_1_1_crear.html">Crear</a> C = <span class="keyword">new</span> <a class="code" href="class_presentacion_1_1_crear.html">Crear</a>(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>, <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">usuario</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>.dispose();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_gestionarkakuro.html#a72268c0f5d3fbef6d66f8efca049e108">  133</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a72268c0f5d3fbef6d66f8efca049e108">eliminarActionPerformed</a>(ActionEvent e) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">int</span> tam = <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>.<a class="code" href="class_presentacion_1_1_ctrl_presentacion.html#abf68355473c3b9f58a53545fb84baf96">tamañoDirectorio</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        JComboBox&lt;String&gt; kakuros = <span class="keyword">new</span> JComboBox&lt;String&gt;();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tam; ++i) kakuros.addItem(<span class="stringliteral">&quot;Kakuro &quot;</span> + String.valueOf(i+1));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">int</span> aux = JOptionPane.showConfirmDialog(</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keyword">null</span>,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                kakuros,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="stringliteral">&quot;Selecciona kakuro a eliminar&quot;</span>,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                JOptionPane.YES_NO_OPTION);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">if</span>(aux == JOptionPane.YES_OPTION){</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                String x = String.valueOf(kakuros.getSelectedItem());</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                String x2 = x.replace(<span class="stringliteral">&quot;Kakuro &quot;</span>,<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = Integer.parseInt(x2);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <a class="code" href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">CP</a>.<a class="code" href="class_presentacion_1_1_ctrl_presentacion.html#a23de1262897000b3d4171904bf176783">eliminarkakuro</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                JOptionPane.showMessageDialog(<a class="code" href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">frame</a>, <span class="stringliteral">&quot;Kakuro eliminado correctamente&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a6b7e6daa35487f81140026b4e6b1d0f1"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a6b7e6daa35487f81140026b4e6b1d0f1">Presentacion.Gestionarkakuro.generarkakurosPerformed</a></div><div class="ttdeci">void generarkakurosPerformed(ActionEvent e)</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00123">Gestionarkakuro.java:123</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a0bfb8cc8f47818ba0fe71c00aca559c2"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a0bfb8cc8f47818ba0fe71c00aca559c2">Presentacion.Gestionarkakuro.retornoActionPerformed</a></div><div class="ttdeci">void retornoActionPerformed(ActionEvent e)</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00118">Gestionarkakuro.java:118</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a62cba4a7a10596a47f87e1482774bba4"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a62cba4a7a10596a47f87e1482774bba4">Presentacion.Gestionarkakuro.initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00056">Gestionarkakuro.java:56</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_generar_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_generar.html">Dominio.Controladores.Generar</a></div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_controladores_2_generar_8java_source.html#l00016">Generar.java:16</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a72268c0f5d3fbef6d66f8efca049e108"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a72268c0f5d3fbef6d66f8efca049e108">Presentacion.Gestionarkakuro.eliminarActionPerformed</a></div><div class="ttdeci">void eliminarActionPerformed(ActionEvent e)</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00133">Gestionarkakuro.java:133</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_ac0abc14e1f5442659272d209a57adde2"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#ac0abc14e1f5442659272d209a57adde2">Presentacion.Gestionarkakuro.eliminar</a></div><div class="ttdeci">JButton eliminar</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00036">Gestionarkakuro.java:36</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_ctrl_presentacion_html"><div class="ttname"><a href="class_presentacion_1_1_ctrl_presentacion.html">Presentacion.CtrlPresentacion</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_presentacion_8java_source.html#l00021">CtrlPresentacion.java:21</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html">Presentacion.Gestionarkakuro</a></div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00027">Gestionarkakuro.java:27</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_ctrl_presentacion_html_abf68355473c3b9f58a53545fb84baf96"><div class="ttname"><a href="class_presentacion_1_1_ctrl_presentacion.html#abf68355473c3b9f58a53545fb84baf96">Presentacion.CtrlPresentacion.tamañoDirectorio</a></div><div class="ttdeci">int tamañoDirectorio()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_presentacion_8java_source.html#l00052">CtrlPresentacion.java:52</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_ae59ffb271252de9da32b269d4cb88510"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#ae59ffb271252de9da32b269d4cb88510">Presentacion.Gestionarkakuro.crear</a></div><div class="ttdeci">JButton crear</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00035">Gestionarkakuro.java:35</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_crear_html"><div class="ttname"><a href="class_presentacion_1_1_crear.html">Presentacion.Crear</a></div><div class="ttdef"><b>Definition:</b> <a href="_crear_8java_source.html#l00042">Crear.java:42</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_ab37499db5cbabc5b2f2e9a0cf0854878"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#ab37499db5cbabc5b2f2e9a0cf0854878">Presentacion.Gestionarkakuro.retorno</a></div><div class="ttdeci">BasicArrowButton retorno</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00038">Gestionarkakuro.java:38</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_afc8e8e831d7f9cc93d7b5f849ded23e6"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#afc8e8e831d7f9cc93d7b5f849ded23e6">Presentacion.Gestionarkakuro.crearActionPerformed</a></div><div class="ttdeci">void crearActionPerformed(ActionEvent e)</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00128">Gestionarkakuro.java:128</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_pantalla_principal_html"><div class="ttname"><a href="class_presentacion_1_1_pantalla_principal.html">Presentacion.PantallaPrincipal</a></div><div class="ttdef"><b>Definition:</b> <a href="_pantalla_principal_8java_source.html#l00031">PantallaPrincipal.java:31</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_ada67f16770293ea624321fbdcf6405b4"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#ada67f16770293ea624321fbdcf6405b4">Presentacion.Gestionarkakuro.logo</a></div><div class="ttdeci">JLabel logo</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00032">Gestionarkakuro.java:32</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_aa6c664c1f9c9030018d5605b628c9d80"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#aa6c664c1f9c9030018d5605b628c9d80">Presentacion.Gestionarkakuro.CP</a></div><div class="ttdeci">CtrlPresentacion CP</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00030">Gestionarkakuro.java:30</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a8e8a95649f96d3451e4bec39e3ba548f"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a8e8a95649f96d3451e4bec39e3ba548f">Presentacion.Gestionarkakuro.titulo</a></div><div class="ttdeci">JLabel titulo</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00037">Gestionarkakuro.java:37</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_ctrl_presentacion_html_a23de1262897000b3d4171904bf176783"><div class="ttname"><a href="class_presentacion_1_1_ctrl_presentacion.html#a23de1262897000b3d4171904bf176783">Presentacion.CtrlPresentacion.eliminarkakuro</a></div><div class="ttdeci">void eliminarkakuro(int id)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_presentacion_8java_source.html#l00056">CtrlPresentacion.java:56</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a91f7eeb0d27ac7970195991e309b40d6"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a91f7eeb0d27ac7970195991e309b40d6">Presentacion.Gestionarkakuro.generar</a></div><div class="ttdeci">JButton generar</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00034">Gestionarkakuro.java:34</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a5779bf7587dd279bebaca46802bd4de4"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a5779bf7587dd279bebaca46802bd4de4">Presentacion.Gestionarkakuro.fondo</a></div><div class="ttdeci">JLabel fondo</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00033">Gestionarkakuro.java:33</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a96957e90d836571698356b32366534cd"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a96957e90d836571698356b32366534cd">Presentacion.Gestionarkakuro.frame</a></div><div class="ttdeci">JFrame frame</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00029">Gestionarkakuro.java:29</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a7e7f51d35e249ab5c9fc7188c8e6d346"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a7e7f51d35e249ab5c9fc7188c8e6d346">Presentacion.Gestionarkakuro.usuario</a></div><div class="ttdeci">String usuario</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00031">Gestionarkakuro.java:31</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_gestionarkakuro_html_a0ce5742977cf3e208f2f5d49eceada86"><div class="ttname"><a href="class_presentacion_1_1_gestionarkakuro.html#a0ce5742977cf3e208f2f5d49eceada86">Presentacion.Gestionarkakuro.Gestionarkakuro</a></div><div class="ttdeci">Gestionarkakuro(CtrlPresentacion CP, String usuario)</div><div class="ttdef"><b>Definition:</b> <a href="_gestionarkakuro_8java_source.html#l00041">Gestionarkakuro.java:41</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

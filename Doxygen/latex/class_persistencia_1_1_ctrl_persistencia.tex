@@ -1,0 +1,502 @@
+\hypertarget{class_persistencia_1_1_ctrl_persistencia}{}\doxysection{Referencia de la Clase Persistencia.\+Ctrl\+Persistencia}
+\label{class_persistencia_1_1_ctrl_persistencia}\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_a8b9648488c84e029ec9462d37aad448c}{cargar\+Tabla\+Usuarios}} ()
+\item 
+static void \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_a288d47b4d9d3501388fcc2694041e8fe}{guardar\+Tabla\+Usuarios}} (Hash\+Set$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} $>$ taula)  throws I\+O\+Exception 
+\item 
+static List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_ab8111908b248872266bac6fee5dd6346}{cargar\+Ranking}} (int id\+Kakuro)
+\item 
+static void \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_a92b89771b7a82e0cf8e57b98f89298e7}{guardar\+Ranking}} (List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ list, Integer id\+Kakuro)  throws I\+O\+Exception 
+\item 
+static List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_a06dfa748df0809305e17f56c60f068e9}{leerkakurotxt}} (int num\+\_\+kakuro)
+\item 
+static void \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_ae66578f83c4ca9fecc47d9ab794b7121}{guardarkakuro}} (List$<$ List$<$ String $>$$>$ matriz\+\_\+fichero, int file\+Count)
+\item 
+static void \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_a6fa71f1c1b61856d138ccc4253f85cfb}{guardarpartida}} (List$<$ List$<$ String $>$$>$ matriz\+\_\+fichero)
+\item 
+static void \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_abf678d58480d5c538820638443fb5dd0}{eliminar\+\_\+kakuro}} (int id)
+\item 
+static int \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_acc1ec5e75e1ce38e1b10dee53712942f}{tamaño\+Directorio}} ()
+\item 
+static boolean \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_ac74575ba2efd3e3c6355b9c563670c17}{hay\+Guardada}} ()
+\item 
+static Hash\+Map$<$ Point, Set$<$ Integer $>$ $>$ \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia_ac680693eabc89082f11863712864b1fb}{generar\+Lookup\+Table}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controladora de \mbox{\hyperlink{namespace_persistencia}{Persistencia}} \begin{DoxyAuthor}{Autor}
+Martí Westermeyer 
+\end{DoxyAuthor}
+
+
+Definición en la línea 20 del archivo Ctrl\+Persistencia.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_ab8111908b248872266bac6fee5dd6346}\label{class_persistencia_1_1_ctrl_persistencia_ab8111908b248872266bac6fee5dd6346}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!cargarRanking@{cargarRanking}}
+\index{cargarRanking@{cargarRanking}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{cargarRanking()}{cargarRanking()}}
+{\footnotesize\ttfamily static List$<$List$<$String$>$ $>$ Persistencia.\+Ctrl\+Persistencia.\+cargar\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Lee el fichero de kak\+X.\+txt (X corrsponde a id\+Kakuro) 
+\begin{DoxyParams}{Parámetros}
+{\em id} & del kakuro a cargar sus rankings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Matriz con el ranking del kakuro correspondiente a id\+Kakuro 
+\end{DoxyReturn}
+
+
+Definición en la línea 65 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                                                  \{}
+\DoxyCodeLine{66         List<List<String>> matriz = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{67         \textcolor{keywordflow}{try} (BufferedReader br = \textcolor{keyword}{new} BufferedReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + idKakuro + \textcolor{stringliteral}{"{}.txt"{}}))) \{}
+\DoxyCodeLine{68                  String line;}
+\DoxyCodeLine{69                  \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{70                    String[] values = line.split(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{71                    matriz.add(Arrays.asList(values));}
+\DoxyCodeLine{72                  \}}
+\DoxyCodeLine{73                \} }
+\DoxyCodeLine{74                \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{75                  System.out.println(e);}
+\DoxyCodeLine{76                \}}
+\DoxyCodeLine{77                 }
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} matriz;}
+\DoxyCodeLine{79     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_a8b9648488c84e029ec9462d37aad448c}\label{class_persistencia_1_1_ctrl_persistencia_a8b9648488c84e029ec9462d37aad448c}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!cargarTablaUsuarios@{cargarTablaUsuarios}}
+\index{cargarTablaUsuarios@{cargarTablaUsuarios}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{cargarTablaUsuarios()}{cargarTablaUsuarios()}}
+{\footnotesize\ttfamily static List$<$List$<$String$>$ $>$ Persistencia.\+Ctrl\+Persistencia.\+cargar\+Tabla\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Lee el fichero de Usuarios \begin{DoxyReturn}{Devuelve}
+Matriz con los Usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea 25 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                            \{}
+\DoxyCodeLine{26         }
+\DoxyCodeLine{27         List<List<String>> matriz = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{28         }
+\DoxyCodeLine{29         \textcolor{keywordflow}{try} (BufferedReader br = \textcolor{keyword}{new} BufferedReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}../Data/usuarios.txt"{}}))) \{}
+\DoxyCodeLine{30               String line;}
+\DoxyCodeLine{31               \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{32                 String[] values = line.split(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{33                 matriz.add(Arrays.asList(values));}
+\DoxyCodeLine{34               \}}
+\DoxyCodeLine{35             \} }
+\DoxyCodeLine{36             \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{37               System.out.println(e);}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39         }
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} matriz;}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_abf678d58480d5c538820638443fb5dd0}\label{class_persistencia_1_1_ctrl_persistencia_abf678d58480d5c538820638443fb5dd0}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!eliminar\_kakuro@{eliminar\_kakuro}}
+\index{eliminar\_kakuro@{eliminar\_kakuro}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{eliminar\_kakuro()}{eliminar\_kakuro()}}
+{\footnotesize\ttfamily static void Persistencia.\+Ctrl\+Persistencia.\+eliminar\+\_\+kakuro (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Elimina un kakuro del repositorio. 
+\begin{DoxyParams}{Parámetros}
+{\em id} & del Kakuro a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 230 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230                                                  \{}
+\DoxyCodeLine{231       }
+\DoxyCodeLine{232           File directory = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/"{}});}
+\DoxyCodeLine{233           \textcolor{keywordtype}{int} fileCount = directory.list().length;}
+\DoxyCodeLine{234           \textcolor{comment}{//int id = k.getid();}}
+\DoxyCodeLine{235           File actual, aux;}
+\DoxyCodeLine{236           \textcolor{keywordtype}{int} numAux;}
+\DoxyCodeLine{237           File file = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{}.txt"{}}); \textcolor{comment}{//initialize File object and passing path as argument  }}
+\DoxyCodeLine{238           File file2 = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{}.txt"{}}); }
+\DoxyCodeLine{239           \textcolor{keywordflow}{if} (file.delete()) System.out.println(\textcolor{stringliteral}{"{}El fichero ha sido borrado satisfactoriamente de la carpeta Kakuros"{}});}
+\DoxyCodeLine{240           \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El fichero no pudo ser borrado"{}});}
+\DoxyCodeLine{241           \textcolor{keywordflow}{if} (file2.delete()) System.out.println(\textcolor{stringliteral}{"{}El fichero ha sido borrado satisfactoriamente de la carpeta Rankings"{}});}
+\DoxyCodeLine{242           \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El fichero no pudo ser borrado"{}});}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244           \textcolor{keywordflow}{if} (fileCount != \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{245               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = fileCount; i > id; -\/-\/i) \{}
+\DoxyCodeLine{246                   numAux = i-\/1;}
+\DoxyCodeLine{247                   actual = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + i + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{248                   aux = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + numAux + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{249                   \textcolor{keywordflow}{if} (!(actual.renameTo(aux))) System.out.println(\textcolor{stringliteral}{"{}El fichero no pudo ser renombrado"{}});}
+\DoxyCodeLine{250               \}}
+\DoxyCodeLine{251               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = fileCount; i > id; -\/-\/i) \{}
+\DoxyCodeLine{252                   numAux = i-\/1;}
+\DoxyCodeLine{253                   actual = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + i + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{254                   aux = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + numAux + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{255                   \textcolor{keywordflow}{if} (!(actual.renameTo(aux))) System.out.println(\textcolor{stringliteral}{"{}El fichero no pudo ser renombrado"{}});}
+\DoxyCodeLine{256               \}}
+\DoxyCodeLine{257           \}}
+\DoxyCodeLine{258           }
+\DoxyCodeLine{259       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_ac680693eabc89082f11863712864b1fb}\label{class_persistencia_1_1_ctrl_persistencia_ac680693eabc89082f11863712864b1fb}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!generarLookupTable@{generarLookupTable}}
+\index{generarLookupTable@{generarLookupTable}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{generarLookupTable()}{generarLookupTable()}}
+{\footnotesize\ttfamily static Hash\+Map$<$Point, Set$<$Integer$>$ $>$ Persistencia.\+Ctrl\+Persistencia.\+generar\+Lookup\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Consulta el archivo Lista\+Posibilidades para cada combinacion posible \begin{DoxyReturn}{Devuelve}
+todas las posibilidades 
+\end{DoxyReturn}
+
+
+Definición en la línea 284 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284                                                                    \{}
+\DoxyCodeLine{285         HashMap<Point, Set<Integer>> LookupTable = \textcolor{keyword}{new} HashMap<Point, Set<Integer>>();}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287           \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{288                 BufferedReader in = \textcolor{keyword}{new} BufferedReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}../Data/ListaPosibilidades.txt"{}}));}
+\DoxyCodeLine{289                 String str;}
+\DoxyCodeLine{290           }
+\DoxyCodeLine{291                 \textcolor{keywordflow}{while} ((str = in.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{292                     String[] result = str.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{293                     \textcolor{comment}{//System.out.println("{}Numero de celdas:"{}+Integer.parseInt(result[0]) + "{}Numero:"{}+Integer.parseInt(result[1]));}}
+\DoxyCodeLine{294                     \textcolor{keywordtype}{int} nums = result.length;}
+\DoxyCodeLine{295                     \textcolor{keywordtype}{int} c = Integer.parseInt(result[0]);}
+\DoxyCodeLine{296                     \textcolor{keywordtype}{int} n = Integer.parseInt(result[1]);}
+\DoxyCodeLine{297                     Set<Integer> s1 = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{298                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 2; i < nums;++i) \{}
+\DoxyCodeLine{299                     String[] resultnumbers = result[i].split(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)+"{}});}
+\DoxyCodeLine{300                    \textcolor{comment}{// System.out.print("{}Combinaciones: "{});}}
+\DoxyCodeLine{301                     \textcolor{keywordflow}{for}(String a : resultnumbers)\{}
+\DoxyCodeLine{302                             \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{303                             num = Integer.parseInt(a);}
+\DoxyCodeLine{304                             \textcolor{comment}{//System.out.print(num);}}
+\DoxyCodeLine{305                             s1.add(num);       }
+\DoxyCodeLine{306                         \}}
+\DoxyCodeLine{307                   \textcolor{comment}{//  System.out.println("{}"{});}}
+\DoxyCodeLine{308                    \textcolor{comment}{// System.out.println(l1);}}
+\DoxyCodeLine{309                             \}}
+\DoxyCodeLine{310                     LookupTable.put(\textcolor{keyword}{new} Point(c,n), s1);}
+\DoxyCodeLine{311                     \textcolor{comment}{//System.out.println(LookupTable);}}
+\DoxyCodeLine{312                     \}}
+\DoxyCodeLine{313     }
+\DoxyCodeLine{314                 in.close();}
+\DoxyCodeLine{315             \} }
+\DoxyCodeLine{316           \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{317               System.out.println(e);}
+\DoxyCodeLine{318             \} }
+\DoxyCodeLine{319         \textcolor{keywordflow}{return} LookupTable; }
+\DoxyCodeLine{320         }
+\DoxyCodeLine{321     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_ae66578f83c4ca9fecc47d9ab794b7121}\label{class_persistencia_1_1_ctrl_persistencia_ae66578f83c4ca9fecc47d9ab794b7121}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!guardarkakuro@{guardarkakuro}}
+\index{guardarkakuro@{guardarkakuro}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{guardarkakuro()}{guardarkakuro()}}
+{\footnotesize\ttfamily static void Persistencia.\+Ctrl\+Persistencia.\+guardarkakuro (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz\+\_\+fichero,  }\item[{int}]{file\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Guarda un kakuro en la carpeta de persistencia. 
+\begin{DoxyParams}{Parámetros}
+{\em matriz\+\_\+fichero} & Matriz del kakuro. \\
+\hline
+{\em file\+Count} & Id del kakuro a introducir. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 135 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                                                                        \{}
+\DoxyCodeLine{136           \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_fichero.get(0).get(0));}
+\DoxyCodeLine{137           \textcolor{keywordtype}{int} m = Integer.parseInt(matriz\_fichero.get(0).get(1));}
+\DoxyCodeLine{138           File file = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + fileCount + \textcolor{stringliteral}{"{}.txt"{}}); \textcolor{comment}{//initialize File object and passing path as argument  }}
+\DoxyCodeLine{139           File file2 = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + fileCount + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{140           \textcolor{keywordflow}{try}   }
+\DoxyCodeLine{141             \{  }
+\DoxyCodeLine{142               file.createNewFile();  \textcolor{comment}{//creates a new file    }}
+\DoxyCodeLine{143               file2.createNewFile();}
+\DoxyCodeLine{144             \}   }
+\DoxyCodeLine{145           \textcolor{keywordflow}{catch} (IOException e)   }
+\DoxyCodeLine{146             \{  }
+\DoxyCodeLine{147               e.printStackTrace();    \textcolor{comment}{//prints exception if any  }}
+\DoxyCodeLine{148             \}}
+\DoxyCodeLine{149         }
+\DoxyCodeLine{150           \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{151               FileWriter myWriter = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + fileCount + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{152               }
+\DoxyCodeLine{153               myWriter.write(matriz\_fichero.get(0).get(0) + \textcolor{charliteral}{','} + matriz\_fichero.get(0).get(1));}
+\DoxyCodeLine{154               myWriter.write(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{155               }
+\DoxyCodeLine{156               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i <= n; i++) \{}
+\DoxyCodeLine{157                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++) \{}
+\DoxyCodeLine{158                       \textcolor{keywordflow}{if}(j == m-\/1) \{}
+\DoxyCodeLine{159                           myWriter.write(matriz\_fichero.get(i).get(j));}
+\DoxyCodeLine{160                           myWriter.write(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{161                       \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{162                           myWriter.write(matriz\_fichero.get(i).get(j) + \textcolor{charliteral}{','});}
+\DoxyCodeLine{163                       \}}
+\DoxyCodeLine{164                       }
+\DoxyCodeLine{165                   \}}
+\DoxyCodeLine{166                   }
+\DoxyCodeLine{167               \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169               myWriter.close();}
+\DoxyCodeLine{170               System.out.println(\textcolor{stringliteral}{"{}Generado el fichero kak"{}} + fileCount + \textcolor{stringliteral}{"{}.txt correctamente."{}});}
+\DoxyCodeLine{171               System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{172             \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{173               System.out.println(\textcolor{stringliteral}{"{}Ha ocurrido un error"{}});}
+\DoxyCodeLine{174               e.printStackTrace();}
+\DoxyCodeLine{175             \}}
+\DoxyCodeLine{176     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_a6fa71f1c1b61856d138ccc4253f85cfb}\label{class_persistencia_1_1_ctrl_persistencia_a6fa71f1c1b61856d138ccc4253f85cfb}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!guardarpartida@{guardarpartida}}
+\index{guardarpartida@{guardarpartida}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{guardarpartida()}{guardarpartida()}}
+{\footnotesize\ttfamily static void Persistencia.\+Ctrl\+Persistencia.\+guardarpartida (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz\+\_\+fichero }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Guarda la situación de la partida. 
+\begin{DoxyParams}{Parámetros}
+{\em matriz\+\_\+fichero} & Matriz del kakuro. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 183 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{183                                                                          \{}
+\DoxyCodeLine{184           \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_fichero.get(0).get(0));}
+\DoxyCodeLine{185           \textcolor{keywordtype}{int} m = Integer.parseInt(matriz\_fichero.get(0).get(1));}
+\DoxyCodeLine{186           File file = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/guardada.txt"{}}); \textcolor{comment}{//initialize File object and passing path as argument  }}
+\DoxyCodeLine{187           \textcolor{keywordflow}{try}   }
+\DoxyCodeLine{188             \{  }
+\DoxyCodeLine{189               file.createNewFile();  \textcolor{comment}{//creates a new file      }}
+\DoxyCodeLine{190             \}   }
+\DoxyCodeLine{191           \textcolor{keywordflow}{catch} (IOException e)   }
+\DoxyCodeLine{192             \{  }
+\DoxyCodeLine{193               e.printStackTrace();    \textcolor{comment}{//prints exception if any  }}
+\DoxyCodeLine{194             \}}
+\DoxyCodeLine{195         }
+\DoxyCodeLine{196           \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{197               FileWriter myWriter = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}../Data/guardada.txt"{}});}
+\DoxyCodeLine{198               }
+\DoxyCodeLine{199               myWriter.write(matriz\_fichero.get(0).get(0) + \textcolor{charliteral}{','} + matriz\_fichero.get(0).get(1));}
+\DoxyCodeLine{200               myWriter.write(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{201               }
+\DoxyCodeLine{202               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i <= n; i++) \{}
+\DoxyCodeLine{203                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++) \{}
+\DoxyCodeLine{204                       \textcolor{keywordflow}{if}(j == m-\/1) \{}
+\DoxyCodeLine{205                           myWriter.write(matriz\_fichero.get(i).get(j));}
+\DoxyCodeLine{206                           myWriter.write(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{207                       \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{208                           myWriter.write(matriz\_fichero.get(i).get(j) + \textcolor{charliteral}{','});}
+\DoxyCodeLine{209                       \}}
+\DoxyCodeLine{210                       }
+\DoxyCodeLine{211                   \}}
+\DoxyCodeLine{212                   }
+\DoxyCodeLine{213               \}}
+\DoxyCodeLine{214               }
+\DoxyCodeLine{215               myWriter.write(matriz\_fichero.get(n+1).get(0));}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217               myWriter.close();}
+\DoxyCodeLine{218               System.out.println(\textcolor{stringliteral}{"{}Partida guardada correctamente"{}});}
+\DoxyCodeLine{219               System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{220             \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{221               System.out.println(\textcolor{stringliteral}{"{}Ha ocurrido un error al guardar partida"{}});}
+\DoxyCodeLine{222               e.printStackTrace();}
+\DoxyCodeLine{223             \}}
+\DoxyCodeLine{224     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_a92b89771b7a82e0cf8e57b98f89298e7}\label{class_persistencia_1_1_ctrl_persistencia_a92b89771b7a82e0cf8e57b98f89298e7}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!guardarRanking@{guardarRanking}}
+\index{guardarRanking@{guardarRanking}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{guardarRanking()}{guardarRanking()}}
+{\footnotesize\ttfamily static void Persistencia.\+Ctrl\+Persistencia.\+guardar\+Ranking (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$}]{list,  }\item[{Integer}]{id\+Kakuro }\end{DoxyParamCaption}) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Modifica el fichero de kak\+X.\+txt (X corrsponde a id\+Kakuro) si ha habido cambios 
+\begin{DoxyParams}{Parámetros}
+{\em list} & Lista de Pairs de nombre\+Usuario y tiempo, \\
+\hline
+{\em id\+Kakuro} & Integer correspondiente al kakuro \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 87 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                                                                              \{}
+\DoxyCodeLine{88         FileWriter writer = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}../Data/Rankings/kak"{}} + idKakuro + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{89         \textcolor{keywordflow}{for} (Pair fila : list) \{}
+\DoxyCodeLine{90             writer.write(fila.getKey());}
+\DoxyCodeLine{91             writer.write(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{92             writer.write(String.valueOf(fila.getValue()));}
+\DoxyCodeLine{93             writer.write(\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95         writer.close();}
+\DoxyCodeLine{96     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_a288d47b4d9d3501388fcc2694041e8fe}\label{class_persistencia_1_1_ctrl_persistencia_a288d47b4d9d3501388fcc2694041e8fe}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!guardarTablaUsuarios@{guardarTablaUsuarios}}
+\index{guardarTablaUsuarios@{guardarTablaUsuarios}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{guardarTablaUsuarios()}{guardarTablaUsuarios()}}
+{\footnotesize\ttfamily static void Persistencia.\+Ctrl\+Persistencia.\+guardar\+Tabla\+Usuarios (\begin{DoxyParamCaption}\item[{Hash\+Set$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} $>$}]{taula }\end{DoxyParamCaption}) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Modifica el fichero de Usuarios si ha habido cambios 
+\begin{DoxyParams}{Parámetros}
+{\em taula} & Set de Usuarios \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 46 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                                                        \{}
+\DoxyCodeLine{47                 }
+\DoxyCodeLine{48         FileWriter writer = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}../Data/usuarios.txt"{}});}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         \textcolor{keywordflow}{for} (Usuario fila : taula) \{}
+\DoxyCodeLine{51             writer.write(fila.getUsuario());}
+\DoxyCodeLine{52             writer.write(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{53             writer.write(fila.getContraseña());}
+\DoxyCodeLine{54             writer.write(\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56         writer.close();}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_ac74575ba2efd3e3c6355b9c563670c17}\label{class_persistencia_1_1_ctrl_persistencia_ac74575ba2efd3e3c6355b9c563670c17}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!hayGuardada@{hayGuardada}}
+\index{hayGuardada@{hayGuardada}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{hayGuardada()}{hayGuardada()}}
+{\footnotesize\ttfamily static boolean Persistencia.\+Ctrl\+Persistencia.\+hay\+Guardada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Consulta si hay una partida guardada \begin{DoxyReturn}{Devuelve}
+true si la hay, en caso contrario false 
+\end{DoxyReturn}
+
+
+Definición en la línea 273 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{273                                         \{}
+\DoxyCodeLine{274         File file = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/guardada.txt"{}});}
+\DoxyCodeLine{275         \textcolor{keywordflow}{if}(file.length() == 0) \{}
+\DoxyCodeLine{276             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{277         \}}
+\DoxyCodeLine{278         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{279     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_a06dfa748df0809305e17f56c60f068e9}\label{class_persistencia_1_1_ctrl_persistencia_a06dfa748df0809305e17f56c60f068e9}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!leerkakurotxt@{leerkakurotxt}}
+\index{leerkakurotxt@{leerkakurotxt}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{leerkakurotxt()}{leerkakurotxt()}}
+{\footnotesize\ttfamily static List$<$List$<$String$>$ $>$ Persistencia.\+Ctrl\+Persistencia.\+leerkakurotxt (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Lee un archivo .txt almacenado en la carpeta de persistencia. 
+\begin{DoxyParams}{Parámetros}
+{\em num\+\_\+kakuro} & Número identificador del kakuro a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El kakuro leído de Data formateado. 
+\end{DoxyReturn}
+
+
+Definición en la línea 102 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                                    \{}
+\DoxyCodeLine{103         List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{104         \textcolor{keywordflow}{if} (num\_kakuro == 0)  \{}
+\DoxyCodeLine{105             \textcolor{keywordflow}{try} (BufferedReader br = \textcolor{keyword}{new} BufferedReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}../Data/guardada.txt"{}}))) \{}
+\DoxyCodeLine{106               String line;}
+\DoxyCodeLine{107               \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{108                 String[] values = line.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{109                 matriz\_auxiliar.add(Arrays.asList(values));}
+\DoxyCodeLine{110               \}}
+\DoxyCodeLine{111             \} }
+\DoxyCodeLine{112             \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{113               System.out.println(e);}
+\DoxyCodeLine{114             \}}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{117             \textcolor{keywordflow}{try} (BufferedReader br = \textcolor{keyword}{new} BufferedReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}../Data/Kakuros/kak"{}} + num\_kakuro + \textcolor{stringliteral}{"{}.txt"{}}))) \{}
+\DoxyCodeLine{118               String line;}
+\DoxyCodeLine{119               \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{120                 String[] values = line.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{121                 matriz\_auxiliar.add(Arrays.asList(values));}
+\DoxyCodeLine{122               \}}
+\DoxyCodeLine{123             \} }
+\DoxyCodeLine{124             \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{125               System.out.println(e);}
+\DoxyCodeLine{126             \}}
+\DoxyCodeLine{127         \}}
+\DoxyCodeLine{128         \textcolor{keywordflow}{return} matriz\_auxiliar;}
+\DoxyCodeLine{129     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_persistencia_1_1_ctrl_persistencia_acc1ec5e75e1ce38e1b10dee53712942f}\label{class_persistencia_1_1_ctrl_persistencia_acc1ec5e75e1ce38e1b10dee53712942f}} 
+\index{Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}!tamañoDirectorio@{tamañoDirectorio}}
+\index{tamañoDirectorio@{tamañoDirectorio}!Persistencia.CtrlPersistencia@{Persistencia.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{tamañoDirectorio()}{tamañoDirectorio()}}
+{\footnotesize\ttfamily static int Persistencia.\+Ctrl\+Persistencia.\+tamaño\+Directorio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Consulta el numero de kakuros almacenados \begin{DoxyReturn}{Devuelve}
+numero de kakuros almacenados 
+\end{DoxyReturn}
+
+
+Definición en la línea 264 del archivo Ctrl\+Persistencia.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{264                                          \{}
+\DoxyCodeLine{265         File directory = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}../Data/Kakuros/"{}});}
+\DoxyCodeLine{266         \textcolor{keywordtype}{int} fileCount = directory.list().length;}
+\DoxyCodeLine{267         \textcolor{keywordflow}{return} fileCount;}
+\DoxyCodeLine{268     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Persistencia/\mbox{\hyperlink{_ctrl_persistencia_8java}{Ctrl\+Persistencia.\+java}}\end{DoxyCompactItemize}

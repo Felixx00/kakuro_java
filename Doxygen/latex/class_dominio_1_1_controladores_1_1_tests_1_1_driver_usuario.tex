@@ -1,0 +1,213 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Tests.\+Driver\+Usuario}
+\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario}\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aaa7516163038874fe9a3b1a17364a7e4}{test\+Get\+Usuario}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} usuario)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aeac8e8a10ca216714368fe3cf2bbbe0c}{test\+Get\+Contraseña}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} usuario)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a02cbe2d37593f4ae8c5e56cb565fe686}{test\+Set\+Usuario}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} usuario, String nomU)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a52219f9e6ad57e67b46fd9b4cc6974de}{test\+Set\+Contraseña}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} usuario, String contr)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a4a2ae5e06f4fa7188a20ddcd0636c982}{test\+Contraseña\+Correcta}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} usuario, String contr)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a631a56d718af9198f81f3c75b61b482a}{main}} (String\mbox{[}$\,$\mbox{]} args)  throws Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver del Usuario \begin{DoxyAuthor}{Autor}
+Víctor Villarejo 
+\end{DoxyAuthor}
+
+
+Definición en la línea 15 del archivo Driver\+Usuario.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a631a56d718af9198f81f3c75b61b482a}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a631a56d718af9198f81f3c75b61b482a}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!main@{main}}
+\index{main@{main}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 68 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                                          \{}
+\DoxyCodeLine{69         }
+\DoxyCodeLine{70         Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{71         }
+\DoxyCodeLine{72         Usuario usuario = \textcolor{keyword}{new} Usuario();}
+\DoxyCodeLine{73         System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{74         System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetUsuario()"{}});}
+\DoxyCodeLine{75         System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetContraseña()"{}});}
+\DoxyCodeLine{76         System.out.println(\textcolor{stringliteral}{"{}3-\/ Test SetUsuario()"{}});}
+\DoxyCodeLine{77         System.out.println(\textcolor{stringliteral}{"{}4-\/ Test SetContraseña()"{}});}
+\DoxyCodeLine{78         System.out.println(\textcolor{stringliteral}{"{}5-\/ Test ContraseñaCorrecta()"{}});}
+\DoxyCodeLine{79         System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{80   }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         \textcolor{keywordtype}{int} op = s.nextInt();}
+\DoxyCodeLine{83         \textcolor{keywordflow}{while}(op != -\/1)\{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{switch} (op) \{}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{case} 1: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aaa7516163038874fe9a3b1a17364a7e4}{testGetUsuario}}(usuario);}
+\DoxyCodeLine{86                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{case} 2: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aeac8e8a10ca216714368fe3cf2bbbe0c}{testGetContraseña}}(usuario);}
+\DoxyCodeLine{88                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{89                 \textcolor{keywordflow}{case} 3: System.out.println(\textcolor{stringliteral}{"{}Introduce el nombre de usuario"{}});}
+\DoxyCodeLine{90                         String n = s.next();}
+\DoxyCodeLine{91                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a02cbe2d37593f4ae8c5e56cb565fe686}{testSetUsuario}}(usuario,n);}
+\DoxyCodeLine{92                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{93                 \textcolor{keywordflow}{case} 4: System.out.println(\textcolor{stringliteral}{"{}Introduce la contraseña del usuario"{}});}
+\DoxyCodeLine{94                         String m = s.next();}
+\DoxyCodeLine{95                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a52219f9e6ad57e67b46fd9b4cc6974de}{testSetContraseña}}(usuario,m);}
+\DoxyCodeLine{96                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97                 \textcolor{keywordflow}{case} 5: System.out.println(\textcolor{stringliteral}{"{}Introduce el nombre de usuariola contraseña para comprobar si es la correcta"{}});}
+\DoxyCodeLine{98                         String l = s.next();}
+\DoxyCodeLine{99                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a4a2ae5e06f4fa7188a20ddcd0636c982}{testContraseñaCorrecta}}(usuario,l);}
+\DoxyCodeLine{100                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101               \}}
+\DoxyCodeLine{102                 System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{103                 System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetUsuario()"{}});}
+\DoxyCodeLine{104                 System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetContraseña()"{}});}
+\DoxyCodeLine{105                 System.out.println(\textcolor{stringliteral}{"{}3-\/ Test SetUsuario()"{}});}
+\DoxyCodeLine{106                 System.out.println(\textcolor{stringliteral}{"{}4-\/ Test SetContraseña()"{}});}
+\DoxyCodeLine{107                 System.out.println(\textcolor{stringliteral}{"{}5-\/ Test ContraseñaCorrecta()"{}});}
+\DoxyCodeLine{108                 System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{109                 op = s.nextInt();}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111         }
+\DoxyCodeLine{112     }
+\DoxyCodeLine{113     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a4a2ae5e06f4fa7188a20ddcd0636c982}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a4a2ae5e06f4fa7188a20ddcd0636c982}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!testContraseñaCorrecta@{testContraseñaCorrecta}}
+\index{testContraseñaCorrecta@{testContraseñaCorrecta}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{testContraseñaCorrecta()}{testContraseñaCorrecta()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+test\+Contraseña\+Correcta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}}]{usuario,  }\item[{String}]{contr }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Comprueba si es la contraseña es correcta 
+\begin{DoxyParams}{Parámetros}
+{\em usuario} & Usuario \\
+\hline
+{\em contr} & String \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 60 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                                                              \{}
+\DoxyCodeLine{61         \textcolor{keywordtype}{boolean} aux = usuario.contraseñaCorrecta(contr);   }
+\DoxyCodeLine{62         \textcolor{keywordflow}{if} (aux) System.out.println(\textcolor{stringliteral}{"{}Contraseña correcta"{}});}
+\DoxyCodeLine{63         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Contraseña incorrecta"{}});}
+\DoxyCodeLine{64     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aeac8e8a10ca216714368fe3cf2bbbe0c}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aeac8e8a10ca216714368fe3cf2bbbe0c}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!testGetContraseña@{testGetContraseña}}
+\index{testGetContraseña@{testGetContraseña}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{testGetContraseña()}{testGetContraseña()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+test\+Get\+Contraseña (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}}]{usuario }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Retorna la contraseña del usuario 
+\begin{DoxyParams}{Parámetros}
+{\em usuario} & Usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 30 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                                           \{}
+\DoxyCodeLine{31         System.out.println(usuario.getContraseña());   }
+\DoxyCodeLine{32     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aaa7516163038874fe9a3b1a17364a7e4}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_aaa7516163038874fe9a3b1a17364a7e4}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!testGetUsuario@{testGetUsuario}}
+\index{testGetUsuario@{testGetUsuario}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{testGetUsuario()}{testGetUsuario()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+test\+Get\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}}]{usuario }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Retorna el nombre del usuario 
+\begin{DoxyParams}{Parámetros}
+{\em usuario} & Usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 21 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                                                        \{}
+\DoxyCodeLine{22         System.out.println(usuario.getUsuario());   }
+\DoxyCodeLine{23     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a52219f9e6ad57e67b46fd9b4cc6974de}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a52219f9e6ad57e67b46fd9b4cc6974de}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!testSetContraseña@{testSetContraseña}}
+\index{testSetContraseña@{testSetContraseña}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{testSetContraseña()}{testSetContraseña()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+test\+Set\+Contraseña (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}}]{usuario,  }\item[{String}]{contr }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Configura la contraseña de usuario 
+\begin{DoxyParams}{Parámetros}
+{\em usuario} & Usuario \\
+\hline
+{\em contr} & String \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 50 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                                                                         \{}
+\DoxyCodeLine{51         usuario.setContraseña(contr);   }
+\DoxyCodeLine{52     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a02cbe2d37593f4ae8c5e56cb565fe686}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_usuario_a02cbe2d37593f4ae8c5e56cb565fe686}} 
+\index{Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}!testSetUsuario@{testSetUsuario}}
+\index{testSetUsuario@{testSetUsuario}!Dominio.Controladores.Tests.DriverUsuario@{Dominio.Controladores.Tests.DriverUsuario}}
+\doxysubsubsection{\texorpdfstring{testSetUsuario()}{testSetUsuario()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Usuario.\+test\+Set\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}}]{usuario,  }\item[{String}]{nomU }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Configura el nombre usuario de usuario 
+\begin{DoxyParams}{Parámetros}
+{\em usuario} & nombre usuario \\
+\hline
+{\em nomU} & String \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 40 del archivo Driver\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                                                     \{}
+\DoxyCodeLine{41         usuario.setUsuario(nomU);   }
+\DoxyCodeLine{42     \};}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\+Tests/\mbox{\hyperlink{_driver_usuario_8java}{Driver\+Usuario.\+java}}\end{DoxyCompactItemize}

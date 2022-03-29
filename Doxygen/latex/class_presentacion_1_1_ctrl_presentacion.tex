@@ -1,0 +1,449 @@
+\hypertarget{class_presentacion_1_1_ctrl_presentacion}{}\doxysection{Referencia de la Clase Presentacion.\+Ctrl\+Presentacion}
+\label{class_presentacion_1_1_ctrl_presentacion}\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a626e6b94b5f3e6493f23e0fd2798c9a2}{Ctrl\+Presentacion}} ()
+\item 
+boolean \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a1902260edbc9ee3e08a86bf0e37bf57d}{comprobar\+Usuario}} (String u, String p)
+\item 
+boolean \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_ae29fdafc6dca2cbe3bc1685d4f791064}{añadir\+Usuario}} (String u, String p)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a581af20c64b1389ac4c5588c278db2d6}{eliminar\+Usuario}} (String u)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a720ff6de5c04cfd21d5823aab224773b}{modificar\+Usuario\+Contraseña}} (String u, String np)
+\item 
+int \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_abf68355473c3b9f58a53545fb84baf96}{tamaño\+Directorio}} ()
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a23de1262897000b3d4171904bf176783}{eliminarkakuro}} (int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a97cbf0f3a86570f6934d95142b59ce92}{leerkakurotxt}} (int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_ae5fb6302aa7c9c6f718973a3c3c598f7}{generarkakuro}} (int n, int m, String dificultad)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_afe6318f96f831cb38acee26dfbb1101f}{guardarkakuro}} (List$<$ List$<$ String $>$$>$ matriz\+\_\+fichero, int file\+Count)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a4c828f8462b3601f5a2b199cb81da02d}{ver\+Ranking}} (int id)
+\item 
+boolean \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a3176fbe60034d9d9b659f45604fd051b}{partida}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id, int i, int j, int cambio)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a32fdc22540d56946e22fc1d6952b5fa0}{guardar\+Partida}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id, long tiempo)
+\item 
+boolean \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_ac546f5514db8db1d15debbd67aeb5d46}{kakuro\+Acabado}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a70be2a2a7979237ffe5c4099b7702e5e}{guardar\+Ranking}} (int id\+Kakuro, String nomJ, Double temps)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a076be7527c6fbda53da2d794cbef1380}{ver\+Records}} (int id\+Kakuro)
+\item 
+int \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a1cde229707582eb86a7a81f335018608}{validar}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_af76b9fc57297847a5c3341fd1b1cdf12}{getvalidartablero}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+boolean \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_afa814a85128415d5b5dea65e59861fd0}{hay\+Guardada}} ()
+\item 
+long \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a1cc1a8b6679c94b3e1c2e4626b77b67e}{cargar\+\_\+tiempo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_aed4f51a470ffa12c6d9af3006af2c5cf}{iniciar\+Ctrls}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio}{Ctrl\+Dominio}} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase destinada a comunicarse con la capa de dominio \begin{DoxyAuthor}{Autor}
+Martí Westermeyer 
+\end{DoxyAuthor}
+
+
+Definición en la línea 21 del archivo Ctrl\+Presentacion.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a626e6b94b5f3e6493f23e0fd2798c9a2}\label{class_presentacion_1_1_ctrl_presentacion_a626e6b94b5f3e6493f23e0fd2798c9a2}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!CtrlPresentacion@{CtrlPresentacion}}
+\index{CtrlPresentacion@{CtrlPresentacion}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{CtrlPresentacion()}{CtrlPresentacion()}}
+{\footnotesize\ttfamily Presentacion.\+Ctrl\+Presentacion.\+Ctrl\+Presentacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 25 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                               \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_aed4f51a470ffa12c6d9af3006af2c5cf}{iniciarCtrls}}();}
+\DoxyCodeLine{27         System.out.println(\textcolor{stringliteral}{"{}Cargando interfície..."{}});}
+\DoxyCodeLine{28         SignIn SI = \textcolor{keyword}{new} SignIn(\textcolor{keyword}{this});}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_ae29fdafc6dca2cbe3bc1685d4f791064}\label{class_presentacion_1_1_ctrl_presentacion_ae29fdafc6dca2cbe3bc1685d4f791064}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily boolean Presentacion.\+Ctrl\+Presentacion.\+añadir\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{p }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 40 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                      \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a0caea2120bd370f5fe83b418e24c88e3}{añadirUsuario}}(u,p);}
+\DoxyCodeLine{42     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a1cc1a8b6679c94b3e1c2e4626b77b67e}\label{class_presentacion_1_1_ctrl_presentacion_a1cc1a8b6679c94b3e1c2e4626b77b67e}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!cargar\_tiempo@{cargar\_tiempo}}
+\index{cargar\_tiempo@{cargar\_tiempo}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{cargar\_tiempo()}{cargar\_tiempo()}}
+{\footnotesize\ttfamily long Presentacion.\+Ctrl\+Presentacion.\+cargar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 106 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                 \{}
+\DoxyCodeLine{107         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a3c60e6b66c9f5cc5cace81c0b046ecc1}{cargar\_tiempo}}();}
+\DoxyCodeLine{108     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a1902260edbc9ee3e08a86bf0e37bf57d}\label{class_presentacion_1_1_ctrl_presentacion_a1902260edbc9ee3e08a86bf0e37bf57d}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!comprobarUsuario@{comprobarUsuario}}
+\index{comprobarUsuario@{comprobarUsuario}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{comprobarUsuario()}{comprobarUsuario()}}
+{\footnotesize\ttfamily boolean Presentacion.\+Ctrl\+Presentacion.\+comprobar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{p }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 36 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                                         \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ad0bd575f9d6de0a151dcdc233d7a9d72}{comprobarUsuario}}(u,p);}
+\DoxyCodeLine{38     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a23de1262897000b3d4171904bf176783}\label{class_presentacion_1_1_ctrl_presentacion_a23de1262897000b3d4171904bf176783}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!eliminarkakuro@{eliminarkakuro}}
+\index{eliminarkakuro@{eliminarkakuro}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{eliminarkakuro()}{eliminarkakuro()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+eliminarkakuro (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 56 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                        \{}
+\DoxyCodeLine{57         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_af93dab18abe939160e2d28adca93031a}{eliminarkakuro}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a581af20c64b1389ac4c5588c278db2d6}\label{class_presentacion_1_1_ctrl_presentacion_a581af20c64b1389ac4c5588c278db2d6}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+eliminar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 44 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                           \{}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a89d1c43cedffc43a2e3a7a07d1a26197}{eliminarUsuario}}(u);}
+\DoxyCodeLine{46     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_ae5fb6302aa7c9c6f718973a3c3c598f7}\label{class_presentacion_1_1_ctrl_presentacion_ae5fb6302aa7c9c6f718973a3c3c598f7}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!generarkakuro@{generarkakuro}}
+\index{generarkakuro@{generarkakuro}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{generarkakuro()}{generarkakuro()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Presentacion.\+Ctrl\+Presentacion.\+generarkakuro (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{String}]{dificultad }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 64 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                              \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_aef9f3665e2283fdd6160c85d54a216b9}{generarkakuro}}(n,m,dificultad);}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_af76b9fc57297847a5c3341fd1b1cdf12}\label{class_presentacion_1_1_ctrl_presentacion_af76b9fc57297847a5c3341fd1b1cdf12}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!getvalidartablero@{getvalidartablero}}
+\index{getvalidartablero@{getvalidartablero}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{getvalidartablero()}{getvalidartablero()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Presentacion.\+Ctrl\+Presentacion.\+getvalidartablero (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 99 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                                                                                  \{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ad5358eb6f898129211bbf2ca0db9591b}{getvalidartablero}}(matriz, n, m, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{101     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_afe6318f96f831cb38acee26dfbb1101f}\label{class_presentacion_1_1_ctrl_presentacion_afe6318f96f831cb38acee26dfbb1101f}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!guardarkakuro@{guardarkakuro}}
+\index{guardarkakuro@{guardarkakuro}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{guardarkakuro()}{guardarkakuro()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+guardarkakuro (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz\+\_\+fichero,  }\item[{int}]{file\+Count }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 68 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                                                                 \{}
+\DoxyCodeLine{69         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a8afd7bbc6834cb122277b2b4a5bd708c}{guardarkakuro}}(matriz\_fichero, fileCount);}
+\DoxyCodeLine{70     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a32fdc22540d56946e22fc1d6952b5fa0}\label{class_presentacion_1_1_ctrl_presentacion_a32fdc22540d56946e22fc1d6952b5fa0}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!guardarPartida@{guardarPartida}}
+\index{guardarPartida@{guardarPartida}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{guardarPartida()}{guardarPartida()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+guardar\+Partida (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id,  }\item[{long}]{tiempo }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 80 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                                                                              \{}
+\DoxyCodeLine{81         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_aede86a7a46399b29bfb47388d2926ef0}{guardarPartida}}(matriz, n, m, \textcolor{keywordtype}{id}, tiempo);}
+\DoxyCodeLine{82     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a70be2a2a7979237ffe5c4099b7702e5e}\label{class_presentacion_1_1_ctrl_presentacion_a70be2a2a7979237ffe5c4099b7702e5e}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!guardarRanking@{guardarRanking}}
+\index{guardarRanking@{guardarRanking}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{guardarRanking()}{guardarRanking()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+guardar\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro,  }\item[{String}]{nomJ,  }\item[{Double}]{temps }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 88 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                                                         \{}
+\DoxyCodeLine{89         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ae6d16d84849005d540f46bc1b1701c3a}{guardarRanking}}(idKakuro, nomJ, temps);}
+\DoxyCodeLine{90     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_afa814a85128415d5b5dea65e59861fd0}\label{class_presentacion_1_1_ctrl_presentacion_afa814a85128415d5b5dea65e59861fd0}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!hayGuardada@{hayGuardada}}
+\index{hayGuardada@{hayGuardada}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{hayGuardada()}{hayGuardada()}}
+{\footnotesize\ttfamily boolean Presentacion.\+Ctrl\+Presentacion.\+hay\+Guardada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 102 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                  \{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a4b2ea0b8b44af0c469f254a4c51a9604}{hayGuardada}}();}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_aed4f51a470ffa12c6d9af3006af2c5cf}\label{class_presentacion_1_1_ctrl_presentacion_aed4f51a470ffa12c6d9af3006af2c5cf}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!iniciarCtrls@{iniciarCtrls}}
+\index{iniciarCtrls@{iniciarCtrls}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{iniciarCtrls()}{iniciarCtrls()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+iniciar\+Ctrls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 31 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                 \{}
+\DoxyCodeLine{32         System.out.println(\textcolor{stringliteral}{"{}Iniciando controlador de dominio..."{}});}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}} = \textcolor{keyword}{new} CtrlDominio();}
+\DoxyCodeLine{34     \}   }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_ac546f5514db8db1d15debbd67aeb5d46}\label{class_presentacion_1_1_ctrl_presentacion_ac546f5514db8db1d15debbd67aeb5d46}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!kakuroAcabado@{kakuroAcabado}}
+\index{kakuroAcabado@{kakuroAcabado}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{kakuroAcabado()}{kakuroAcabado()}}
+{\footnotesize\ttfamily boolean Presentacion.\+Ctrl\+Presentacion.\+kakuro\+Acabado (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 84 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                                                                    \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a458508b5edddd39c876bbc37033f5788}{kakuroAcabado}}(matriz, n, m, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{86     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a97cbf0f3a86570f6934d95142b59ce92}\label{class_presentacion_1_1_ctrl_presentacion_a97cbf0f3a86570f6934d95142b59ce92}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!leerkakurotxt@{leerkakurotxt}}
+\index{leerkakurotxt@{leerkakurotxt}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{leerkakurotxt()}{leerkakurotxt()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Presentacion.\+Ctrl\+Presentacion.\+leerkakurotxt (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 60 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                     \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a207cfc8a33cb7d5a34da0b9f2f60c24c}{leerkakurotxt}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{62     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a720ff6de5c04cfd21d5823aab224773b}\label{class_presentacion_1_1_ctrl_presentacion_a720ff6de5c04cfd21d5823aab224773b}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!modificarUsuarioContraseña@{modificarUsuarioContraseña}}
+\index{modificarUsuarioContraseña@{modificarUsuarioContraseña}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{modificarUsuarioContraseña()}{modificarUsuarioContraseña()}}
+{\footnotesize\ttfamily void Presentacion.\+Ctrl\+Presentacion.\+modificar\+Usuario\+Contraseña (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{np }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 48 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                 \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a5df22686a9d5d425fee79f9dad46deb0}{modificarUsuarioContraseña}}(u, np);}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a3176fbe60034d9d9b659f45604fd051b}\label{class_presentacion_1_1_ctrl_presentacion_a3176fbe60034d9d9b659f45604fd051b}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!partida@{partida}}
+\index{partida@{partida}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{partida()}{partida()}}
+{\footnotesize\ttfamily boolean Presentacion.\+Ctrl\+Presentacion.\+partida (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{cambio }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 76 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                                                                                       \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab8861308e143f2d3aea67a3b58152710}{partida}}(matriz, n, m, \textcolor{keywordtype}{id}, i,j,cambio);}
+\DoxyCodeLine{78     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_abf68355473c3b9f58a53545fb84baf96}\label{class_presentacion_1_1_ctrl_presentacion_abf68355473c3b9f58a53545fb84baf96}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!tamañoDirectorio@{tamañoDirectorio}}
+\index{tamañoDirectorio@{tamañoDirectorio}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{tamañoDirectorio()}{tamañoDirectorio()}}
+{\footnotesize\ttfamily int Presentacion.\+Ctrl\+Presentacion.\+tamaño\+Directorio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 52 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                   \{}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade9a1f12c3633cc4b43aa9f3d128f437}{tamañoDirectorio}}();}
+\DoxyCodeLine{54     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a1cde229707582eb86a7a81f335018608}\label{class_presentacion_1_1_ctrl_presentacion_a1cde229707582eb86a7a81f335018608}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!validar@{validar}}
+\index{validar@{validar}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily int Presentacion.\+Ctrl\+Presentacion.\+validar (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 96 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                                         \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a06b534aa734115bba5de38976da28682}{validar}}(matriz, n, m, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{98     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a4c828f8462b3601f5a2b199cb81da02d}\label{class_presentacion_1_1_ctrl_presentacion_a4c828f8462b3601f5a2b199cb81da02d}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!verRanking@{verRanking}}
+\index{verRanking@{verRanking}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{verRanking()}{verRanking()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Presentacion.\+Ctrl\+Presentacion.\+ver\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 72 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                          \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a4798b989f4754b75421d958be98fb02e}{verRanking}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{74     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a076be7527c6fbda53da2d794cbef1380}\label{class_presentacion_1_1_ctrl_presentacion_a076be7527c6fbda53da2d794cbef1380}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!verRecords@{verRecords}}
+\index{verRecords@{verRecords}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{verRecords()}{verRecords()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Presentacion.\+Ctrl\+Presentacion.\+ver\+Records (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 92 del archivo Ctrl\+Presentacion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92                                                \{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}{CD}}.\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a44b9d08e4cb567aba924680ab48bfd82}{verRecords}}(idKakuro);}
+\DoxyCodeLine{94     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}\label{class_presentacion_1_1_ctrl_presentacion_a852411bbd9c38ea598ca9fe75b08ce08}} 
+\index{Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}!CD@{CD}}
+\index{CD@{CD}!Presentacion.CtrlPresentacion@{Presentacion.CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{CD}{CD}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio}{Ctrl\+Dominio}} Presentacion.\+Ctrl\+Presentacion.\+CD\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 23 del archivo Ctrl\+Presentacion.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Presentacion/\mbox{\hyperlink{_ctrl_presentacion_8java}{Ctrl\+Presentacion.\+java}}\end{DoxyCompactItemize}

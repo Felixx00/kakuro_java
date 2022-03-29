@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Controladores/Tests/DriverSolve.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_e912ff623dc0459f90a60a5f09bfb195.html">Controladores</a></li><li class="navelem"><a class="el" href="dir_193eb194cd1a4852bee6e5dbda1f11bc.html">Tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DriverSolve.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_driver_solve_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>Dominio.Controladores.Tests;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.lang.Exception;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_controladores.html">Controladores</a>.<a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html">SolveValida</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_clases.html">Clases</a>.<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html">kakuro</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_controladores.html">Controladores</a>.<a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html">LeerEscribir</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html">   16</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html">DriverSolve</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#a02e767d8f41d18ff4df7cd2e735040d6">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#a02e767d8f41d18ff4df7cd2e735040d6">testValidar</a>(<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html">kakuro</a> k) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html">SolveValida</a> s = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html">SolveValida</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html#adb0a397b643431cd2e9cdd1a93fd0405">initialize</a>(k);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html#ad35257db31bf9ab943d674a88e1ae388">valida</a>(0, 0, k);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> num = s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html#a9b23824a0df2b65fa0f6736e861c68e0">getnumsolucions</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html#a74034848c964b5f8ed18208bb28d15d2">solve</a>(0, 0, k);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> num;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#acfc0a94855df08f1ff69bbbec2f9e143">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#acfc0a94855df08f1ff69bbbec2f9e143">main</a> (String [] args) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Scanner s = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        System.out.println(<span class="stringliteral">&quot;1.Elegir kakuro&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        System.out.println(<span class="stringliteral">&quot;-1.Salir&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html">LeerEscribir</a> l = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html">LeerEscribir</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">int</span> op = s.nextInt();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html">kakuro</a> k;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html">SolveValida</a> so = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_solve_valida.html">SolveValida</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">while</span>(op != -1) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span>(op == 1) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                k = l.<a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html#ad588b07114be3577d7e4c0694fbee0ae">leerkakurotxt</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">int</span> op2;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                System.out.println(<span class="stringliteral">&quot;1.Validar este kakuro&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                System.out.println(<span class="stringliteral">&quot;-1.Atrás&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                op2 = s.nextInt();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">while</span>(op2 != -1) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="comment">//Validar</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <span class="keywordflow">if</span>(op2 == 1) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        <span class="keywordtype">int</span> sols;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        sols = <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#a02e767d8f41d18ff4df7cd2e735040d6">testValidar</a>(k);        </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        <span class="keywordflow">if</span>(sols == 0){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            System.out.println(<span class="stringliteral">&quot;Este Kakuro no tiene solución!&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                            l.<a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html#a5133ec4489992d1fe9c02d65f1ac3db7">escribirkakuro</a>(k, 0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        <span class="keywordflow">if</span>(sols == 1) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                            System.out.println(<span class="stringliteral">&quot;Este Kakuro tiene una solución única. &quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                            l.<a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html#a5133ec4489992d1fe9c02d65f1ac3db7">escribirkakuro</a>(k, 1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="keywordflow">if</span>(sols==2){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                            System.out.println(<span class="stringliteral">&quot;Este Kakuro tiene más de una solución&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                             l.<a class="code" href="class_dominio_1_1_controladores_1_1_leer_escribir.html#a5133ec4489992d1fe9c02d65f1ac3db7">escribirkakuro</a>(k, 1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        System.out.println(<span class="stringliteral">&quot;1.Validar este kakuro&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        System.out.println(<span class="stringliteral">&quot;-1.Atrás&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        op2 = s.nextInt();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_html_a02e767d8f41d18ff4df7cd2e735040d6"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#a02e767d8f41d18ff4df7cd2e735040d6">Dominio.Controladores.Tests.DriverSolve.testValidar</a></div><div class="ttdeci">static int testValidar(kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_solve_8java_source.html#l00023">DriverSolve.java:23</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_valida_html_ad35257db31bf9ab943d674a88e1ae388"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve_valida.html#ad35257db31bf9ab943d674a88e1ae388">Dominio.Controladores.SolveValida.valida</a></div><div class="ttdeci">boolean valida(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_valida_8java_source.html#l00205">SolveValida.java:205</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html">Dominio.Clases.kakuro</a></div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00011">kakuro.java:11</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_valida_html_a74034848c964b5f8ed18208bb28d15d2"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve_valida.html#a74034848c964b5f8ed18208bb28d15d2">Dominio.Controladores.SolveValida.solve</a></div><div class="ttdeci">boolean solve(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_valida_8java_source.html#l00122">SolveValida.java:122</a></div></div>
+<div class="ttc" id="anamespace_dominio_html"><div class="ttname"><a href="namespace_dominio.html">Dominio</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_valida_html_adb0a397b643431cd2e9cdd1a93fd0405"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve_valida.html#adb0a397b643431cd2e9cdd1a93fd0405">Dominio.Controladores.SolveValida.initialize</a></div><div class="ttdeci">void initialize(kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_valida_8java_source.html#l00055">SolveValida.java:55</a></div></div>
+<div class="ttc" id="anamespace_dominio_1_1_controladores_html"><div class="ttname"><a href="namespace_dominio_1_1_controladores.html">Dominio.Controladores</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00001">CtrlRankings.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_leer_escribir_html_a5133ec4489992d1fe9c02d65f1ac3db7"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_leer_escribir.html#a5133ec4489992d1fe9c02d65f1ac3db7">Dominio.Controladores.LeerEscribir.escribirkakuro</a></div><div class="ttdeci">void escribirkakuro(kakuro k, int solucion)</div><div class="ttdef"><b>Definition:</b> <a href="_leer_escribir_8java_source.html#l00187">LeerEscribir.java:187</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html">Dominio.Controladores.Tests.DriverSolve</a></div><div class="ttdef"><b>Definition:</b> <a href="_driver_solve_8java_source.html#l00016">DriverSolve.java:16</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_leer_escribir_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_leer_escribir.html">Dominio.Controladores.LeerEscribir</a></div><div class="ttdef"><b>Definition:</b> <a href="_leer_escribir_8java_source.html#l00020">LeerEscribir.java:20</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_valida_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve_valida.html">Dominio.Controladores.SolveValida</a></div><div class="ttdef"><b>Definition:</b> <a href="_solve_valida_8java_source.html#l00017">SolveValida.java:17</a></div></div>
+<div class="ttc" id="anamespace_dominio_1_1_clases_html"><div class="ttname"><a href="namespace_dominio_1_1_clases.html">Dominio.Clases</a></div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00001">Blanca.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_html_acfc0a94855df08f1ff69bbbec2f9e143"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve.html#acfc0a94855df08f1ff69bbbec2f9e143">Dominio.Controladores.Tests.DriverSolve.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_solve_8java_source.html#l00034">DriverSolve.java:34</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_leer_escribir_html_ad588b07114be3577d7e4c0694fbee0ae"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_leer_escribir.html#ad588b07114be3577d7e4c0694fbee0ae">Dominio.Controladores.LeerEscribir.leerkakurotxt</a></div><div class="ttdeci">kakuro leerkakurotxt()</div><div class="ttdef"><b>Definition:</b> <a href="_leer_escribir_8java_source.html#l00085">LeerEscribir.java:85</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_valida_html_a9b23824a0df2b65fa0f6736e861c68e0"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve_valida.html#a9b23824a0df2b65fa0f6736e861c68e0">Dominio.Controladores.SolveValida.getnumsolucions</a></div><div class="ttdeci">int getnumsolucions()</div><div class="ttdef"><b>Definition:</b> <a href="_solve_valida_8java_source.html#l00048">SolveValida.java:48</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

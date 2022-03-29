@@ -1,0 +1,303 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_partida}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Partida}
+\label{class_dominio_1_1_controladores_1_1_partida}\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a2e4fa9e0d3e6f1761b485d0aed4c82ca}{Partida}} ()
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_ae496175b801422ddb16b8e1c6380d0df}{Partida}} (long tiempo)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a9fc5799d7aa289df8fdc17e8aac51ba6}{partida}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k, int x, int y, int cambio)
+\item 
+Boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a2d57af286dab142b09788224a4d9ddc3}{resuelto}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a20323189335a93af0465ff9470219143}{comprovar\+Num}} (int cambio, int x, int y)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}{consultar\+JugableF}} (int x, int y)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}{consultar\+JugableC}} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tablero\+Activo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase encargada de las funciones relativas al caso de uso Jugar \begin{DoxyAuthor}{Autor}
+Marti Westermeyer 
+\end{DoxyAuthor}
+
+
+Definición en la línea 20 del archivo Partida.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_a2e4fa9e0d3e6f1761b485d0aed4c82ca}\label{class_dominio_1_1_controladores_1_1_partida_a2e4fa9e0d3e6f1761b485d0aed4c82ca}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!Partida@{Partida}}
+\index{Partida@{Partida}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{Partida()}{Partida()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dominio.\+Controladores.\+Partida.\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creadora de \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida}{Partida}} vacia 
+
+Definición en la línea 32 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                       \{}
+\DoxyCodeLine{33         }
+\DoxyCodeLine{34     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_ae496175b801422ddb16b8e1c6380d0df}\label{class_dominio_1_1_controladores_1_1_partida_ae496175b801422ddb16b8e1c6380d0df}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!Partida@{Partida}}
+\index{Partida@{Partida}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{Partida()}{Partida()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dominio.\+Controladores.\+Partida.\+Partida (\begin{DoxyParamCaption}\item[{long}]{tiempo }\end{DoxyParamCaption})}
+
+Creadora de \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida}{Partida}} con tiempo 
+\begin{DoxyParams}{Parámetros}
+{\em tiempo} & tiempo de resolucion \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 39 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                  \{}
+\DoxyCodeLine{40         this.tiempo = tiempo;}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_a20323189335a93af0465ff9470219143}\label{class_dominio_1_1_controladores_1_1_partida_a20323189335a93af0465ff9470219143}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!comprovarNum@{comprovarNum}}
+\index{comprovarNum@{comprovarNum}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{comprovarNum()}{comprovarNum()}}
+{\footnotesize\ttfamily Boolean Dominio.\+Controladores.\+Partida.\+comprovar\+Num (\begin{DoxyParamCaption}\item[{int}]{cambio,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba que el número introducido cumple con las restricciones 
+\begin{DoxyParams}{Parámetros}
+{\em cambio} & Numero nuevo a escribir \\
+\hline
+{\em x} & Índice de fila \\
+\hline
+{\em y} & Índice de columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el número se puede escribir en esa posicion, en caso contrario False 
+\end{DoxyReturn}
+
+
+Definición en la línea 83 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                            \{}
+\DoxyCodeLine{84         \textcolor{keywordtype}{int} jugableF = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}{consultarJugableF}}(x,y);}
+\DoxyCodeLine{85         \textcolor{keywordtype}{int} jugableC = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}{consultarJugableC}}(x,y);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87         \textcolor{comment}{//fila}}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (!(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[x][jugableF]).add\_setfila(cambio))) \{}
+\DoxyCodeLine{89             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         \textcolor{comment}{//columna}}
+\DoxyCodeLine{93         \textcolor{keywordflow}{if} (!(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[jugableC][y]).add\_setcol(cambio))) \{}
+\DoxyCodeLine{94             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96         }
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (!(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[x][jugableF]).sumafila(\textcolor{keyword}{false})) || }
+\DoxyCodeLine{98                 !(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[jugableC][y]).sumacol(\textcolor{keyword}{false}))) \{}
+\DoxyCodeLine{99             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{102     \}   }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}\label{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!consultarJugableC@{consultarJugableC}}
+\index{consultarJugableC@{consultarJugableC}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{consultarJugableC()}{consultarJugableC()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Partida.\+consultar\+JugableC (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla Jugable de su respectiva columna 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la Jugable, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 123 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                                                  \{}
+\DoxyCodeLine{124         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = x; j >= 0; -\/-\/j) \{}
+\DoxyCodeLine{125             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[j][y].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \textcolor{keywordflow}{return} j;}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{128     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}\label{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!consultarJugableF@{consultarJugableF}}
+\index{consultarJugableF@{consultarJugableF}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{consultarJugableF()}{consultarJugableF()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Partida.\+consultar\+JugableF (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla Jugable de su respectiva fila 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la Jugable, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 111 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                                  \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = y; i >= 0; -\/-\/i) \{}
+\DoxyCodeLine{113             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[x][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{116     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_a9fc5799d7aa289df8fdc17e8aac51ba6}\label{class_dominio_1_1_controladores_1_1_partida_a9fc5799d7aa289df8fdc17e8aac51ba6}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!partida@{partida}}
+\index{partida@{partida}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{partida()}{partida()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Partida.\+partida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{cambio }\end{DoxyParamCaption})}
+
+Inicia una partida con un determinado kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro a jugar \\
+\hline
+{\em x} & fila de la casilla a cambiar \\
+\hline
+{\em y} & columna de la casilla a cambiar \\
+\hline
+{\em cambio} & numero a cambiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si el cambio propuesto es correcto 
+\end{DoxyReturn}
+
+
+Definición en la línea 51 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                                                \{}
+\DoxyCodeLine{52         }
+\DoxyCodeLine{53         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{54         \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{55         \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m; ++j) \{}
+\DoxyCodeLine{59                 \textcolor{keywordflow}{if} (i != x || j != y) \{}
+\DoxyCodeLine{60                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero() != 0) \{}
+\DoxyCodeLine{61                         \textcolor{keywordtype}{int} jugableF = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}{consultarJugableF}}(i,j);}
+\DoxyCodeLine{62                         \textcolor{keywordtype}{int} jugableC = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}{consultarJugableC}}(i,j);}
+\DoxyCodeLine{63                         ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][jugableF]).add\_setfila(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero());}
+\DoxyCodeLine{64                         ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[jugableC][j]).add\_setcol(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero());}
+\DoxyCodeLine{65                     \}}
+\DoxyCodeLine{66                 \}}
+\DoxyCodeLine{67             \}}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a20323189335a93af0465ff9470219143}{comprovarNum}}(cambio,x ,y))) \{}
+\DoxyCodeLine{71             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{74     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_a2d57af286dab142b09788224a4d9ddc3}\label{class_dominio_1_1_controladores_1_1_partida_a2d57af286dab142b09788224a4d9ddc3}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!resuelto@{resuelto}}
+\index{resuelto@{resuelto}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{resuelto()}{resuelto()}}
+{\footnotesize\ttfamily Boolean Dominio.\+Controladores.\+Partida.\+resuelto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Comprueba que el kakuro está completo y correcto 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro a jugar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el kakuro está resuelto 
+\end{DoxyReturn}
+
+
+Definición en la línea 135 del archivo Partida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                       \{}
+\DoxyCodeLine{136         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{137         \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{138         \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{139         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{140             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m; ++j) \{}
+\DoxyCodeLine{141                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero() != 0) \{}
+\DoxyCodeLine{142                         \textcolor{keywordtype}{int} jugableF = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a7645f009a8f6b8b72a232bd625163c32}{consultarJugableF}}(i,j);}
+\DoxyCodeLine{143                         \textcolor{keywordtype}{int} jugableC = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_af190ddc374f3ee028451ef79ba2c1bfc}{consultarJugableC}}(i,j);}
+\DoxyCodeLine{144                         ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][jugableF]).add\_setfila(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero());}
+\DoxyCodeLine{145                         ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[jugableC][j]).add\_setcol(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).getNumero());}
+\DoxyCodeLine{146                     \}}
+\DoxyCodeLine{147                 }
+\DoxyCodeLine{148             \}}
+\DoxyCodeLine{149         \}}
+\DoxyCodeLine{150         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{151             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m; ++j) \{}
+\DoxyCodeLine{152                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) \&\&}
+\DoxyCodeLine{153                         !((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}{tableroActivo}}[i][j]).comprSumas()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{154             \}}
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{156         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{157     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}\label{class_dominio_1_1_controladores_1_1_partida_aa39af2cfdc6aad8432ce1e97962a80bf}} 
+\index{Dominio.Controladores.Partida@{Dominio.Controladores.Partida}!tableroActivo@{tableroActivo}}
+\index{tableroActivo@{tableroActivo}!Dominio.Controladores.Partida@{Dominio.Controladores.Partida}}
+\doxysubsubsection{\texorpdfstring{tableroActivo}{tableroActivo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Dominio.\+Controladores.\+Partida.\+tablero\+Activo\hspace{0.3cm}{\ttfamily [private]}}
+
+Matriz de tipo Cell para la partida actual 
+
+Definición en la línea 24 del archivo Partida.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_dominio_2_controladores_2_partida_8java}{Partida.\+java}}\end{DoxyCompactItemize}

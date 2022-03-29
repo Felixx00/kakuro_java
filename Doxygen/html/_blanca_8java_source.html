@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Clases/Blanca.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_a1e234000a1450d2570688accbe96cc7.html">Clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Blanca.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_blanca_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_dominio_1_1_clases.html">    1</a></span>&#160;<span class="keyword">package </span>Dominio.Clases;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a> <span class="keyword">extends</span> <a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">   13</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">numero</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">   18</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">numero_correcto</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">   23</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">numero_fila</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">   27</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">numero_columna</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">   32</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">celdas_fila</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">   38</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">celdas_columna</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a82339875f9d06496f222e3ea0f23b3bd">   41</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a82339875f9d06496f222e3ea0f23b3bd">Blanca</a>(){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#ab1dbf28683ba6a5d8fd02cb16dc6a508">   49</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ab1dbf28683ba6a5d8fd02cb16dc6a508">Blanca</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">numero</a>, <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">numero_correcto</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      this.numero = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">numero</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      this.numero_correcto = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">numero_correcto</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#ad995165c7b0db12d15cb1a8b67a91910">   59</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ad995165c7b0db12d15cb1a8b67a91910">getNumero</a>(){</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">numero</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a2626ed0190c8024c016b07f3a658bfde">   67</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a2626ed0190c8024c016b07f3a658bfde">getNumeroCorrecto</a>(){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> this.<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">numero_correcto</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a633f5d9a2175f7c5293413045426e665">   75</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a633f5d9a2175f7c5293413045426e665">setNumero</a>(<span class="keywordtype">int</span> x){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">if</span>(x &lt; 10 &amp;&amp; x &gt;= 0) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">numero</a> = x;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a9256ba92f7e5b292790c24ff329494df">   86</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a9256ba92f7e5b292790c24ff329494df">setNumeroCorrecto</a>(<span class="keywordtype">int</span> y){</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">if</span>(y &lt; 10 &amp;&amp; y &gt;= 0) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          this.numero_correcto = y;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#aae9bb55d47cb35c3eb74d159a6dcfebc">   96</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#aae9bb55d47cb35c3eb74d159a6dcfebc">getNumero_fila</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">numero_fila</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#acdd5c87201c7d6f77078975ef29b2052">  104</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#acdd5c87201c7d6f77078975ef29b2052">setNumero_fila</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">numero_fila</a>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        this.numero_fila = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">numero_fila</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#adeecff9f7da51c4d539fe4ee8149a935">  111</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#adeecff9f7da51c4d539fe4ee8149a935">getNumero_columna</a>() {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">numero_columna</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a6349ad0af381ae6551bdbfcb9ce67383">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a6349ad0af381ae6551bdbfcb9ce67383">setNumero_columna</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">numero_columna</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        this.numero_columna = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">numero_columna</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a814dc5d5877f3b7a30b2fa83ecc16bbb">  126</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a814dc5d5877f3b7a30b2fa83ecc16bbb">getCeldas_fila</a>() {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">celdas_fila</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a53c8f5aacaec39ad402adff6e2d40bb1">  133</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a53c8f5aacaec39ad402adff6e2d40bb1">setCeldas_fila</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">celdas_fila</a>) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        this.celdas_fila = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">celdas_fila</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a53a15dc3c30288073f2c694cffa63c6e">  140</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a53a15dc3c30288073f2c694cffa63c6e">getCeldas_columna</a>() {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">celdas_columna</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_blanca.html#a55e8e58c5a35bdf58c9fd9a257263e5f">  147</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a55e8e58c5a35bdf58c9fd9a257263e5f">setCeldas_columna</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">celdas_columna</a>) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        this.celdas_columna = <a class="code" href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">celdas_columna</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_acf23463a3500782ae6e4bb422e27cbbe"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#acf23463a3500782ae6e4bb422e27cbbe">Dominio.Clases.Blanca.numero</a></div><div class="ttdeci">int numero</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00013">Blanca.java:13</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_acd53abf11bbbd0dfbe596c262c803c83"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#acd53abf11bbbd0dfbe596c262c803c83">Dominio.Clases.Blanca.numero_correcto</a></div><div class="ttdeci">int numero_correcto</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00018">Blanca.java:18</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_ab1dbf28683ba6a5d8fd02cb16dc6a508"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#ab1dbf28683ba6a5d8fd02cb16dc6a508">Dominio.Clases.Blanca.Blanca</a></div><div class="ttdeci">Blanca(int numero, int numero_correcto)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00049">Blanca.java:49</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_ad3bbcf2bdd3feb5c4f3ba9ee607e3683"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#ad3bbcf2bdd3feb5c4f3ba9ee607e3683">Dominio.Clases.Blanca.numero_columna</a></div><div class="ttdeci">int numero_columna</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00027">Blanca.java:27</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a2626ed0190c8024c016b07f3a658bfde"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a2626ed0190c8024c016b07f3a658bfde">Dominio.Clases.Blanca.getNumeroCorrecto</a></div><div class="ttdeci">int getNumeroCorrecto()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00067">Blanca.java:67</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a814dc5d5877f3b7a30b2fa83ecc16bbb"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a814dc5d5877f3b7a30b2fa83ecc16bbb">Dominio.Clases.Blanca.getCeldas_fila</a></div><div class="ttdeci">int getCeldas_fila()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00126">Blanca.java:126</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a82339875f9d06496f222e3ea0f23b3bd"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a82339875f9d06496f222e3ea0f23b3bd">Dominio.Clases.Blanca.Blanca</a></div><div class="ttdeci">Blanca()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00041">Blanca.java:41</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a9256ba92f7e5b292790c24ff329494df"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a9256ba92f7e5b292790c24ff329494df">Dominio.Clases.Blanca.setNumeroCorrecto</a></div><div class="ttdeci">void setNumeroCorrecto(int y)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00086">Blanca.java:86</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a633f5d9a2175f7c5293413045426e665"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a633f5d9a2175f7c5293413045426e665">Dominio.Clases.Blanca.setNumero</a></div><div class="ttdeci">void setNumero(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00075">Blanca.java:75</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html">Dominio.Clases.Blanca</a></div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00008">Blanca.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a53a15dc3c30288073f2c694cffa63c6e"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a53a15dc3c30288073f2c694cffa63c6e">Dominio.Clases.Blanca.getCeldas_columna</a></div><div class="ttdeci">int getCeldas_columna()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00140">Blanca.java:140</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_aae9bb55d47cb35c3eb74d159a6dcfebc"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#aae9bb55d47cb35c3eb74d159a6dcfebc">Dominio.Clases.Blanca.getNumero_fila</a></div><div class="ttdeci">int getNumero_fila()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00096">Blanca.java:96</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_acdd5c87201c7d6f77078975ef29b2052"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#acdd5c87201c7d6f77078975ef29b2052">Dominio.Clases.Blanca.setNumero_fila</a></div><div class="ttdeci">void setNumero_fila(int numero_fila)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00104">Blanca.java:104</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_adc63dbc486eaa07f88003bb9adfadeca"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#adc63dbc486eaa07f88003bb9adfadeca">Dominio.Clases.Blanca.numero_fila</a></div><div class="ttdeci">int numero_fila</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00023">Blanca.java:23</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a5b0a4e89ed415e4f6e60aadfb77e01ed"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a5b0a4e89ed415e4f6e60aadfb77e01ed">Dominio.Clases.Blanca.celdas_columna</a></div><div class="ttdeci">int celdas_columna</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00038">Blanca.java:38</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a7551007498b7391f840c41bb73b94931"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a7551007498b7391f840c41bb73b94931">Dominio.Clases.Blanca.celdas_fila</a></div><div class="ttdeci">int celdas_fila</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00032">Blanca.java:32</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a53c8f5aacaec39ad402adff6e2d40bb1"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a53c8f5aacaec39ad402adff6e2d40bb1">Dominio.Clases.Blanca.setCeldas_fila</a></div><div class="ttdeci">void setCeldas_fila(int celdas_fila)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00133">Blanca.java:133</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_adeecff9f7da51c4d539fe4ee8149a935"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#adeecff9f7da51c4d539fe4ee8149a935">Dominio.Clases.Blanca.getNumero_columna</a></div><div class="ttdeci">int getNumero_columna()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00111">Blanca.java:111</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_ad995165c7b0db12d15cb1a8b67a91910"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#ad995165c7b0db12d15cb1a8b67a91910">Dominio.Clases.Blanca.getNumero</a></div><div class="ttdeci">int getNumero()</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00059">Blanca.java:59</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_cell_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_cell.html">Dominio.Clases.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00007">Cell.java:7</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a6349ad0af381ae6551bdbfcb9ce67383"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a6349ad0af381ae6551bdbfcb9ce67383">Dominio.Clases.Blanca.setNumero_columna</a></div><div class="ttdeci">void setNumero_columna(int numero_columna)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00118">Blanca.java:118</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html_a55e8e58c5a35bdf58c9fd9a257263e5f"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html#a55e8e58c5a35bdf58c9fd9a257263e5f">Dominio.Clases.Blanca.setCeldas_columna</a></div><div class="ttdeci">void setCeldas_columna(int celdas_columna)</div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00147">Blanca.java:147</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

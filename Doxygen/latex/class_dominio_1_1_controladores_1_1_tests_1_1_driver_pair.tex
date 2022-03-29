@@ -1,0 +1,179 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Tests.\+Driver\+Pair}
+\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair}\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a8acfd512b46bdb709228e930286cb23a}{test\+Get\+Key}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aea8bfd7d1dcd0dbbd4c74067a56a6d92}{test\+Get\+Value}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a363d8dbafaffec5ebc24c1c43a21e45b}{test\+Set\+Key}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair, String key)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aa3a7a2b35096e7dc6dc1c2719a3018f0}{test\+Set\+Value}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair, Double value)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_ac5c93954a53838789cfae9412fb3e821}{main}} (String\mbox{[}$\,$\mbox{]} args)  throws Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver de Pair \begin{DoxyAuthor}{Autor}
+Rubén Montagut 
+\end{DoxyAuthor}
+
+
+Definición en la línea 12 del archivo Driver\+Pair.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_ac5c93954a53838789cfae9412fb3e821}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_ac5c93954a53838789cfae9412fb3e821}} 
+\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}!main@{main}}
+\index{main@{main}!Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Pair.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 54 del archivo Driver\+Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                          \{}
+\DoxyCodeLine{55         }
+\DoxyCodeLine{56         Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{57         }
+\DoxyCodeLine{58         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}();}
+\DoxyCodeLine{59         System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{60         System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetKey()"{}});}
+\DoxyCodeLine{61         System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetValue()"{}});}
+\DoxyCodeLine{62         System.out.println(\textcolor{stringliteral}{"{}3-\/ Test SetKey()"{}});}
+\DoxyCodeLine{63         System.out.println(\textcolor{stringliteral}{"{}4-\/ Test SetValue()"{}});}
+\DoxyCodeLine{64         System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{65   }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{int} op = s.nextInt();}
+\DoxyCodeLine{68         \textcolor{keywordflow}{while}(op != -\/1)\{}
+\DoxyCodeLine{69             \textcolor{keywordflow}{switch} (op) \{}
+\DoxyCodeLine{70                 \textcolor{keywordflow}{case} 1: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a8acfd512b46bdb709228e930286cb23a}{testGetKey}}(pair);}
+\DoxyCodeLine{71                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{72                 \textcolor{keywordflow}{case} 2: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aea8bfd7d1dcd0dbbd4c74067a56a6d92}{testGetValue}}(pair);}
+\DoxyCodeLine{73                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{74                 \textcolor{keywordflow}{case} 3: System.out.println(\textcolor{stringliteral}{"{}Introduce la key que quiere"{}});}
+\DoxyCodeLine{75                         String n = s.next();}
+\DoxyCodeLine{76                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a363d8dbafaffec5ebc24c1c43a21e45b}{testSetKey}}(pair,n);}
+\DoxyCodeLine{77                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{78                 \textcolor{keywordflow}{case} 4: System.out.println(\textcolor{stringliteral}{"{}Introduce el value que quiere"{}});}
+\DoxyCodeLine{79                         Double m = s.nextDouble();}
+\DoxyCodeLine{80                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aa3a7a2b35096e7dc6dc1c2719a3018f0}{testSetValue}}(pair,m);}
+\DoxyCodeLine{81                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{82               \}}
+\DoxyCodeLine{83                 System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{84                 System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetKey()"{}});}
+\DoxyCodeLine{85                 System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetValue()"{}});}
+\DoxyCodeLine{86                 System.out.println(\textcolor{stringliteral}{"{}3-\/ Test SetKey()"{}});}
+\DoxyCodeLine{87                 System.out.println(\textcolor{stringliteral}{"{}4-\/ Test SetValue()"{}});}
+\DoxyCodeLine{88                 System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{89                 op = s.nextInt();}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         }
+\DoxyCodeLine{92     }
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a8acfd512b46bdb709228e930286cb23a}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a8acfd512b46bdb709228e930286cb23a}} 
+\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}!testGetKey@{testGetKey}}
+\index{testGetKey@{testGetKey}!Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsubsection{\texorpdfstring{testGetKey()}{testGetKey()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Pair.\+test\+Get\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{pair }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Retorna la key de pair 
+\begin{DoxyParams}{Parámetros}
+{\em pair} & Pair \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 19 del archivo Driver\+Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                              \{}
+\DoxyCodeLine{20         System.out.println(pair.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_aa73a6d6255f222f5330baf3482a52ce9}{getKey}}());   }
+\DoxyCodeLine{21     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aea8bfd7d1dcd0dbbd4c74067a56a6d92}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aea8bfd7d1dcd0dbbd4c74067a56a6d92}} 
+\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}!testGetValue@{testGetValue}}
+\index{testGetValue@{testGetValue}!Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsubsection{\texorpdfstring{testGetValue()}{testGetValue()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Pair.\+test\+Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{pair }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Retorna el value de pair 
+\begin{DoxyParams}{Parámetros}
+{\em pair} & Pair \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 28 del archivo Driver\+Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                                                                \{}
+\DoxyCodeLine{29         System.out.println(pair.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_ac947d4c0e5dec6abf7a834b54f585dc6}{getValue}}());   }
+\DoxyCodeLine{30     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a363d8dbafaffec5ebc24c1c43a21e45b}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_a363d8dbafaffec5ebc24c1c43a21e45b}} 
+\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}!testSetKey@{testSetKey}}
+\index{testSetKey@{testSetKey}!Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsubsection{\texorpdfstring{testSetKey()}{testSetKey()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Pair.\+test\+Set\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{pair,  }\item[{String}]{key }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Configura la key del Pair 
+\begin{DoxyParams}{Parámetros}
+{\em pair} & Pair \\
+\hline
+{\em key} & String \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 38 del archivo Driver\+Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                                                          \{}
+\DoxyCodeLine{39         pair.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a14bb7d82c311fdb615a40d01f5ebcadd}{setKey}}(key);   }
+\DoxyCodeLine{40     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aa3a7a2b35096e7dc6dc1c2719a3018f0}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_pair_aa3a7a2b35096e7dc6dc1c2719a3018f0}} 
+\index{Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}!testSetValue@{testSetValue}}
+\index{testSetValue@{testSetValue}!Dominio.Controladores.Tests.DriverPair@{Dominio.Controladores.Tests.DriverPair}}
+\doxysubsubsection{\texorpdfstring{testSetValue()}{testSetValue()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Pair.\+test\+Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{pair,  }\item[{Double}]{value }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Configura el value del Pair 
+\begin{DoxyParams}{Parámetros}
+{\em pair} & Pair \\
+\hline
+{\em value} & Double \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 48 del archivo Driver\+Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                              \{}
+\DoxyCodeLine{49         pair.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a7b650bfa366ce55706b240ba939965b0}{setValue}}(value);   }
+\DoxyCodeLine{50     \};}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\+Tests/\mbox{\hyperlink{_driver_pair_8java}{Driver\+Pair.\+java}}\end{DoxyCompactItemize}

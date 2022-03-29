@@ -1,0 +1,151 @@
+\hypertarget{class_dominio_1_1_clases_1_1_partida}{}\doxysection{Referencia de la Clase Dominio.\+Clases.\+Partida}
+\label{class_dominio_1_1_clases_1_1_partida}\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_a3e251d42052caf986c43a87cbe9a3198}{jugar}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_a8b8100d55d075695a06be6888bf1562c}{comprovar\+Num}} (int cambio, int x, int y)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_aedf0757950285a4b6542b0ec09d8d735}{consultar\+JugableF}} (int x, int y)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_ad02cedad8fbd101a50d5554a40d84ad2}{consultar\+JugableC}} (int x, int y)
+\item 
+Boolean \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_a3b7f178bb16efa83afe476a4a6deeae5}{resuelto}} (int n, int m)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_partida_aae124f5963761a0ba288bc7cae484e22}{tablero\+Activo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase encargada de las funciones relativas al caso de uso Jugar \begin{DoxyAuthor}{Autor}
+Marti Westermeyer 
+\end{DoxyAuthor}
+
+
+Definición en la línea 13 del archivo Partida.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_a8b8100d55d075695a06be6888bf1562c}\label{class_dominio_1_1_clases_1_1_partida_a8b8100d55d075695a06be6888bf1562c}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!comprovarNum@{comprovarNum}}
+\index{comprovarNum@{comprovarNum}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{comprovarNum()}{comprovarNum()}}
+{\footnotesize\ttfamily Boolean Dominio.\+Clases.\+Partida.\+comprovar\+Num (\begin{DoxyParamCaption}\item[{int}]{cambio,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba que el número introducido cumple con las restricciones 
+\begin{DoxyParams}{Parámetros}
+{\em cambio} & Numero nuevo a escribir \\
+\hline
+{\em x} & Índice de fila \\
+\hline
+{\em y} & Índice de columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el número se puede escribir en esa posicion, en caso contrario False 
+\end{DoxyReturn}
+
+
+Definición en la línea 72 del archivo Partida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_ad02cedad8fbd101a50d5554a40d84ad2}\label{class_dominio_1_1_clases_1_1_partida_ad02cedad8fbd101a50d5554a40d84ad2}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!consultarJugableC@{consultarJugableC}}
+\index{consultarJugableC@{consultarJugableC}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{consultarJugableC()}{consultarJugableC()}}
+{\footnotesize\ttfamily int Dominio.\+Clases.\+Partida.\+consultar\+JugableC (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}} de su respectiva columna 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 127 del archivo Partida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_aedf0757950285a4b6542b0ec09d8d735}\label{class_dominio_1_1_clases_1_1_partida_aedf0757950285a4b6542b0ec09d8d735}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!consultarJugableF@{consultarJugableF}}
+\index{consultarJugableF@{consultarJugableF}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{consultarJugableF()}{consultarJugableF()}}
+{\footnotesize\ttfamily int Dominio.\+Clases.\+Partida.\+consultar\+JugableF (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}} de su respectiva fila 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 112 del archivo Partida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_a3e251d42052caf986c43a87cbe9a3198}\label{class_dominio_1_1_clases_1_1_partida_a3e251d42052caf986c43a87cbe9a3198}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!jugar@{jugar}}
+\index{jugar@{jugar}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{jugar()}{jugar()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Partida.\+jugar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Inicia una partida con un determinado kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro a jugar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 23 del archivo Partida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_a3b7f178bb16efa83afe476a4a6deeae5}\label{class_dominio_1_1_clases_1_1_partida_a3b7f178bb16efa83afe476a4a6deeae5}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!resuelto@{resuelto}}
+\index{resuelto@{resuelto}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{resuelto()}{resuelto()}}
+{\footnotesize\ttfamily Boolean Dominio.\+Clases.\+Partida.\+resuelto (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba que el kakuro está completo y correcto 
+\begin{DoxyParams}{Parámetros}
+{\em n} & Número de filas \\
+\hline
+{\em m} & Número de columnas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el kakuro está resuelto 
+\end{DoxyReturn}
+
+
+Definición en la línea 140 del archivo Partida.\+java.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_partida_aae124f5963761a0ba288bc7cae484e22}\label{class_dominio_1_1_clases_1_1_partida_aae124f5963761a0ba288bc7cae484e22}} 
+\index{Dominio.Clases.Partida@{Dominio.Clases.Partida}!tableroActivo@{tableroActivo}}
+\index{tableroActivo@{tableroActivo}!Dominio.Clases.Partida@{Dominio.Clases.Partida}}
+\doxysubsubsection{\texorpdfstring{tableroActivo}{tableroActivo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Dominio.\+Clases.\+Partida.\+tablero\+Activo\hspace{0.3cm}{\ttfamily [private]}}
+
+Matriz de tipo \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} para la partida actual 
+
+Definición en la línea 17 del archivo Partida.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Clases/Partida.\+java\end{DoxyCompactItemize}

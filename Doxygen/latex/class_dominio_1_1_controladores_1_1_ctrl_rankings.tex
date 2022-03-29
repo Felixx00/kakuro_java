@@ -1,0 +1,233 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Ctrl\+Rankings}
+\label{class_dominio_1_1_controladores_1_1_ctrl_rankings}\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a1f891212028e8e3b01774ba105349c43}{get\+Num\+Rankings}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ce24dd0c44361d1fd1fabe9661ee341}{cargar\+\_\+ranking}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a7f351236a0aeb52dc1424b762ae758ce}{guardar\+Ranking}} (int id\+Kakuro, String nomJ, Double temps)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_af0715bd84b04376918f604c712afe723}{ver\+Ranking}} (int id\+Kakuro)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_aac60cc224445b4ba5dccb4c168f182cf}{ver\+Records}} (int id\+Kakuro)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a9c2bfc8995f87c829690a88ced5ad042}{end}} (int id\+Kakuro)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}} = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}$>$()
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a416f830d5e23d6149d6e1e4d1781cca9}{dirty}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controlador de Rankings \begin{DoxyAuthor}{Autor}
+Rubén Montagut 
+\end{DoxyAuthor}
+
+
+Definición en la línea 12 del archivo Ctrl\+Rankings.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ce24dd0c44361d1fd1fabe9661ee341}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ce24dd0c44361d1fd1fabe9661ee341}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!cargar\_ranking@{cargar\_ranking}}
+\index{cargar\_ranking@{cargar\_ranking}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{cargar\_ranking()}{cargar\_ranking()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Rankings.\+cargar\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Guarda en la lista los rankings del txt 
+
+Definición en la línea 39 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                  \{}
+\DoxyCodeLine{40         }
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} tam = CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{42         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} idKakuro = 1; idKakuro <= tam; ++idKakuro) \{}
+\DoxyCodeLine{43             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{44                 List<List<String>> aux = CtrlPersistencia.cargarRanking(idKakuro);}
+\DoxyCodeLine{45                 \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} r = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}();}
+\DoxyCodeLine{46                 \textcolor{keywordflow}{for} (List<String> fila : aux) \{}
+\DoxyCodeLine{47                     \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}();}
+\DoxyCodeLine{48                     p.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a14bb7d82c311fdb615a40d01f5ebcadd}{setKey}}(fila.get(0));}
+\DoxyCodeLine{49                     p.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a7b650bfa366ce55706b240ba939965b0}{setValue}}(Double.valueOf(fila.get(1)));}
+\DoxyCodeLine{50                     r.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a01dbd6145c0d5e6f5fc9a8f59f745dd6}{afegirTemps}}(p);}
+\DoxyCodeLine{51                 \}}
+\DoxyCodeLine{52                 this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.add(r);}
+\DoxyCodeLine{53                 \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.get((idKakuro-\/1)).setRecords();}
+\DoxyCodeLine{54                 }
+\DoxyCodeLine{55             \}}
+\DoxyCodeLine{56             \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{57                 System.out.println(e);}
+\DoxyCodeLine{58             \} }
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a9c2bfc8995f87c829690a88ced5ad042}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a9c2bfc8995f87c829690a88ced5ad042}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!end@{end}}
+\index{end@{end}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Rankings.\+end (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Función para modificar el fichero si ha habido cambios 
+
+Definición en la línea 107 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                    \{}
+\DoxyCodeLine{108         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a416f830d5e23d6149d6e1e4d1781cca9}{dirty}}) \{}
+\DoxyCodeLine{109             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{110                 CtrlPersistencia.guardarRanking(this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.get((idKakuro-\/1)).getRanking(), idKakuro);}
+\DoxyCodeLine{111             \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{112                 e.printStackTrace();}
+\DoxyCodeLine{113             \}}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a1f891212028e8e3b01774ba105349c43}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a1f891212028e8e3b01774ba105349c43}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!getNumRankings@{getNumRankings}}
+\index{getNumRankings@{getNumRankings}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{getNumRankings()}{getNumRankings()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Ctrl\+Rankings.\+get\+Num\+Rankings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el numero de rankings en rankings \begin{DoxyReturn}{Devuelve}
+Numero de rankings 
+\end{DoxyReturn}
+
+
+Definición en la línea 32 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                 \{}
+\DoxyCodeLine{33         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.size();}
+\DoxyCodeLine{34     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a7f351236a0aeb52dc1424b762ae758ce}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a7f351236a0aeb52dc1424b762ae758ce}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!guardarRanking@{guardarRanking}}
+\index{guardarRanking@{guardarRanking}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{guardarRanking()}{guardarRanking()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Rankings.\+guardar\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro,  }\item[{String}]{nomJ,  }\item[{Double}]{temps }\end{DoxyParamCaption})}
+
+Añade el nombre y tiempo pasado por parámetro al ranking del kakuro correspondiente 
+\begin{DoxyParams}{Parámetros}
+{\em id\+Kakuro} & id del kakuro \\
+\hline
+{\em nomJ} & Nombre del Usuario \\
+\hline
+{\em temps} & Tiempo de la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 69 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                                         \{}
+\DoxyCodeLine{70         idKakuro-\/=1;}
+\DoxyCodeLine{71         this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.get(idKakuro).guardarRanking(nomJ, temps);}
+\DoxyCodeLine{72         this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a416f830d5e23d6149d6e1e4d1781cca9}{dirty}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{73         idKakuro+=1;}
+\DoxyCodeLine{74         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a9c2bfc8995f87c829690a88ced5ad042}{end}}(idKakuro);}
+\DoxyCodeLine{75     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_af0715bd84b04376918f604c712afe723}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_af0715bd84b04376918f604c712afe723}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!verRanking@{verRanking}}
+\index{verRanking@{verRanking}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{verRanking()}{verRanking()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Controladores.\+Ctrl\+Rankings.\+ver\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})}
+
+Consulta un único Ranking 
+\begin{DoxyParams}{Parámetros}
+{\em id\+Kakuro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Ranking del kakuro seleccionado 
+\end{DoxyReturn}
+
+
+Definición en la línea 83 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                \{}
+\DoxyCodeLine{84         idKakuro-\/=1;}
+\DoxyCodeLine{85         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} r = this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.get(idKakuro);}
+\DoxyCodeLine{86         List<Pair> aux = r.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aec8d36e4343b5710803e27b6b3c231f5}{getRanking}}();}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{88     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_aac60cc224445b4ba5dccb4c168f182cf}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_aac60cc224445b4ba5dccb4c168f182cf}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!verRecords@{verRecords}}
+\index{verRecords@{verRecords}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{verRecords()}{verRecords()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Controladores.\+Ctrl\+Rankings.\+ver\+Records (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})}
+
+Consulta los tres primeros Ranking 
+\begin{DoxyParams}{Parámetros}
+{\em id\+Kakuro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Records del kakuro seleccionado 
+\end{DoxyReturn}
+
+
+Definición en la línea 96 del archivo Ctrl\+Rankings.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                \{}
+\DoxyCodeLine{97         idKakuro-\/=1;}
+\DoxyCodeLine{98         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} r = this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}{rankings}}.get(idKakuro);}
+\DoxyCodeLine{99         List<Pair> aux = r.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a4e6d08750ef68b579f9d130ae5980f51}{getRecords}}();}
+\DoxyCodeLine{100         \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{101     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a416f830d5e23d6149d6e1e4d1781cca9}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a416f830d5e23d6149d6e1e4d1781cca9}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!dirty@{dirty}}
+\index{dirty@{dirty}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{dirty}{dirty}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Ctrl\+Rankings.\+dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+Booleano para saber si se ha modificado la tabla 
+
+Definición en la línea 24 del archivo Ctrl\+Rankings.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}\label{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ad92aad18bb2c61cb15a9162e8f08c5}} 
+\index{Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}!rankings@{rankings}}
+\index{rankings@{rankings}!Dominio.Controladores.CtrlRankings@{Dominio.Controladores.CtrlRankings}}
+\doxysubsubsection{\texorpdfstring{rankings}{rankings}}
+{\footnotesize\ttfamily Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}$>$ Dominio.\+Controladores.\+Ctrl\+Rankings.\+rankings = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de Rankings 
+
+Definición en la línea 18 del archivo Ctrl\+Rankings.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_ctrl_rankings_8java}{Ctrl\+Rankings.\+java}}\end{DoxyCompactItemize}

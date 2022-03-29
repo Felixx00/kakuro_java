@@ -1,0 +1,568 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Leer\+Escribir}
+\label{class_dominio_1_1_controladores_1_1_leer_escribir}\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crear\+Matriz}} (List$<$ List$<$ String $>$$>$ matriz\+\_\+auxiliar, int n, int m, int id)
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ad588b07114be3577d7e4c0694fbee0ae}{leerkakurotxt}} ()
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_a640dcdff0e968857514359abefc7f66e}{cargar\+\_\+partida}} ()
+\item 
+long \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ac1dd1b09b55adff5f396db153d5d4edf}{cargar\+\_\+tiempo}} ()
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ae768208d8d363246982f21b34dff2aa4}{leerkakurocmd}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_a5133ec4489992d1fe9c02d65f1ac3db7}{escribirkakuro}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k, int solucion)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_a1ff095dd598d198d4950f25b35c56b8f}{guardar\+\_\+kakuro}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ad3aabdb91a3b0230fefaba17de2ec57a}{convertir\+Kakuro\+Matriz}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k, int solucion)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_a57cd5aa46041d17861c35f2635516096}{guardar\+\_\+partida}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k, long tiempo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase encargada de las funciones relativas a las lecturas y escrituras \begin{DoxyAuthor}{Autor}
+Fèlix Forroll 
+\end{DoxyAuthor}
+
+
+Definición en la línea 20 del archivo Leer\+Escribir.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_a640dcdff0e968857514359abefc7f66e}\label{class_dominio_1_1_controladores_1_1_leer_escribir_a640dcdff0e968857514359abefc7f66e}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!cargar\_partida@{cargar\_partida}}
+\index{cargar\_partida@{cargar\_partida}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{cargar\_partida()}{cargar\_partida()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} Dominio.\+Controladores.\+Leer\+Escribir.\+cargar\+\_\+partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lee el fichero de la partida guardada \begin{DoxyReturn}{Devuelve}
+La partida guardada 
+\end{DoxyReturn}
+
+
+Definición en la línea 112 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                          \{}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114                 List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{115                         }
+\DoxyCodeLine{116                 \textcolor{keywordflow}{if} (!(CtrlPersistencia.hayGuardada())) \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}();}
+\DoxyCodeLine{117                 }
+\DoxyCodeLine{118                 \textcolor{keywordtype}{int} num\_kakuro = 0;}
+\DoxyCodeLine{119                 }
+\DoxyCodeLine{120                 matriz\_auxiliar = CtrlPersistencia.leerkakurotxt(num\_kakuro);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122                 \textcolor{comment}{//Pasa a int las dimensiones de la matriz}}
+\DoxyCodeLine{123                 \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_auxiliar.get(0).get(0));}
+\DoxyCodeLine{124                 \textcolor{keywordtype}{int} m = Integer.parseInt(matriz\_auxiliar.get(0).get(1));}
+\DoxyCodeLine{125                 }
+\DoxyCodeLine{126                 \textcolor{comment}{//System.out.println(matriz\_auxiliar.get(n+1).get(0));}}
+\DoxyCodeLine{127                 \textcolor{comment}{//x = Long.parseLong(matriz\_auxiliar.get(n+1).get(0));}}
+\DoxyCodeLine{128               }
+\DoxyCodeLine{129                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz\_auxiliar, n, m, num\_kakuro);    }
+\DoxyCodeLine{130           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_ac1dd1b09b55adff5f396db153d5d4edf}\label{class_dominio_1_1_controladores_1_1_leer_escribir_ac1dd1b09b55adff5f396db153d5d4edf}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!cargar\_tiempo@{cargar\_tiempo}}
+\index{cargar\_tiempo@{cargar\_tiempo}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{cargar\_tiempo()}{cargar\_tiempo()}}
+{\footnotesize\ttfamily long Dominio.\+Controladores.\+Leer\+Escribir.\+cargar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lee el tiempo de la partida guardada \begin{DoxyReturn}{Devuelve}
+Tiempo de partida 
+\end{DoxyReturn}
+
+
+Definición en la línea 136 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                       \{}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138                 List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{139                                 }
+\DoxyCodeLine{140                 \textcolor{keywordtype}{int} num\_kakuro = 0;}
+\DoxyCodeLine{141                 }
+\DoxyCodeLine{142                 matriz\_auxiliar = CtrlPersistencia.leerkakurotxt(num\_kakuro);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144                 \textcolor{comment}{//Pasa a int las dimensiones de la matriz}}
+\DoxyCodeLine{145                 \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_auxiliar.get(0).get(0));}
+\DoxyCodeLine{146                             }
+\DoxyCodeLine{147                 \textcolor{keywordtype}{long} x = Long.parseLong(matriz\_auxiliar.get(n+1).get(0));}
+\DoxyCodeLine{148               }
+\DoxyCodeLine{149                 \textcolor{keywordflow}{return} x;    }
+\DoxyCodeLine{150           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_ad3aabdb91a3b0230fefaba17de2ec57a}\label{class_dominio_1_1_controladores_1_1_leer_escribir_ad3aabdb91a3b0230fefaba17de2ec57a}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!convertirKakuroMatriz@{convertirKakuroMatriz}}
+\index{convertirKakuroMatriz@{convertirKakuroMatriz}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{convertirKakuroMatriz()}{convertirKakuroMatriz()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Dominio.\+Controladores.\+Leer\+Escribir.\+convertir\+Kakuro\+Matriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k,  }\item[{int}]{solucion }\end{DoxyParamCaption})}
+
+convierte un kakuro de tipo kakuro a matris de lista 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro ya inicializado \\
+\hline
+{\em solucion} & 0 si desea convertirlo con las blancas vacias, 1 con la solución del kakuro en las blancas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el kakuro convertido a matriz de listas 
+\end{DoxyReturn}
+
+
+Definición en la línea 304 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{304                                                                                   \{}
+\DoxyCodeLine{305               }
+\DoxyCodeLine{306               List<List<String>> matriz\_fichero = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{307               String tipo;}
+\DoxyCodeLine{308               \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{309               \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{310               \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] tablero = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312               String[] array\_tamaño = \{Integer.toString(n), Integer.toString(m)\};}
+\DoxyCodeLine{313               matriz\_fichero.add(Arrays.asList(array\_tamaño));}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{}
+\DoxyCodeLine{316                   String[] info\_casilla = \textcolor{keyword}{new} String[m];}
+\DoxyCodeLine{317                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++)\{}
+\DoxyCodeLine{318                       }
+\DoxyCodeLine{319                       \textcolor{comment}{//System.out.print(i + "{} "{}  + j);}}
+\DoxyCodeLine{320                     tipo = tablero[i][j].getClass().getSimpleName();}
+\DoxyCodeLine{321                     \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Jugable"{}}))\{}
+\DoxyCodeLine{322                       \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() == 0)\{}
+\DoxyCodeLine{323                         \textcolor{comment}{//fila}}
+\DoxyCodeLine{324                         info\_casilla[j] = ((\textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila()));}
+\DoxyCodeLine{325                       \}}
+\DoxyCodeLine{326                       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila() == 0)\{}
+\DoxyCodeLine{327                         \textcolor{comment}{//columna}}
+\DoxyCodeLine{328                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna());}
+\DoxyCodeLine{329                       \}}
+\DoxyCodeLine{330                       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{331                         \textcolor{comment}{//las dos}}
+\DoxyCodeLine{332                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() + \textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila());}
+\DoxyCodeLine{333                       \}}
+\DoxyCodeLine{334                     \}}
+\DoxyCodeLine{335                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}NoJugable"{}}))\{}
+\DoxyCodeLine{336                         info\_casilla[j] = \textcolor{stringliteral}{"{}*"{}};}
+\DoxyCodeLine{337                     \}}
+\DoxyCodeLine{338                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Blanca"{}}))\{}
+\DoxyCodeLine{339                         }
+\DoxyCodeLine{340                           \textcolor{keywordflow}{if}(solucion == 0) \{}
+\DoxyCodeLine{341                               \textcolor{keywordtype}{int} x = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumero();}
+\DoxyCodeLine{342                               \textcolor{keywordflow}{if}(x == 0)\{}
+\DoxyCodeLine{343                                   info\_casilla[j] = \textcolor{stringliteral}{"{}?"{}}; }
+\DoxyCodeLine{344                               \}}
+\DoxyCodeLine{345                               \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{346                                   info\_casilla[j] = String.valueOf(x);}
+\DoxyCodeLine{347                                 \}}
+\DoxyCodeLine{348                               \}}
+\DoxyCodeLine{349                           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(solucion == 1) \{}
+\DoxyCodeLine{350                               \textcolor{keywordtype}{int} x = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumeroCorrecto();}
+\DoxyCodeLine{351                               }
+\DoxyCodeLine{352                               \textcolor{keywordflow}{if}(x == 0)\{}
+\DoxyCodeLine{353                                   }
+\DoxyCodeLine{354                                   info\_casilla[j] = \textcolor{stringliteral}{"{}?"{}};}
+\DoxyCodeLine{355                               \}}
+\DoxyCodeLine{356                               \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{357                                   info\_casilla[j] = String.valueOf(x);}
+\DoxyCodeLine{358                                 \}}
+\DoxyCodeLine{359                           \}          }
+\DoxyCodeLine{360                         \}}
+\DoxyCodeLine{361                   \}}
+\DoxyCodeLine{362                   matriz\_fichero.add(Arrays.asList(info\_casilla));}
+\DoxyCodeLine{363                 \}}
+\DoxyCodeLine{364               \textcolor{keywordflow}{return} matriz\_fichero;}
+\DoxyCodeLine{365           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}\label{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!crearMatriz@{crearMatriz}}
+\index{crearMatriz@{crearMatriz}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{crearMatriz()}{crearMatriz()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} Dominio.\+Controladores.\+Leer\+Escribir.\+crear\+Matriz (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz\+\_\+auxiliar,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Inicializa el tablero con los parámetros correctos de la matriz auxiliar 
+\begin{DoxyParams}{Parámetros}
+{\em matriz\+\_\+auxiliar} & Matriz de String de formato leído \\
+\hline
+{\em n} & Número filas \\
+\hline
+{\em m} & Número columnas \\
+\hline
+{\em id} & Id del kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Kakuro inicializado 
+\end{DoxyReturn}
+
+
+Definición en la línea 31 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                                                          \{}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] tablero = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[n][m];}
+\DoxyCodeLine{33             \textcolor{keywordtype}{int} nb = 0;}
+\DoxyCodeLine{34             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < n+1; i++) \{}
+\DoxyCodeLine{35               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < m; j++) \{}
+\DoxyCodeLine{36             }
+\DoxyCodeLine{37                 String aux = matriz\_auxiliar.get(i).get(j);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39                 \textcolor{keywordflow}{if}(aux.charAt(0) == \textcolor{charliteral}{'*'})\{}
+\DoxyCodeLine{40                   tablero[i-\/1][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_no_jugable}{NoJugable}}(); \textcolor{comment}{//Negra(No jugable)}}
+\DoxyCodeLine{41                 \}}
+\DoxyCodeLine{42                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(aux.charAt(0) == \textcolor{charliteral}{'?'})\{   }
+\DoxyCodeLine{43                   tablero[i-\/1][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}(); \textcolor{comment}{//Blanca a llenar}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(aux.charAt(0) == \textcolor{charliteral}{'C'} || aux.charAt(0) == \textcolor{charliteral}{'F'})\{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49                     tablero[i-\/1][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}();}
+\DoxyCodeLine{50                   \textcolor{keywordflow}{if}(aux.charAt(0) == \textcolor{charliteral}{'C'} \&\& aux.contains(\textcolor{stringliteral}{"{}F"{}}))\{}
+\DoxyCodeLine{51                     aux = aux.replaceFirst(\textcolor{stringliteral}{"{}C"{}},\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{52                     String[] valores = aux.split(\textcolor{stringliteral}{"{}F"{}});}
+\DoxyCodeLine{53                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i-\/1][j]).setnum\_Fila(Integer.parseInt(valores[1]));}
+\DoxyCodeLine{54                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i-\/1][j]).setnum\_Columna(Integer.parseInt(valores[0]));}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56                   \}}
+\DoxyCodeLine{57                   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(aux.charAt(0) == \textcolor{charliteral}{'F'})\{}
+\DoxyCodeLine{58                     aux = aux.replaceFirst(\textcolor{stringliteral}{"{}F"{}},\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{59                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i-\/1][j]).setnum\_Fila(Integer.parseInt(aux));}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61                   \}}
+\DoxyCodeLine{62                   \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{63                     aux = aux.replaceFirst(\textcolor{stringliteral}{"{}C"{}},\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{64                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i-\/1][j]).setnum\_Columna(Integer.parseInt(aux));}
+\DoxyCodeLine{65                   \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68                 \}}
+\DoxyCodeLine{69                 \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{70                   tablero[i-\/1][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{71                   ++nb;}
+\DoxyCodeLine{72                   ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i-\/1][j]).setNumero(Integer.parseInt(matriz\_auxiliar.get(i).get(j)));}
+\DoxyCodeLine{73                 \}}
+\DoxyCodeLine{74               \}}
+\DoxyCodeLine{75             \}}
+\DoxyCodeLine{76             \textcolor{comment}{//System.out.println(n + "{} "{} + m + "{} "{} + nb + "{} "{} + id);}}
+\DoxyCodeLine{77             \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}(tablero, n, m, nb, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{78             \textcolor{keywordflow}{return} k;}
+\DoxyCodeLine{79           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_a5133ec4489992d1fe9c02d65f1ac3db7}\label{class_dominio_1_1_controladores_1_1_leer_escribir_a5133ec4489992d1fe9c02d65f1ac3db7}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!escribirkakuro@{escribirkakuro}}
+\index{escribirkakuro@{escribirkakuro}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{escribirkakuro()}{escribirkakuro()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Leer\+Escribir.\+escribirkakuro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k,  }\item[{int}]{solucion }\end{DoxyParamCaption})}
+
+Escribe un kakuro con el formato correcto por consola 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro ya inicializado \\
+\hline
+{\em solucion} & Equivale a 0 si lo queremos escribir sin resolver, 1-\/4 para escribir con solución \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 187 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{187                                                             \{}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189             String tipo;}
+\DoxyCodeLine{190             \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{191             \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{192             \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] tablero = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{193             }
+\DoxyCodeLine{194             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{}
+\DoxyCodeLine{195               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++)\{}
+\DoxyCodeLine{196                   \textcolor{comment}{//System.out.print(i + "{} "{}  + j);}}
+\DoxyCodeLine{197                 tipo = tablero[i][j].getClass().getSimpleName();}
+\DoxyCodeLine{198                 \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Jugable"{}}))\{}
+\DoxyCodeLine{199                   \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() == 0)\{}
+\DoxyCodeLine{200                     \textcolor{comment}{//fila}}
+\DoxyCodeLine{201                     System.out.print(\textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila());}
+\DoxyCodeLine{202                   \}}
+\DoxyCodeLine{203                   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila() == 0)\{}
+\DoxyCodeLine{204                     \textcolor{comment}{//columna}}
+\DoxyCodeLine{205                     System.out.print(\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna());}
+\DoxyCodeLine{206                   \}}
+\DoxyCodeLine{207                   \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{208                     \textcolor{comment}{//las dos}}
+\DoxyCodeLine{209                     System.out.print(\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() + \textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila());}
+\DoxyCodeLine{210                   \}}
+\DoxyCodeLine{211                   }
+\DoxyCodeLine{212                 \}}
+\DoxyCodeLine{213                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}NoJugable"{}}))\{}
+\DoxyCodeLine{214                   System.out.print(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{215                 \}}
+\DoxyCodeLine{216                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Blanca"{}}))\{}
+\DoxyCodeLine{217                     }
+\DoxyCodeLine{218                   \textcolor{keywordflow}{if}(solucion == 0) \{}
+\DoxyCodeLine{219                       \textcolor{keywordtype}{int} x = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumero();}
+\DoxyCodeLine{220                       \textcolor{keywordflow}{if}(x == 0)\{}
+\DoxyCodeLine{221                         System.out.print(\textcolor{stringliteral}{"{}?"{}});}
+\DoxyCodeLine{222                       \}}
+\DoxyCodeLine{223                       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{224                         System.out.print(x);}
+\DoxyCodeLine{225                         \}}
+\DoxyCodeLine{226                       \}}
+\DoxyCodeLine{227                   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(solucion == 1) \{}
+\DoxyCodeLine{228                       \textcolor{keywordtype}{int} x = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumeroCorrecto();}
+\DoxyCodeLine{229                       \textcolor{keywordflow}{if}(x == 0)\{}
+\DoxyCodeLine{230                         System.out.print(\textcolor{stringliteral}{"{}?"{}});}
+\DoxyCodeLine{231                       \}}
+\DoxyCodeLine{232                       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{233                         System.out.print(x);}
+\DoxyCodeLine{234                         \}}
+\DoxyCodeLine{235                   \}          }
+\DoxyCodeLine{236                 \}}
+\DoxyCodeLine{237                 System.out.print(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{238               \}}
+\DoxyCodeLine{239               System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{240             \}}
+\DoxyCodeLine{241             System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{242           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_a1ff095dd598d198d4950f25b35c56b8f}\label{class_dominio_1_1_controladores_1_1_leer_escribir_a1ff095dd598d198d4950f25b35c56b8f}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!guardar\_kakuro@{guardar\_kakuro}}
+\index{guardar\_kakuro@{guardar\_kakuro}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{guardar\_kakuro()}{guardar\_kakuro()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Leer\+Escribir.\+guardar\+\_\+kakuro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Almacena un kakuro en un nuevo fichero de Data/\+Kakuros/ 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro ya inicializado \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 249 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{249                                                \{}
+\DoxyCodeLine{250               List<List<String>> matriz\_fichero = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{251               String tipo;}
+\DoxyCodeLine{252               \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{253               \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{254               \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] tablero = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256               String[] array\_tamaño = \{Integer.toString(n), Integer.toString(m)\};}
+\DoxyCodeLine{257               matriz\_fichero.add(Arrays.asList(array\_tamaño));}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{}
+\DoxyCodeLine{260                   String[] info\_casilla = \textcolor{keyword}{new} String[m];}
+\DoxyCodeLine{261                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++)\{}
+\DoxyCodeLine{262                       }
+\DoxyCodeLine{263                       \textcolor{comment}{//System.out.print(i + "{} "{}  + j);}}
+\DoxyCodeLine{264                     tipo = tablero[i][j].getClass().getSimpleName();}
+\DoxyCodeLine{265                     \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Jugable"{}}))\{}
+\DoxyCodeLine{266                       \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() == 0)\{}
+\DoxyCodeLine{267                         \textcolor{comment}{//fila}}
+\DoxyCodeLine{268                         info\_casilla[j] = ((\textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila()));}
+\DoxyCodeLine{269                       \}}
+\DoxyCodeLine{270                       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila() == 0)\{}
+\DoxyCodeLine{271                         \textcolor{comment}{//columna}}
+\DoxyCodeLine{272                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna());}
+\DoxyCodeLine{273                       \}}
+\DoxyCodeLine{274                       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{275                         \textcolor{comment}{//las dos}}
+\DoxyCodeLine{276                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() + \textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila());}
+\DoxyCodeLine{277                       \}}
+\DoxyCodeLine{278                     \}}
+\DoxyCodeLine{279                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}NoJugable"{}}))\{}
+\DoxyCodeLine{280                         info\_casilla[j] = \textcolor{stringliteral}{"{}*"{}};}
+\DoxyCodeLine{281                     \}}
+\DoxyCodeLine{282                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Blanca"{}}))\{    }
+\DoxyCodeLine{283                         info\_casilla[j] = \textcolor{stringliteral}{"{}?"{}}; }
+\DoxyCodeLine{284                     \}}
+\DoxyCodeLine{285                     }
+\DoxyCodeLine{286                   \}}
+\DoxyCodeLine{287                   matriz\_fichero.add(Arrays.asList(info\_casilla));}
+\DoxyCodeLine{288                 \}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290               System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{291               }
+\DoxyCodeLine{292               \textcolor{keywordtype}{int} fileCount = CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{293               fileCount++;}
+\DoxyCodeLine{294               }
+\DoxyCodeLine{295               k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a46da21ce24fbceb645ea87231df7977c}{setid}}(fileCount);}
+\DoxyCodeLine{296               CtrlPersistencia.guardarkakuro(matriz\_fichero, fileCount);}
+\DoxyCodeLine{297           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_a57cd5aa46041d17861c35f2635516096}\label{class_dominio_1_1_controladores_1_1_leer_escribir_a57cd5aa46041d17861c35f2635516096}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!guardar\_partida@{guardar\_partida}}
+\index{guardar\_partida@{guardar\_partida}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{guardar\_partida()}{guardar\_partida()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Leer\+Escribir.\+guardar\+\_\+partida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k,  }\item[{long}]{tiempo }\end{DoxyParamCaption})}
+
+Guarda en fichero la partida 
+\begin{DoxyParams}{Parámetros}
+{\em tablero} & Tablero de la partida a guardar \\
+\hline
+{\em tiempo} & Tiempo de la partida a guardar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 372 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{372                                                              \{}
+\DoxyCodeLine{373               \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] tablero = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{374               \textcolor{keywordtype}{int} n = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{375               \textcolor{keywordtype}{int} m = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{376               List<List<String>> matriz\_fichero = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{377               String tipo;}
+\DoxyCodeLine{378               }
+\DoxyCodeLine{379               String[] array\_tamaño = \{Integer.toString(n), Integer.toString(m)\};}
+\DoxyCodeLine{380               matriz\_fichero.add(Arrays.asList(array\_tamaño));}
+\DoxyCodeLine{381               }
+\DoxyCodeLine{382               \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{}
+\DoxyCodeLine{383                   String[] info\_casilla = \textcolor{keyword}{new} String[m];}
+\DoxyCodeLine{384                   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < m; j++)\{}
+\DoxyCodeLine{385                       }
+\DoxyCodeLine{386                       \textcolor{comment}{//System.out.print(i + "{} "{}  + j);}}
+\DoxyCodeLine{387                     tipo = tablero[i][j].getClass().getSimpleName();}
+\DoxyCodeLine{388                     \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Jugable"{}}))\{}
+\DoxyCodeLine{389                       \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() == 0)\{}
+\DoxyCodeLine{390                         \textcolor{comment}{//fila}}
+\DoxyCodeLine{391                         info\_casilla[j] = ((\textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila()));}
+\DoxyCodeLine{392                       \}}
+\DoxyCodeLine{393                       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila() == 0)\{}
+\DoxyCodeLine{394                         \textcolor{comment}{//columna}}
+\DoxyCodeLine{395                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna());}
+\DoxyCodeLine{396                       \}}
+\DoxyCodeLine{397                       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{398                         \textcolor{comment}{//las dos}}
+\DoxyCodeLine{399                           info\_casilla[j] = (\textcolor{stringliteral}{"{}C"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Columna() + \textcolor{stringliteral}{"{}F"{}} + ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})tablero[i][j]).getnum\_Fila());}
+\DoxyCodeLine{400                       \}}
+\DoxyCodeLine{401                     \}}
+\DoxyCodeLine{402                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}NoJugable"{}}))\{}
+\DoxyCodeLine{403                         info\_casilla[j] = \textcolor{stringliteral}{"{}*"{}};}
+\DoxyCodeLine{404                     \}}
+\DoxyCodeLine{405                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tipo.equals(\textcolor{stringliteral}{"{}Blanca"{}}))\{   }
+\DoxyCodeLine{406                         \textcolor{keywordflow}{if}(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumero() == 0) \{}
+\DoxyCodeLine{407                             info\_casilla[j] = \textcolor{stringliteral}{"{}?"{}}; }
+\DoxyCodeLine{408                         \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{409                             info\_casilla[j] = (Integer.toString(((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})tablero[i][j]).getNumero()));}
+\DoxyCodeLine{410                         \}}
+\DoxyCodeLine{411                     \}}
+\DoxyCodeLine{412                   \}}
+\DoxyCodeLine{413                   matriz\_fichero.add(Arrays.asList(info\_casilla));}
+\DoxyCodeLine{414                 \}}
+\DoxyCodeLine{415               }
+\DoxyCodeLine{416               String[] segundos = \{Long.toString((tiempo))\};}
+\DoxyCodeLine{417               matriz\_fichero.add(Arrays.asList(segundos));}
+\DoxyCodeLine{418               }
+\DoxyCodeLine{419               System.out.println(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{420               }
+\DoxyCodeLine{421               CtrlPersistencia.guardarpartida(matriz\_fichero);}
+\DoxyCodeLine{422           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_ae768208d8d363246982f21b34dff2aa4}\label{class_dominio_1_1_controladores_1_1_leer_escribir_ae768208d8d363246982f21b34dff2aa4}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!leerkakurocmd@{leerkakurocmd}}
+\index{leerkakurocmd@{leerkakurocmd}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{leerkakurocmd()}{leerkakurocmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} Dominio.\+Controladores.\+Leer\+Escribir.\+leerkakurocmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lee un formato de kakuro introducido por la consola \begin{DoxyReturn}{Devuelve}
+Kakuro inicializado 
+\end{DoxyReturn}
+
+
+Definición en la línea 157 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157                                         \{}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159             List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{160             String line = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{161             Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{162             System.out.print(\textcolor{stringliteral}{"{}Introduce dimensiones: "{}});}
+\DoxyCodeLine{163             \textcolor{keywordtype}{int} n = s.nextInt();}
+\DoxyCodeLine{164             \textcolor{keywordtype}{int} m = s.nextInt();}
+\DoxyCodeLine{165              }
+\DoxyCodeLine{166              String dimensions = Integer.toString(n) + \textcolor{charliteral}{','} +  Integer.toString(m);}
+\DoxyCodeLine{167              \textcolor{comment}{//System.out.println(dimensions);}}
+\DoxyCodeLine{168              }
+\DoxyCodeLine{169              matriz\_auxiliar.add(Arrays.asList(dimensions));     }
+\DoxyCodeLine{170             System.out.print(\textcolor{stringliteral}{"{}Introduce kakuro: "{}});}
+\DoxyCodeLine{171             }
+\DoxyCodeLine{172              \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n ; ++i) \{}
+\DoxyCodeLine{173                 line = s.next();}
+\DoxyCodeLine{174                 String[] values = line.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{175                 matriz\_auxiliar.add(Arrays.asList(values));}
+\DoxyCodeLine{176                }
+\DoxyCodeLine{177              \}}
+\DoxyCodeLine{178              \textcolor{keywordtype}{int} fileCount = CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{179              \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz\_auxiliar, n, m, fileCount+1);}
+\DoxyCodeLine{180           \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_leer_escribir_ad588b07114be3577d7e4c0694fbee0ae}\label{class_dominio_1_1_controladores_1_1_leer_escribir_ad588b07114be3577d7e4c0694fbee0ae}} 
+\index{Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}!leerkakurotxt@{leerkakurotxt}}
+\index{leerkakurotxt@{leerkakurotxt}!Dominio.Controladores.LeerEscribir@{Dominio.Controladores.LeerEscribir}}
+\doxysubsubsection{\texorpdfstring{leerkakurotxt()}{leerkakurotxt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} Dominio.\+Controladores.\+Leer\+Escribir.\+leerkakurotxt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lee un formato de kakuro desde un fichero \begin{DoxyReturn}{Devuelve}
+Kakuro inicializado 
+\end{DoxyReturn}
+
+
+Definición en la línea 85 del archivo Leer\+Escribir.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                         \{}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87                 List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{88                 }
+\DoxyCodeLine{89                 \textcolor{keywordtype}{int} fileCount = CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{90                 \textcolor{keywordflow}{if} (fileCount == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}();}
+\DoxyCodeLine{91                 \textcolor{keywordtype}{int} num\_kakuro = 0;}
+\DoxyCodeLine{92                 Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{93                 }
+\DoxyCodeLine{94                 \textcolor{keywordflow}{while}(num\_kakuro > fileCount || num\_kakuro <= 0) \{}
+\DoxyCodeLine{95                     System.out.println(\textcolor{stringliteral}{"{}Elige numero de kakuro (1 -\/ "{}} + fileCount + \textcolor{stringliteral}{"{}):"{}});}
+\DoxyCodeLine{96                     num\_kakuro = s.nextInt();}
+\DoxyCodeLine{97                 \}}
+\DoxyCodeLine{98                 matriz\_auxiliar = CtrlPersistencia.leerkakurotxt(num\_kakuro);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100                 \textcolor{comment}{//Pasa a int las dimensiones de la matriz}}
+\DoxyCodeLine{101                 \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_auxiliar.get(0).get(0));}
+\DoxyCodeLine{102                 \textcolor{keywordtype}{int} m = Integer.parseInt(matriz\_auxiliar.get(0).get(1));}
+\DoxyCodeLine{103               }
+\DoxyCodeLine{104                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz\_auxiliar, n, m, num\_kakuro);    }
+\DoxyCodeLine{105           \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_leer_escribir_8java}{Leer\+Escribir.\+java}}\end{DoxyCompactItemize}

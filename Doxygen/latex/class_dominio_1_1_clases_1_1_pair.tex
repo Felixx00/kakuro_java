@@ -1,0 +1,178 @@
+\hypertarget{class_dominio_1_1_clases_1_1_pair}{}\doxysection{Referencia de la Clase Dominio.\+Clases.\+Pair}
+\label{class_dominio_1_1_clases_1_1_pair}\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+Diagrama de herencias de Dominio.\+Clases.\+Pair\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dominio_1_1_clases_1_1_pair}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_aa73a6d6255f222f5330baf3482a52ce9}{get\+Key}} ()
+\item 
+Double \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_ac947d4c0e5dec6abf7a834b54f585dc6}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a14bb7d82c311fdb615a40d01f5ebcadd}{set\+Key}} (String key)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a7b650bfa366ce55706b240ba939965b0}{set\+Value}} (Double value)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a8dc3b52d244b65918c53c862b2825f5f}{compare\+To}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} o)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a6a18505bd0865c39bdcdf373eb1ff3ed}{Key}}
+\item 
+Double \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}{Value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para guardar pares de valores \begin{DoxyAuthor}{Autor}
+Rubén Montagut 
+\end{DoxyAuthor}
+
+
+Definición en la línea 8 del archivo Pair.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_a8dc3b52d244b65918c53c862b2825f5f}\label{class_dominio_1_1_clases_1_1_pair_a8dc3b52d244b65918c53c862b2825f5f}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily int Dominio.\+Clases.\+Pair.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{o }\end{DoxyParamCaption})}
+
+Compara el valor del par actual con otro par. 
+\begin{DoxyParams}{Parámetros}
+{\em o} & El par que se va a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor que ha comparado del otro par. 
+\end{DoxyReturn}
+
+
+Definición en la línea 55 del archivo Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                  \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}{Value}}.compareTo(o.Value);}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_aa73a6d6255f222f5330baf3482a52ce9}\label{class_dominio_1_1_clases_1_1_pair_aa73a6d6255f222f5330baf3482a52ce9}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!getKey@{getKey}}
+\index{getKey@{getKey}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily String Dominio.\+Clases.\+Pair.\+get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta la clave del par. \begin{DoxyReturn}{Devuelve}
+La clave String del par. 
+\end{DoxyReturn}
+
+
+Definición en la línea 24 del archivo Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                            \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a6a18505bd0865c39bdcdf373eb1ff3ed}{Key}};}
+\DoxyCodeLine{26     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_ac947d4c0e5dec6abf7a834b54f585dc6}\label{class_dominio_1_1_clases_1_1_pair_ac947d4c0e5dec6abf7a834b54f585dc6}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!getValue@{getValue}}
+\index{getValue@{getValue}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily Double Dominio.\+Clases.\+Pair.\+get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta el valor del par. \begin{DoxyReturn}{Devuelve}
+El valor Double del par. 
+\end{DoxyReturn}
+
+
+Definición en la línea 31 del archivo Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                              \{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}{Value}};}
+\DoxyCodeLine{33     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_a14bb7d82c311fdb615a40d01f5ebcadd}\label{class_dominio_1_1_clases_1_1_pair_a14bb7d82c311fdb615a40d01f5ebcadd}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!setKey@{setKey}}
+\index{setKey@{setKey}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Pair.\+set\+Key (\begin{DoxyParamCaption}\item[{String}]{key }\end{DoxyParamCaption})}
+
+Asigna una clave al par. 
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave String para asignar como clave al par. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 38 del archivo Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                    \{}
+\DoxyCodeLine{39         this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a6a18505bd0865c39bdcdf373eb1ff3ed}{Key}} = key;}
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_a7b650bfa366ce55706b240ba939965b0}\label{class_dominio_1_1_clases_1_1_pair_a7b650bfa366ce55706b240ba939965b0}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!setValue@{setValue}}
+\index{setValue@{setValue}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Pair.\+set\+Value (\begin{DoxyParamCaption}\item[{Double}]{value }\end{DoxyParamCaption})}
+
+Asigna un valor al par. 
+\begin{DoxyParams}{Parámetros}
+{\em value} & Valor Double para asignar como valor al par. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 45 del archivo Pair.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                        \{}
+\DoxyCodeLine{46         this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}{Value}} = value;}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_a6a18505bd0865c39bdcdf373eb1ff3ed}\label{class_dominio_1_1_clases_1_1_pair_a6a18505bd0865c39bdcdf373eb1ff3ed}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!Key@{Key}}
+\index{Key@{Key}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily String Dominio.\+Clases.\+Pair.\+Key\hspace{0.3cm}{\ttfamily [private]}}
+
+String como clave primaria en el par. 
+
+Definición en la línea 13 del archivo Pair.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}\label{class_dominio_1_1_clases_1_1_pair_a20741841b3dcc4f18fb3a72e579527cc}} 
+\index{Dominio.Clases.Pair@{Dominio.Clases.Pair}!Value@{Value}}
+\index{Value@{Value}!Dominio.Clases.Pair@{Dominio.Clases.Pair}}
+\doxysubsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily Double Dominio.\+Clases.\+Pair.\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+Número decimal utilizado como valor en el par. 
+
+Definición en la línea 18 del archivo Pair.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Clases/\mbox{\hyperlink{_pair_8java}{Pair.\+java}}\end{DoxyCompactItemize}

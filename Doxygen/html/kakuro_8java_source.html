@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Clases/kakuro.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_a1e234000a1450d2570688accbe96cc7.html">Clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">kakuro.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="kakuro_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">package </span>Dominio.Clases;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_clases_1_1kakuro.html">kakuro</a>  {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">   15</a></span>&#160;  <span class="keyword">private</span> <a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>[][] <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">   19</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">   23</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">   27</a></span>&#160;  <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a81aa6b708570b15debb652f563d186f1">   31</a></span>&#160; <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a81aa6b708570b15debb652f563d186f1">identificador</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#ac56ebf346fc35668852dfd911aa212c3">   36</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ac56ebf346fc35668852dfd911aa212c3">kakuro</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#aa172e26082f67b3ceccfb6390e6689d8">   46</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#aa172e26082f67b3ceccfb6390e6689d8">kakuro</a>(<a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>[][] <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>, <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>, <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>, <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>, <span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      this.tablero = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      this.n = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      this.m = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      this.numeroBlancas = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      this.identificador= id;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#ae7d318d4785d34eedff639e710263893">   57</a></span>&#160;  <span class="keyword">public</span> <a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>[][] <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ae7d318d4785d34eedff639e710263893">getTablero</a>(){</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#ac42bc5b9309c8a39b89dc2e3d96d0736">   64</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ac42bc5b9309c8a39b89dc2e3d96d0736">getN</a>(){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a3b1c31239eb59883266c7539ee626fb2">   72</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a3b1c31239eb59883266c7539ee626fb2">getM</a>(){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a609ac4f9e39c702998ce175b0ade4c0c">   79</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a609ac4f9e39c702998ce175b0ade4c0c">getnumeroBlancas</a>(){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a9efd7325a0eddecc4db9240a29209517">   87</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a9efd7325a0eddecc4db9240a29209517">getid</a>(){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a81aa6b708570b15debb652f563d186f1">identificador</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a0f8fe86774daa432b91c38e669881f96">   95</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a0f8fe86774daa432b91c38e669881f96">setTablero</a>(<a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>[][]<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      this.tablero = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">tablero</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#ac6487ef9e9d7d1588ccb51acd037eeaa">  102</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ac6487ef9e9d7d1588ccb51acd037eeaa">setN</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      this.n = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">n</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a208cc85f56fee57f0935f1b98e773018">  110</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a208cc85f56fee57f0935f1b98e773018">setM</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>){</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      this.m = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">m</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a7b1315e765e6550b3149b5ded40cef3a">  117</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a7b1315e765e6550b3149b5ded40cef3a">setnumeroBlancas</a>(<span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>){</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      this.numeroBlancas = <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">numeroBlancas</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1kakuro.html#a46da21ce24fbceb645ea87231df7977c">  125</a></span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a46da21ce24fbceb645ea87231df7977c">setid</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>){</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      this.identificador = id;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a208cc85f56fee57f0935f1b98e773018"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a208cc85f56fee57f0935f1b98e773018">Dominio.Clases.kakuro.setM</a></div><div class="ttdeci">void setM(int m)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00110">kakuro.java:110</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ac42bc5b9309c8a39b89dc2e3d96d0736"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ac42bc5b9309c8a39b89dc2e3d96d0736">Dominio.Clases.kakuro.getN</a></div><div class="ttdeci">int getN()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00064">kakuro.java:64</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a04d63b479d6b9f55a82fcf700a0d38c8"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a04d63b479d6b9f55a82fcf700a0d38c8">Dominio.Clases.kakuro.n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00019">kakuro.java:19</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html">Dominio.Clases.kakuro</a></div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00011">kakuro.java:11</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ac6487ef9e9d7d1588ccb51acd037eeaa"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ac6487ef9e9d7d1588ccb51acd037eeaa">Dominio.Clases.kakuro.setN</a></div><div class="ttdeci">void setN(int n)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00102">kakuro.java:102</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a46da21ce24fbceb645ea87231df7977c"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a46da21ce24fbceb645ea87231df7977c">Dominio.Clases.kakuro.setid</a></div><div class="ttdeci">void setid(int id)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00125">kakuro.java:125</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a0f8fe86774daa432b91c38e669881f96"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a0f8fe86774daa432b91c38e669881f96">Dominio.Clases.kakuro.setTablero</a></div><div class="ttdeci">void setTablero(Cell[][]tablero)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00095">kakuro.java:95</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a7b1315e765e6550b3149b5ded40cef3a"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a7b1315e765e6550b3149b5ded40cef3a">Dominio.Clases.kakuro.setnumeroBlancas</a></div><div class="ttdeci">void setnumeroBlancas(int numeroBlancas)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00117">kakuro.java:117</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a5be58a0f30041f819baf2e8bcdfcdcd6"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a5be58a0f30041f819baf2e8bcdfcdcd6">Dominio.Clases.kakuro.numeroBlancas</a></div><div class="ttdeci">int numeroBlancas</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00027">kakuro.java:27</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a6469601f8c6fb6bbe223c517921b83fd"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a6469601f8c6fb6bbe223c517921b83fd">Dominio.Clases.kakuro.m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00023">kakuro.java:23</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ac56ebf346fc35668852dfd911aa212c3"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ac56ebf346fc35668852dfd911aa212c3">Dominio.Clases.kakuro.kakuro</a></div><div class="ttdeci">kakuro()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00036">kakuro.java:36</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a4e6f39baffcb6c79578c2bc1db22e524"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a4e6f39baffcb6c79578c2bc1db22e524">Dominio.Clases.kakuro.tablero</a></div><div class="ttdeci">Cell[][] tablero</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00015">kakuro.java:15</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a609ac4f9e39c702998ce175b0ade4c0c"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a609ac4f9e39c702998ce175b0ade4c0c">Dominio.Clases.kakuro.getnumeroBlancas</a></div><div class="ttdeci">int getnumeroBlancas()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00079">kakuro.java:79</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_aa172e26082f67b3ceccfb6390e6689d8"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#aa172e26082f67b3ceccfb6390e6689d8">Dominio.Clases.kakuro.kakuro</a></div><div class="ttdeci">kakuro(Cell[][] tablero, int n, int m, int numeroBlancas, int id)</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00046">kakuro.java:46</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_cell_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_cell.html">Dominio.Clases.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00007">Cell.java:7</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a3b1c31239eb59883266c7539ee626fb2"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a3b1c31239eb59883266c7539ee626fb2">Dominio.Clases.kakuro.getM</a></div><div class="ttdeci">int getM()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00072">kakuro.java:72</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a81aa6b708570b15debb652f563d186f1"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a81aa6b708570b15debb652f563d186f1">Dominio.Clases.kakuro.identificador</a></div><div class="ttdeci">int identificador</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00031">kakuro.java:31</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a9efd7325a0eddecc4db9240a29209517"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a9efd7325a0eddecc4db9240a29209517">Dominio.Clases.kakuro.getid</a></div><div class="ttdeci">int getid()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00087">kakuro.java:87</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ae7d318d4785d34eedff639e710263893"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ae7d318d4785d34eedff639e710263893">Dominio.Clases.kakuro.getTablero</a></div><div class="ttdeci">Cell[][] getTablero()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00057">kakuro.java:57</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

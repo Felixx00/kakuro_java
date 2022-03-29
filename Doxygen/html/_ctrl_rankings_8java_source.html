@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Controladores/CtrlRankings.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_e912ff623dc0459f90a60a5f09bfb195.html">Controladores</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CtrlRankings.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ctrl_rankings_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_dominio_1_1_controladores.html">    1</a></span>&#160;<span class="keyword">package </span>Dominio.Controladores;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_clases.html">Clases</a>.*;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_persistencia.html">Persistencia</a>.<a class="code" href="class_persistencia_1_1_ctrl_persistencia.html">CtrlPersistencia</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">   12</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ad92aad18bb2c61cb15a9162e8f08c5">   18</a></span>&#160;    <span class="keyword">private</span> ArrayList&lt;Ranking&gt; <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ad92aad18bb2c61cb15a9162e8f08c5">rankings</a> = <span class="keyword">new</span> ArrayList&lt;Ranking&gt;();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a416f830d5e23d6149d6e1e4d1781cca9">   24</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a416f830d5e23d6149d6e1e4d1781cca9">dirty</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a1f891212028e8e3b01774ba105349c43">   32</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a1f891212028e8e3b01774ba105349c43">getNumRankings</a>() {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> this.rankings.size();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ce24dd0c44361d1fd1fabe9661ee341">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ce24dd0c44361d1fd1fabe9661ee341">cargar_ranking</a>() {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">int</span> tam = <a class="code" href="class_persistencia_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code" href="class_persistencia_1_1_ctrl_persistencia.html#acc1ec5e75e1ce38e1b10dee53712942f">tamañoDirectorio</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idKakuro = 1; idKakuro &lt;= tam; ++idKakuro) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                List&lt;List&lt;String&gt;&gt; aux = <a class="code" href="class_persistencia_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code" href="class_persistencia_1_1_ctrl_persistencia.html#ab8111908b248872266bac6fee5dd6346">cargarRanking</a>(idKakuro);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="class_dominio_1_1_clases_1_1_ranking.html">Ranking</a> r = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_clases_1_1_ranking.html">Ranking</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">for</span> (List&lt;String&gt; fila : aux) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a> p = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    p.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a14bb7d82c311fdb615a40d01f5ebcadd">setKey</a>(fila.get(0));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    p.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a7b650bfa366ce55706b240ba939965b0">setValue</a>(Double.valueOf(fila.get(1)));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    r.<a class="code" href="class_dominio_1_1_clases_1_1_ranking.html#a01dbd6145c0d5e6f5fc9a8f59f745dd6">afegirTemps</a>(p);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                this.rankings.add(r);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ad92aad18bb2c61cb15a9162e8f08c5">rankings</a>.get((idKakuro-1)).setRecords();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">catch</span> (Exception e) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                System.out.println(e);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            } </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a7f351236a0aeb52dc1424b762ae758ce">   69</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a7f351236a0aeb52dc1424b762ae758ce">guardarRanking</a>(<span class="keywordtype">int</span> idKakuro, String nomJ, Double temps) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        idKakuro-=1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        this.rankings.get(idKakuro).guardarRanking(nomJ, temps);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        this.dirty = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        idKakuro+=1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a9c2bfc8995f87c829690a88ced5ad042">end</a>(idKakuro);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#af0715bd84b04376918f604c712afe723">   83</a></span>&#160;    <span class="keyword">public</span> List&lt;Pair&gt; <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#af0715bd84b04376918f604c712afe723">verRanking</a>(<span class="keywordtype">int</span> idKakuro) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        idKakuro-=1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_dominio_1_1_clases_1_1_ranking.html">Ranking</a> r = this.rankings.get(idKakuro);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        List&lt;Pair&gt; aux = r.<a class="code" href="class_dominio_1_1_clases_1_1_ranking.html#aec8d36e4343b5710803e27b6b3c231f5">getRanking</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> aux;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#aac60cc224445b4ba5dccb4c168f182cf">   96</a></span>&#160;    <span class="keyword">public</span> List&lt;Pair&gt; <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#aac60cc224445b4ba5dccb4c168f182cf">verRecords</a>(<span class="keywordtype">int</span> idKakuro) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        idKakuro-=1;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_dominio_1_1_clases_1_1_ranking.html">Ranking</a> r = this.rankings.get(idKakuro);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        List&lt;Pair&gt; aux = r.<a class="code" href="class_dominio_1_1_clases_1_1_ranking.html#a4e6d08750ef68b579f9d130ae5980f51">getRecords</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> aux;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a9c2bfc8995f87c829690a88ced5ad042">  107</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a9c2bfc8995f87c829690a88ced5ad042">end</a>(<span class="keywordtype">int</span> idKakuro) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a416f830d5e23d6149d6e1e4d1781cca9">dirty</a>) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <a class="code" href="class_persistencia_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code" href="class_persistencia_1_1_ctrl_persistencia.html#a92b89771b7a82e0cf8e57b98f89298e7">guardarRanking</a>(this.rankings.get((idKakuro-1)).getRanking(), idKakuro);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                e.printStackTrace();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_ranking_html_aec8d36e4343b5710803e27b6b3c231f5"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_ranking.html#aec8d36e4343b5710803e27b6b3c231f5">Dominio.Clases.Ranking.getRanking</a></div><div class="ttdeci">List&lt; Pair &gt; getRanking()</div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_clases_2_ranking_8java_source.html#l00027">Ranking.java:27</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html">Dominio.Clases.Pair</a></div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00008">Pair.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a0ce24dd0c44361d1fd1fabe9661ee341"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ce24dd0c44361d1fd1fabe9661ee341">Dominio.Controladores.CtrlRankings.cargar_ranking</a></div><div class="ttdeci">void cargar_ranking()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00039">CtrlRankings.java:39</a></div></div>
+<div class="ttc" id="anamespace_persistencia_html"><div class="ttname"><a href="namespace_persistencia.html">Persistencia</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_persistencia_8java_source.html#l00001">CtrlPersistencia.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a0ad92aad18bb2c61cb15a9162e8f08c5"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a0ad92aad18bb2c61cb15a9162e8f08c5">Dominio.Controladores.CtrlRankings.rankings</a></div><div class="ttdeci">ArrayList&lt; Ranking &gt; rankings</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00018">CtrlRankings.java:18</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_ranking_html_a01dbd6145c0d5e6f5fc9a8f59f745dd6"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_ranking.html#a01dbd6145c0d5e6f5fc9a8f59f745dd6">Dominio.Clases.Ranking.afegirTemps</a></div><div class="ttdeci">void afegirTemps(Pair p)</div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_clases_2_ranking_8java_source.html#l00036">Ranking.java:36</a></div></div>
+<div class="ttc" id="aclass_persistencia_1_1_ctrl_persistencia_html"><div class="ttname"><a href="class_persistencia_1_1_ctrl_persistencia.html">Persistencia.CtrlPersistencia</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_persistencia_8java_source.html#l00020">CtrlPersistencia.java:20</a></div></div>
+<div class="ttc" id="anamespace_dominio_html"><div class="ttname"><a href="namespace_dominio.html">Dominio</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_af0715bd84b04376918f604c712afe723"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#af0715bd84b04376918f604c712afe723">Dominio.Controladores.CtrlRankings.verRanking</a></div><div class="ttdeci">List&lt; Pair &gt; verRanking(int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00083">CtrlRankings.java:83</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a1f891212028e8e3b01774ba105349c43"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a1f891212028e8e3b01774ba105349c43">Dominio.Controladores.CtrlRankings.getNumRankings</a></div><div class="ttdeci">int getNumRankings()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00032">CtrlRankings.java:32</a></div></div>
+<div class="ttc" id="aclass_persistencia_1_1_ctrl_persistencia_html_ab8111908b248872266bac6fee5dd6346"><div class="ttname"><a href="class_persistencia_1_1_ctrl_persistencia.html#ab8111908b248872266bac6fee5dd6346">Persistencia.CtrlPersistencia.cargarRanking</a></div><div class="ttdeci">static List&lt; List&lt; String &gt; &gt; cargarRanking(int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_persistencia_8java_source.html#l00065">CtrlPersistencia.java:65</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">Dominio.Controladores.CtrlRankings</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00012">CtrlRankings.java:12</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a416f830d5e23d6149d6e1e4d1781cca9"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a416f830d5e23d6149d6e1e4d1781cca9">Dominio.Controladores.CtrlRankings.dirty</a></div><div class="ttdeci">boolean dirty</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00024">CtrlRankings.java:24</a></div></div>
+<div class="ttc" id="aclass_persistencia_1_1_ctrl_persistencia_html_a92b89771b7a82e0cf8e57b98f89298e7"><div class="ttname"><a href="class_persistencia_1_1_ctrl_persistencia.html#a92b89771b7a82e0cf8e57b98f89298e7">Persistencia.CtrlPersistencia.guardarRanking</a></div><div class="ttdeci">static void guardarRanking(List&lt; Pair &gt; list, Integer idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_persistencia_8java_source.html#l00087">CtrlPersistencia.java:87</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_aac60cc224445b4ba5dccb4c168f182cf"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#aac60cc224445b4ba5dccb4c168f182cf">Dominio.Controladores.CtrlRankings.verRecords</a></div><div class="ttdeci">List&lt; Pair &gt; verRecords(int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00096">CtrlRankings.java:96</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a9c2bfc8995f87c829690a88ced5ad042"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a9c2bfc8995f87c829690a88ced5ad042">Dominio.Controladores.CtrlRankings.end</a></div><div class="ttdeci">void end(int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00107">CtrlRankings.java:107</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a7b650bfa366ce55706b240ba939965b0"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a7b650bfa366ce55706b240ba939965b0">Dominio.Clases.Pair.setValue</a></div><div class="ttdeci">void setValue(Double value)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00045">Pair.java:45</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a14bb7d82c311fdb615a40d01f5ebcadd"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a14bb7d82c311fdb615a40d01f5ebcadd">Dominio.Clases.Pair.setKey</a></div><div class="ttdeci">void setKey(String key)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00038">Pair.java:38</a></div></div>
+<div class="ttc" id="anamespace_dominio_1_1_clases_html"><div class="ttname"><a href="namespace_dominio_1_1_clases.html">Dominio.Clases</a></div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00001">Blanca.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_ranking_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_ranking.html">Dominio.Clases.Ranking</a></div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_clases_2_ranking_8java_source.html#l00009">Ranking.java:9</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_ranking_html_a4e6d08750ef68b579f9d130ae5980f51"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_ranking.html#a4e6d08750ef68b579f9d130ae5980f51">Dominio.Clases.Ranking.getRecords</a></div><div class="ttdeci">List&lt; Pair &gt; getRecords()</div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_clases_2_ranking_8java_source.html#l00073">Ranking.java:73</a></div></div>
+<div class="ttc" id="aclass_persistencia_1_1_ctrl_persistencia_html_acc1ec5e75e1ce38e1b10dee53712942f"><div class="ttname"><a href="class_persistencia_1_1_ctrl_persistencia.html#acc1ec5e75e1ce38e1b10dee53712942f">Persistencia.CtrlPersistencia.tamañoDirectorio</a></div><div class="ttdeci">static int tamañoDirectorio()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_persistencia_8java_source.html#l00264">CtrlPersistencia.java:264</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html_a7f351236a0aeb52dc1424b762ae758ce"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html#a7f351236a0aeb52dc1424b762ae758ce">Dominio.Controladores.CtrlRankings.guardarRanking</a></div><div class="ttdeci">void guardarRanking(int idKakuro, String nomJ, Double temps)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00069">CtrlRankings.java:69</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

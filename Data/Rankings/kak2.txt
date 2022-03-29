@@ -1,0 +1,13 @@
+felix 2.9
+felix 3.0
+marti 19.1
+marti 20.0
+marti 27.0
+marti 29.0
+victor 30.0
+victor 34.0
+victor 40.0
+ruben 45.1
+ruben 50.0
+ruben 60.0
+ruben 70.0

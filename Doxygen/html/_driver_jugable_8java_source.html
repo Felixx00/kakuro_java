@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Controladores/Tests/DriverJugable.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_e912ff623dc0459f90a60a5f09bfb195.html">Controladores</a></li><li class="navelem"><a class="el" href="dir_193eb194cd1a4852bee6e5dbda1f11bc.html">Tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DriverJugable.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>Dominio.Controladores.Tests;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.lang.Exception;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> java.util.Iterator;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> Dominio.Clases.Jugable;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html">   12</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html">DriverJugable</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ad90c36b8a2902da4ce1044b104752458">   18</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ad90c36b8a2902da4ce1044b104752458">testGetNumColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        System.out.println(jugable.getnum_Columna());</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ae67ca8e4a8a5552caab7c007e306e34f">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ae67ca8e4a8a5552caab7c007e306e34f">testGetNumFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        System.out.println(jugable.getnum_Fila());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a16e0a11dfce26a7439fb1a931237b92c">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a16e0a11dfce26a7439fb1a931237b92c">testSetNumColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a7eab2f2b8f754f52f8619245c4bb5b67">setnum_Columna</a>(num);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a434d841d21d8430a66c321d088505815">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a434d841d21d8430a66c321d088505815">testSetNumFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a86eb1ae9428022df229117c51c9620d2">setnum_Fila</a>(num);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a429a6d9bac59a92d6a41ec12a699114a">   56</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a429a6d9bac59a92d6a41ec12a699114a">testActualizaColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a12eec7aee04ba778f012e031077b0cf8">actualizaC</a>(num);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#afe1994db22de06cc7c85a20e9a4c8092">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#afe1994db22de06cc7c85a20e9a4c8092">testActualizaFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a05b5f413782ecf8af10d0e52de41fd9e">actualizaF</a>(num);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a201a6210dff14720ee56dbfc2c2c853f">   78</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a201a6210dff14720ee56dbfc2c2c853f">testGetSetColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        Iterator&lt;Integer&gt; it = jugable.getset_Columna().iterator();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            System.out.println(it.next());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#adfdaa6de127d5c420e40306af13554ce">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#adfdaa6de127d5c420e40306af13554ce">testGetSetFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        Iterator&lt;Integer&gt; it = jugable.getset_Fila().iterator();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            System.out.println(it.next());</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#acb6f9eaebebfaec227b3f8aa2a634fc2">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#acb6f9eaebebfaec227b3f8aa2a634fc2">testAdd_SetColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a48fb8b39fcac2f75a2855be962b9054b">add_setcol</a>(num);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a9230f108ac90a360407a1e17ba9b710b">  111</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a9230f108ac90a360407a1e17ba9b710b">testAdd_SetFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#afe0eda1953ecb9f39d5bd6b977432ede">add_setfila</a>(num);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a4bfc0f55eef419f1b205097abecd26a3">  121</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a4bfc0f55eef419f1b205097abecd26a3">testDel_SetColumna</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a1f303c8086b4bb068a2c17c48b952494">del_setcol</a>(num);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ac3bfd6ee8de1588d0ab008b14590535e">  130</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ac3bfd6ee8de1588d0ab008b14590535e">testDel_SetFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable, <span class="keywordtype">int</span> num){</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#ae3357537c7428f88c6d03968d4e499bc">del_setfila</a>(num);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a121cb55ee16a5695bf84ac63fde00898">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a121cb55ee16a5695bf84ac63fde00898">testSumaCol</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable){</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numColumna actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a11248a8649e6c0ee57b380a4454108b0">getnum_Columna</a>());</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        System.out.println(<span class="stringliteral">&quot;Prueba con el sumCol False: si (suma dels valors del set) &gt; numColumna devuelve false, en caso contrario true&quot;</span>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        System.out.println(jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a9a6d298c8d8376224c9a27a931fa9fcf">sumacol</a>(<span class="keyword">false</span>));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        System.out.println(<span class="stringliteral">&quot;Prueba con el sumCol True: tiene que actualizar el numColumna = (suma dels valors del set)&quot;</span>);   </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a9a6d298c8d8376224c9a27a931fa9fcf">sumacol</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numColumna actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a11248a8649e6c0ee57b380a4454108b0">getnum_Columna</a>());    </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#af797a73eea027d53fee283059edade76">  153</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#af797a73eea027d53fee283059edade76">testSumaFila</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numFila actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a538a59a6862779fef6edc666c648cbc8">getnum_Fila</a>());</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        System.out.println(<span class="stringliteral">&quot;Prueba con el sumFila False: si (suma dels valors del set) &gt; numFila devuelve false, en caso contrario true&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        System.out.println(jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a5f7fae8b341675df3370871a291dc36c">sumafila</a>(<span class="keyword">false</span>));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        System.out.println(<span class="stringliteral">&quot;Prueba con el sumFila True: tiene que actualizar el numFila = (suma dels valors del set)&quot;</span>); </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a5f7fae8b341675df3370871a291dc36c">sumafila</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numFila actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a538a59a6862779fef6edc666c648cbc8">getnum_Fila</a>());  </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#aaa9b8f00b069e416abc1d7b2d86950b6">  166</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#aaa9b8f00b069e416abc1d7b2d86950b6">testComprSumas</a>(<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable){</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">int</span> sumafila = 0, sumacolumna = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        Iterator&lt;Integer&gt; it = jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a47b1740a265d29ce9116eb0578dc8970">getset_Fila</a>().iterator();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        Iterator&lt;Integer&gt; it2 = jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#ae9d7471905b3d6bc74ec902f8b2d6c1c">getset_Columna</a>().iterator();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">while</span> (it.hasNext()){</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            sumafila += it.next();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">while</span> (it2.hasNext()){</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            sumacolumna += it2.next();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numFila actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a538a59a6862779fef6edc666c648cbc8">getnum_Fila</a>() + <span class="stringliteral">&quot; --- Suma dels valors del set actual = &quot;</span> + sumafila);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        System.out.println(<span class="stringliteral">&quot;Valor numColumna actual = &quot;</span> + jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#a11248a8649e6c0ee57b380a4454108b0">getnum_Columna</a>() + <span class="stringliteral">&quot; --- Suma dels valors del set actual = &quot;</span> + sumacolumna);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        System.out.println(<span class="stringliteral">&quot;True si numFila y numColumna son iguales a las sumas de sus sets correspondientes:&quot;</span>);   </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        System.out.println(jugable.<a class="code" href="class_dominio_1_1_clases_1_1_jugable.html#ac29b0ab5ba0b7631ba9b56da7438b483">comprSumas</a>());</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main (String [] args) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        Scanner s = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a> jugable = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_clases_1_1_jugable.html">Jugable</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        System.out.println(<span class="stringliteral">&quot;Introduce el número correspondiente a la función que se quiera testear:&quot;</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        System.out.println(<span class="stringliteral">&quot;1- Test getnum_Columna()&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        System.out.println(<span class="stringliteral">&quot;2- Test getnum_Fila()&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        System.out.println(<span class="stringliteral">&quot;3- Test setnum_Columna()&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        System.out.println(<span class="stringliteral">&quot;4- Test setnum_Fila()&quot;</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        System.out.println(<span class="stringliteral">&quot;5- Test actualizaC()&quot;</span>); </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        System.out.println(<span class="stringliteral">&quot;6- Test actualizaF()&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        System.out.println(<span class="stringliteral">&quot;7- Test getset_col()&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        System.out.println(<span class="stringliteral">&quot;8- Test getset_fila()&quot;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        System.out.println(<span class="stringliteral">&quot;9- Test add_setcol()&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        System.out.println(<span class="stringliteral">&quot;10- Test add_setfila()&quot;</span>); </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        System.out.println(<span class="stringliteral">&quot;11- Test del_setcol()&quot;</span>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        System.out.println(<span class="stringliteral">&quot;12- Test del_setfila()&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        System.out.println(<span class="stringliteral">&quot;13- Test sumacol()&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        System.out.println(<span class="stringliteral">&quot;14- Test sumafila()&quot;</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        System.out.println(<span class="stringliteral">&quot;15- Test comprsumas()&quot;</span>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        System.out.println(<span class="stringliteral">&quot;-1- Salir&quot;</span>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordtype">int</span> op = s.nextInt();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">while</span>(op != -1){</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="keywordflow">case</span> 1: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ad90c36b8a2902da4ce1044b104752458">testGetNumColumna</a>(jugable);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">case</span> 2: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ae67ca8e4a8a5552caab7c007e306e34f">testGetNumFila</a>(jugable);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordflow">case</span> 3: System.out.println(<span class="stringliteral">&quot;Introduce nuevo numero&quot;</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        <span class="keywordtype">int</span> n = s.nextInt();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a16e0a11dfce26a7439fb1a931237b92c">testSetNumColumna</a>(jugable,n);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">case</span> 4: System.out.println(<span class="stringliteral">&quot;Introduce nuevo numero&quot;</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        <span class="keywordtype">int</span> m = s.nextInt();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a434d841d21d8430a66c321d088505815">testSetNumFila</a>(jugable,m);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">case</span> 5: System.out.println(<span class="stringliteral">&quot;Introduce nuevo numero&quot;</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                        <span class="keywordtype">int</span> o = s.nextInt();</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a429a6d9bac59a92d6a41ec12a699114a">testActualizaColumna</a>(jugable,o);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                <span class="keywordflow">case</span> 6: System.out.println(<span class="stringliteral">&quot;Introduce nuevo numero&quot;</span>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        <span class="keywordtype">int</span> p = s.nextInt();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#afe1994db22de06cc7c85a20e9a4c8092">testActualizaFila</a>(jugable,p);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordflow">case</span> 7: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a201a6210dff14720ee56dbfc2c2c853f">testGetSetColumna</a>(jugable);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordflow">case</span> 8: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#adfdaa6de127d5c420e40306af13554ce">testGetSetFila</a>(jugable);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="keywordflow">case</span> 9: System.out.println(<span class="stringliteral">&quot;Introduce el numero a añadir al set col&quot;</span>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        <span class="keywordtype">int</span> q = s.nextInt();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#acb6f9eaebebfaec227b3f8aa2a634fc2">testAdd_SetColumna</a>(jugable,q);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">case</span> 10:System.out.println(<span class="stringliteral">&quot;Introduce el numero a añadir al set fila&quot;</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        <span class="keywordtype">int</span> r = s.nextInt();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a9230f108ac90a360407a1e17ba9b710b">testAdd_SetFila</a>(jugable,r);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">case</span> 11: System.out.println(<span class="stringliteral">&quot;Introduce el numero a elimiar en el set col&quot;</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        <span class="keywordtype">int</span> u = s.nextInt();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a4bfc0f55eef419f1b205097abecd26a3">testDel_SetColumna</a>(jugable,u);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">case</span> 12:System.out.println(<span class="stringliteral">&quot;Introduce el numero a eliminar en el set fila&quot;</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        <span class="keywordtype">int</span> t = s.nextInt();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ac3bfd6ee8de1588d0ab008b14590535e">testDel_SetFila</a>(jugable,t);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">case</span> 13:<a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a121cb55ee16a5695bf84ac63fde00898">testSumaCol</a>(jugable);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">case</span> 14:<a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#af797a73eea027d53fee283059edade76">testSumaFila</a>(jugable);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">case</span> 15:<a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#aaa9b8f00b069e416abc1d7b2d86950b6">testComprSumas</a>(jugable);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <span class="keywordflow">break</span>;  </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;              }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                System.out.println(<span class="stringliteral">&quot;Introduce el número correspondiente a la función que se quiera testear:&quot;</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                System.out.println(<span class="stringliteral">&quot;1- Test getnum_Columna()&quot;</span>);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                System.out.println(<span class="stringliteral">&quot;2- Test getnum_Fila()&quot;</span>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                System.out.println(<span class="stringliteral">&quot;3- Test setnum_Columna()&quot;</span>);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                System.out.println(<span class="stringliteral">&quot;4- Test setnum_Fila()&quot;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                System.out.println(<span class="stringliteral">&quot;5- Test actualizaC()&quot;</span>); </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                System.out.println(<span class="stringliteral">&quot;6- Test actualizaF()&quot;</span>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                System.out.println(<span class="stringliteral">&quot;7- Test getset_col()&quot;</span>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                System.out.println(<span class="stringliteral">&quot;8- Test getset_fila()&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                System.out.println(<span class="stringliteral">&quot;9- Test add_setcol()&quot;</span>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                System.out.println(<span class="stringliteral">&quot;10- Test add_setfila()&quot;</span>); </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                System.out.println(<span class="stringliteral">&quot;11- Test del_setcol()&quot;</span>);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                System.out.println(<span class="stringliteral">&quot;12- Test del_setfila()&quot;</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                System.out.println(<span class="stringliteral">&quot;13- Test sumacol()&quot;</span>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                System.out.println(<span class="stringliteral">&quot;14- Test sumafila()&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                System.out.println(<span class="stringliteral">&quot;15- Test comprsumas()&quot;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                System.out.println(<span class="stringliteral">&quot;-1- Salir&quot;</span>);    </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                op = s.nextInt();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a05b5f413782ecf8af10d0e52de41fd9e"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a05b5f413782ecf8af10d0e52de41fd9e">Dominio.Clases.Jugable.actualizaF</a></div><div class="ttdeci">void actualizaF(int y)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00078">Jugable.java:78</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_ae9d7471905b3d6bc74ec902f8b2d6c1c"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#ae9d7471905b3d6bc74ec902f8b2d6c1c">Dominio.Clases.Jugable.getset_Columna</a></div><div class="ttdeci">Set&lt; Integer &gt; getset_Columna()</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00126">Jugable.java:126</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_ae3357537c7428f88c6d03968d4e499bc"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#ae3357537c7428f88c6d03968d4e499bc">Dominio.Clases.Jugable.del_setfila</a></div><div class="ttdeci">void del_setfila(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00110">Jugable.java:110</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_ad90c36b8a2902da4ce1044b104752458"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ad90c36b8a2902da4ce1044b104752458">Dominio.Controladores.Tests.DriverJugable.testGetNumColumna</a></div><div class="ttdeci">static void testGetNumColumna(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00018">DriverJugable.java:18</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a4bfc0f55eef419f1b205097abecd26a3"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a4bfc0f55eef419f1b205097abecd26a3">Dominio.Controladores.Tests.DriverJugable.testDel_SetColumna</a></div><div class="ttdeci">static void testDel_SetColumna(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00121">DriverJugable.java:121</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a7eab2f2b8f754f52f8619245c4bb5b67"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a7eab2f2b8f754f52f8619245c4bb5b67">Dominio.Clases.Jugable.setnum_Columna</a></div><div class="ttdeci">void setnum_Columna(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00071">Jugable.java:71</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a47b1740a265d29ce9116eb0578dc8970"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a47b1740a265d29ce9116eb0578dc8970">Dominio.Clases.Jugable.getset_Fila</a></div><div class="ttdeci">Set&lt; Integer &gt; getset_Fila()</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00133">Jugable.java:133</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_ac3bfd6ee8de1588d0ab008b14590535e"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ac3bfd6ee8de1588d0ab008b14590535e">Dominio.Controladores.Tests.DriverJugable.testDel_SetFila</a></div><div class="ttdeci">static void testDel_SetFila(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00130">DriverJugable.java:130</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a9a6d298c8d8376224c9a27a931fa9fcf"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a9a6d298c8d8376224c9a27a931fa9fcf">Dominio.Clases.Jugable.sumacol</a></div><div class="ttdeci">Boolean sumacol(boolean actSuma)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00161">Jugable.java:161</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a429a6d9bac59a92d6a41ec12a699114a"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a429a6d9bac59a92d6a41ec12a699114a">Dominio.Controladores.Tests.DriverJugable.testActualizaColumna</a></div><div class="ttdeci">static void testActualizaColumna(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00056">DriverJugable.java:56</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a9230f108ac90a360407a1e17ba9b710b"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a9230f108ac90a360407a1e17ba9b710b">Dominio.Controladores.Tests.DriverJugable.testAdd_SetFila</a></div><div class="ttdeci">static void testAdd_SetFila(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00111">DriverJugable.java:111</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html">Dominio.Clases.Jugable</a></div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00009">Jugable.java:9</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a16e0a11dfce26a7439fb1a931237b92c"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a16e0a11dfce26a7439fb1a931237b92c">Dominio.Controladores.Tests.DriverJugable.testSetNumColumna</a></div><div class="ttdeci">static void testSetNumColumna(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00035">DriverJugable.java:35</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a434d841d21d8430a66c321d088505815"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a434d841d21d8430a66c321d088505815">Dominio.Controladores.Tests.DriverJugable.testSetNumFila</a></div><div class="ttdeci">static void testSetNumFila(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00045">DriverJugable.java:45</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a121cb55ee16a5695bf84ac63fde00898"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a121cb55ee16a5695bf84ac63fde00898">Dominio.Controladores.Tests.DriverJugable.testSumaCol</a></div><div class="ttdeci">static void testSumaCol(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00139">DriverJugable.java:139</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_a201a6210dff14720ee56dbfc2c2c853f"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#a201a6210dff14720ee56dbfc2c2c853f">Dominio.Controladores.Tests.DriverJugable.testGetSetColumna</a></div><div class="ttdeci">static void testGetSetColumna(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00078">DriverJugable.java:78</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_ac29b0ab5ba0b7631ba9b56da7438b483"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#ac29b0ab5ba0b7631ba9b56da7438b483">Dominio.Clases.Jugable.comprSumas</a></div><div class="ttdeci">Boolean comprSumas()</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00176">Jugable.java:176</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_afe1994db22de06cc7c85a20e9a4c8092"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#afe1994db22de06cc7c85a20e9a4c8092">Dominio.Controladores.Tests.DriverJugable.testActualizaFila</a></div><div class="ttdeci">static void testActualizaFila(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00068">DriverJugable.java:68</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_afe0eda1953ecb9f39d5bd6b977432ede"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#afe0eda1953ecb9f39d5bd6b977432ede">Dominio.Clases.Jugable.add_setfila</a></div><div class="ttdeci">Boolean add_setfila(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00094">Jugable.java:94</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_acb6f9eaebebfaec227b3f8aa2a634fc2"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#acb6f9eaebebfaec227b3f8aa2a634fc2">Dominio.Controladores.Tests.DriverJugable.testAdd_SetColumna</a></div><div class="ttdeci">static void testAdd_SetColumna(Jugable jugable, int num)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00101">DriverJugable.java:101</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a5f7fae8b341675df3370871a291dc36c"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a5f7fae8b341675df3370871a291dc36c">Dominio.Clases.Jugable.sumafila</a></div><div class="ttdeci">Boolean sumafila(boolean actSuma)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00144">Jugable.java:144</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a538a59a6862779fef6edc666c648cbc8"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a538a59a6862779fef6edc666c648cbc8">Dominio.Clases.Jugable.getnum_Fila</a></div><div class="ttdeci">int getnum_Fila()</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00059">Jugable.java:59</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_af797a73eea027d53fee283059edade76"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#af797a73eea027d53fee283059edade76">Dominio.Controladores.Tests.DriverJugable.testSumaFila</a></div><div class="ttdeci">static void testSumaFila(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00153">DriverJugable.java:153</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a86eb1ae9428022df229117c51c9620d2"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a86eb1ae9428022df229117c51c9620d2">Dominio.Clases.Jugable.setnum_Fila</a></div><div class="ttdeci">void setnum_Fila(int y)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00065">Jugable.java:65</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a11248a8649e6c0ee57b380a4454108b0"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a11248a8649e6c0ee57b380a4454108b0">Dominio.Clases.Jugable.getnum_Columna</a></div><div class="ttdeci">int getnum_Columna()</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00052">Jugable.java:52</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a1f303c8086b4bb068a2c17c48b952494"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a1f303c8086b4bb068a2c17c48b952494">Dominio.Clases.Jugable.del_setcol</a></div><div class="ttdeci">void del_setcol(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00118">Jugable.java:118</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_ae67ca8e4a8a5552caab7c007e306e34f"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#ae67ca8e4a8a5552caab7c007e306e34f">Dominio.Controladores.Tests.DriverJugable.testGetNumFila</a></div><div class="ttdeci">static void testGetNumFila(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00026">DriverJugable.java:26</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_aaa9b8f00b069e416abc1d7b2d86950b6"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#aaa9b8f00b069e416abc1d7b2d86950b6">Dominio.Controladores.Tests.DriverJugable.testComprSumas</a></div><div class="ttdeci">static void testComprSumas(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00166">DriverJugable.java:166</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html_adfdaa6de127d5c420e40306af13554ce"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html#adfdaa6de127d5c420e40306af13554ce">Dominio.Controladores.Tests.DriverJugable.testGetSetFila</a></div><div class="ttdeci">static void testGetSetFila(Jugable jugable)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00089">DriverJugable.java:89</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a48fb8b39fcac2f75a2855be962b9054b"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a48fb8b39fcac2f75a2855be962b9054b">Dominio.Clases.Jugable.add_setcol</a></div><div class="ttdeci">Boolean add_setcol(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00102">Jugable.java:102</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_jugable.html">Dominio.Controladores.Tests.DriverJugable</a></div><div class="ttdef"><b>Definition:</b> <a href="_driver_jugable_8java_source.html#l00012">DriverJugable.java:12</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_jugable_html_a12eec7aee04ba778f012e031077b0cf8"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_jugable.html#a12eec7aee04ba778f012e031077b0cf8">Dominio.Clases.Jugable.actualizaC</a></div><div class="ttdeci">void actualizaC(int x)</div><div class="ttdef"><b>Definition:</b> <a href="_jugable_8java_source.html#l00085">Jugable.java:85</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

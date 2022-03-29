@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Controladores/Tests/DriverCtrlRanking.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_e912ff623dc0459f90a60a5f09bfb195.html">Controladores</a></li><li class="navelem"><a class="el" href="dir_193eb194cd1a4852bee6e5dbda1f11bc.html">Tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DriverCtrlRanking.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_driver_ctrl_ranking_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_dominio_1_1_controladores_1_1_tests.html">    1</a></span>&#160;<span class="keyword">package </span>Dominio.Controladores.Tests;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.ListIterator;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_clases.html">Clases</a>.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_clases.html">Clases</a>.<a class="code" href="class_dominio_1_1_clases_1_1_ranking.html">Ranking</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> <a class="code" href="namespace_dominio.html">Dominio</a>.<a class="code" href="namespace_dominio_1_1_controladores.html">Controladores</a>.<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html">   17</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html">DriverCtrlRanking</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2b47e660de87502688735a7feb82ebd">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2b47e660de87502688735a7feb82ebd">testCargarRankings</a>(<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        CR.cargar_ranking();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a1f7e4b12f0b59ef4ffeef5ddbb76f913">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a1f7e4b12f0b59ef4ffeef5ddbb76f913">testGetNumRankings</a>(<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        System.out.println(<span class="stringliteral">&quot;Cantidad de Rankings: &quot;</span> + CR.getNumRankings());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a9947373a33093a9f34c564b31610944b">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a9947373a33093a9f34c564b31610944b">testGuardarRanking</a>(<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR, <span class="keywordtype">int</span> idKakuro, String nomJ, Double temps) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        CR.guardarRanking(idKakuro, nomJ, temps);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2011415b1c31720dda4cf3183db5903">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2011415b1c31720dda4cf3183db5903">testVerRanking</a>(<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR, <span class="keywordtype">int</span> idKakuro) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        List&lt;Pair&gt; aux = CR.verRanking(idKakuro);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ListIterator&lt;Pair&gt; it = aux.listIterator();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a> aux2 = it.next();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            System.out.println(aux2.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">getKey</a>() + <span class="stringliteral">&quot; &quot;</span> + aux2.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">getValue</a>());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a0894d996c8e6fc03d70cfce0fdb7d806">   70</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a0894d996c8e6fc03d70cfce0fdb7d806">testVerRecords</a>(<a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR, <span class="keywordtype">int</span> idKakuro) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        List&lt;Pair&gt; aux = CR.verRecords(idKakuro);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ListIterator&lt;Pair&gt; it = aux.listIterator();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a> aux2 = it.next();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            System.out.println(aux2.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">getKey</a>() + <span class="stringliteral">&quot; &quot;</span> + aux2.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">getValue</a>());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a7ef78f25dde7badb63fd46bd239409cb">   81</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a7ef78f25dde7badb63fd46bd239409cb">main</a> (String [] args) <span class="keywordflow">throws</span> Exception{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Scanner s = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a> CR = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">CtrlRankings</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        System.out.println(<span class="stringliteral">&quot;Introduce el número correspondiente a la función que se quiera testear:&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        System.out.println(<span class="stringliteral">&quot;1- Test CargarRankings()&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        System.out.println(<span class="stringliteral">&quot;2- Test GetNumRankings()&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        System.out.println(<span class="stringliteral">&quot;3- Test GuardarRanking()&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        System.out.println(<span class="stringliteral">&quot;4- Test VerRanking()&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        System.out.println(<span class="stringliteral">&quot;5- Test VerRecords()&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        System.out.println(<span class="stringliteral">&quot;-1- Salir&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">int</span> op = s.nextInt();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">while</span>(op != -1){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">case</span> 1: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2b47e660de87502688735a7feb82ebd">testCargarRankings</a>(CR);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">case</span> 2: <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a1f7e4b12f0b59ef4ffeef5ddbb76f913">testGetNumRankings</a>(CR);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">case</span> 3: System.out.println(<span class="stringliteral">&quot;Introduce el kakuro al que quieras guardar, nuevo nombre y tiempo en s con coma&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordtype">int</span> a = s.nextInt();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        String n = s.next();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        Double d = s.nextDouble();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a9947373a33093a9f34c564b31610944b">testGuardarRanking</a>(CR,a,n,d);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">case</span> 4: System.out.println(<span class="stringliteral">&quot;Introduce el kakuro del cual quieres obtener el ranking&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        <span class="keywordtype">int</span> b = s.nextInt();    </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2011415b1c31720dda4cf3183db5903">testVerRanking</a>(CR,b);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        System.out.println(<span class="stringliteral">&quot;Ranking y Records actualizados&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">case</span> 5: System.out.println(<span class="stringliteral">&quot;Introduce el kakuro del cual quieres obtener los records&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        <span class="keywordtype">int</span> c = s.nextInt();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                        <a class="code" href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a0894d996c8e6fc03d70cfce0fdb7d806">testVerRecords</a>(CR, c);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;              }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                System.out.println(<span class="stringliteral">&quot;Introduce el número correspondiente a la función que se quiera testear:&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                System.out.println(<span class="stringliteral">&quot;1- Test CargarRankings()&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                System.out.println(<span class="stringliteral">&quot;2- Test GetNumRankings()&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                System.out.println(<span class="stringliteral">&quot;3- Test GuardarRanking()&quot;</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                System.out.println(<span class="stringliteral">&quot;4- Test VerRanking()&quot;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                System.out.println(<span class="stringliteral">&quot;5- Test VerRecords()&quot;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                System.out.println(<span class="stringliteral">&quot;-1- Salir&quot;</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                op = s.nextInt();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html">Dominio.Clases.Pair</a></div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00008">Pair.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_a0894d996c8e6fc03d70cfce0fdb7d806"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a0894d996c8e6fc03d70cfce0fdb7d806">Dominio.Controladores.Tests.DriverCtrlRanking.testVerRecords</a></div><div class="ttdeci">static void testVerRecords(CtrlRankings CR, int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00070">DriverCtrlRanking.java:70</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_ae2b47e660de87502688735a7feb82ebd"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2b47e660de87502688735a7feb82ebd">Dominio.Controladores.Tests.DriverCtrlRanking.testCargarRankings</a></div><div class="ttdeci">static void testCargarRankings(CtrlRankings CR)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00024">DriverCtrlRanking.java:24</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_ac947d4c0e5dec6abf7a834b54f585dc6"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">Dominio.Clases.Pair.getValue</a></div><div class="ttdeci">Double getValue()</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00031">Pair.java:31</a></div></div>
+<div class="ttc" id="anamespace_dominio_html"><div class="ttname"><a href="namespace_dominio.html">Dominio</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_aa73a6d6255f222f5330baf3482a52ce9"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">Dominio.Clases.Pair.getKey</a></div><div class="ttdeci">String getKey()</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00024">Pair.java:24</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_ctrl_rankings_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_ctrl_rankings.html">Dominio.Controladores.CtrlRankings</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00012">CtrlRankings.java:12</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_a7ef78f25dde7badb63fd46bd239409cb"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a7ef78f25dde7badb63fd46bd239409cb">Dominio.Controladores.Tests.DriverCtrlRanking.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00081">DriverCtrlRanking.java:81</a></div></div>
+<div class="ttc" id="anamespace_dominio_1_1_controladores_html"><div class="ttname"><a href="namespace_dominio_1_1_controladores.html">Dominio.Controladores</a></div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_rankings_8java_source.html#l00001">CtrlRankings.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_a1f7e4b12f0b59ef4ffeef5ddbb76f913"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a1f7e4b12f0b59ef4ffeef5ddbb76f913">Dominio.Controladores.Tests.DriverCtrlRanking.testGetNumRankings</a></div><div class="ttdeci">static void testGetNumRankings(CtrlRankings CR)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00033">DriverCtrlRanking.java:33</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_a9947373a33093a9f34c564b31610944b"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#a9947373a33093a9f34c564b31610944b">Dominio.Controladores.Tests.DriverCtrlRanking.testGuardarRanking</a></div><div class="ttdeci">static void testGuardarRanking(CtrlRankings CR, int idKakuro, String nomJ, Double temps)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00045">DriverCtrlRanking.java:45</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html_ae2011415b1c31720dda4cf3183db5903"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html#ae2011415b1c31720dda4cf3183db5903">Dominio.Controladores.Tests.DriverCtrlRanking.testVerRanking</a></div><div class="ttdeci">static void testVerRanking(CtrlRankings CR, int idKakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00055">DriverCtrlRanking.java:55</a></div></div>
+<div class="ttc" id="anamespace_dominio_1_1_clases_html"><div class="ttname"><a href="namespace_dominio_1_1_clases.html">Dominio.Clases</a></div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00001">Blanca.java:1</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_ranking_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_ranking.html">Dominio.Clases.Ranking</a></div><div class="ttdef"><b>Definition:</b> <a href="_dominio_2_clases_2_ranking_8java_source.html#l00009">Ranking.java:9</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_tests_1_1_driver_ctrl_ranking.html">Dominio.Controladores.Tests.DriverCtrlRanking</a></div><div class="ttdef"><b>Definition:</b> <a href="_driver_ctrl_ranking_8java_source.html#l00017">DriverCtrlRanking.java:17</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

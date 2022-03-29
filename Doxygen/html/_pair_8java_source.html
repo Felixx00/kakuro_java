@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Clases/Pair.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_a1e234000a1450d2570688accbe96cc7.html">Clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Pair.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_pair_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>Dominio.Clases;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a> <span class="keyword">implements</span> Comparable&lt;Pair&gt;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#a6a18505bd0865c39bdcdf373eb1ff3ed">   13</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a6a18505bd0865c39bdcdf373eb1ff3ed">Key</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">   18</a></span>&#160;    <span class="keyword">private</span> Double <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">Value</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">   24</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">getKey</a>() {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> this.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a6a18505bd0865c39bdcdf373eb1ff3ed">Key</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">   31</a></span>&#160;    <span class="keyword">public</span> Double <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">getValue</a>() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> this.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">Value</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#a14bb7d82c311fdb615a40d01f5ebcadd">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a14bb7d82c311fdb615a40d01f5ebcadd">setKey</a>(String key) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this.Key = key;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#a7b650bfa366ce55706b240ba939965b0">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a7b650bfa366ce55706b240ba939965b0">setValue</a>(Double value) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        this.Value = value;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    @Override</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_dominio_1_1_clases_1_1_pair.html#a8dc3b52d244b65918c53c862b2825f5f">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a8dc3b52d244b65918c53c862b2825f5f">compareTo</a>(<a class="code" href="class_dominio_1_1_clases_1_1_pair.html">Pair</a> o) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">Value</a>.compareTo(o.<a class="code" href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">Value</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a20741841b3dcc4f18fb3a72e579527cc"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a20741841b3dcc4f18fb3a72e579527cc">Dominio.Clases.Pair.Value</a></div><div class="ttdeci">Double Value</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00018">Pair.java:18</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html">Dominio.Clases.Pair</a></div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00008">Pair.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_ac947d4c0e5dec6abf7a834b54f585dc6"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#ac947d4c0e5dec6abf7a834b54f585dc6">Dominio.Clases.Pair.getValue</a></div><div class="ttdeci">Double getValue()</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00031">Pair.java:31</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_aa73a6d6255f222f5330baf3482a52ce9"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#aa73a6d6255f222f5330baf3482a52ce9">Dominio.Clases.Pair.getKey</a></div><div class="ttdeci">String getKey()</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00024">Pair.java:24</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a6a18505bd0865c39bdcdf373eb1ff3ed"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a6a18505bd0865c39bdcdf373eb1ff3ed">Dominio.Clases.Pair.Key</a></div><div class="ttdeci">String Key</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00013">Pair.java:13</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a7b650bfa366ce55706b240ba939965b0"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a7b650bfa366ce55706b240ba939965b0">Dominio.Clases.Pair.setValue</a></div><div class="ttdeci">void setValue(Double value)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00045">Pair.java:45</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a14bb7d82c311fdb615a40d01f5ebcadd"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a14bb7d82c311fdb615a40d01f5ebcadd">Dominio.Clases.Pair.setKey</a></div><div class="ttdeci">void setKey(String key)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00038">Pair.java:38</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_pair_html_a8dc3b52d244b65918c53c862b2825f5f"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_pair.html#a8dc3b52d244b65918c53c862b2825f5f">Dominio.Clases.Pair.compareTo</a></div><div class="ttdeci">int compareTo(Pair o)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8java_source.html#l00055">Pair.java:55</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

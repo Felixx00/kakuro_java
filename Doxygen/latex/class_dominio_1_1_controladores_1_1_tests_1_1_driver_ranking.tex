@@ -1,0 +1,232 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Tests.\+Driver\+Ranking}
+\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking}\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a065c0831bc556425bc475c406122656c}{test\+Get\+Ranking}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} ranking)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_af255d5b9a7522228bb8fa9b0c4826893}{test\+Afegir\+Temps}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} ranking, \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} pair)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a2799e2631f3c9fea6025c8110ab62e04}{test\+Set\+Records}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} ranking)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a99669c3dd866ad7782dcc1836469b760}{test\+Guardar\+I\+Ordenar\+Ranking}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} ranking, String nom, Double temps)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a23db2c27a675ccb3ed7b6ca71265bc92}{test\+Get\+Records}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}} ranking)  throws Exception
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_ae33a16521fa24d6910b7af449c220fdd}{main}} (String\mbox{[}$\,$\mbox{]} args)  throws Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver del Driver De Ranking \begin{DoxyAuthor}{Autor}
+Rubén Montagut 
+\end{DoxyAuthor}
+
+
+Definición en la línea 14 del archivo Driver\+Ranking.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_ae33a16521fa24d6910b7af449c220fdd}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_ae33a16521fa24d6910b7af449c220fdd}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!main@{main}}
+\index{main@{main}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 82 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                                              \{}
+\DoxyCodeLine{83         }
+\DoxyCodeLine{84         Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{85         }
+\DoxyCodeLine{86         Ranking ranking = \textcolor{keyword}{new} Ranking();}
+\DoxyCodeLine{87         System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{88         System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetRanking()"{}});}
+\DoxyCodeLine{89         System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetRecords()"{}});}
+\DoxyCodeLine{90         System.out.println(\textcolor{stringliteral}{"{}3-\/ Test AfegirTemps()"{}});}
+\DoxyCodeLine{91         System.out.println(\textcolor{stringliteral}{"{}4-\/ Test GuardarIOrdenarRanking()"{}});}
+\DoxyCodeLine{92         System.out.println(\textcolor{stringliteral}{"{}5-\/ Test SetRecords()"{}});}
+\DoxyCodeLine{93         System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{94   }
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96         \textcolor{keywordtype}{int} op = s.nextInt();}
+\DoxyCodeLine{97         \textcolor{keywordflow}{while}(op != -\/1)\{}
+\DoxyCodeLine{98             \textcolor{keywordflow}{switch} (op) \{}
+\DoxyCodeLine{99                 \textcolor{keywordflow}{case} 1: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a065c0831bc556425bc475c406122656c}{testGetRanking}}(ranking);}
+\DoxyCodeLine{100                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101                 \textcolor{keywordflow}{case} 2: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a23db2c27a675ccb3ed7b6ca71265bc92}{testGetRecords}}(ranking);}
+\DoxyCodeLine{102                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{case} 3: System.out.println(\textcolor{stringliteral}{"{}Introduce nuevo nombre y tiempo en s con coma"{}});}
+\DoxyCodeLine{104                         String n = s.next();}
+\DoxyCodeLine{105                         Double d = s.nextDouble();}
+\DoxyCodeLine{106                         Pair aux = \textcolor{keyword}{new} Pair();}
+\DoxyCodeLine{107                         aux.setKey(n);}
+\DoxyCodeLine{108                         aux.setValue(d);}
+\DoxyCodeLine{109                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_af255d5b9a7522228bb8fa9b0c4826893}{testAfegirTemps}}(ranking,aux);}
+\DoxyCodeLine{110                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{111                 \textcolor{keywordflow}{case} 4: System.out.println(\textcolor{stringliteral}{"{}Introduce nuevo nombre y tiempo en s con coma"{}});}
+\DoxyCodeLine{112                         String m = s.next();}
+\DoxyCodeLine{113                         Double e = s.nextDouble();}
+\DoxyCodeLine{114                         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a99669c3dd866ad7782dcc1836469b760}{testGuardarIOrdenarRanking}}(ranking,m,e);}
+\DoxyCodeLine{115                         System.out.println(\textcolor{stringliteral}{"{}Ranking y Records actualizados"{}});}
+\DoxyCodeLine{116                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{case} 5: \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a2799e2631f3c9fea6025c8110ab62e04}{testSetRecords}}(ranking);}
+\DoxyCodeLine{118                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{119               \}}
+\DoxyCodeLine{120                 System.out.println(\textcolor{stringliteral}{"{}Introduce el número correspondiente a la función que se quiera testear:"{}});}
+\DoxyCodeLine{121                 System.out.println(\textcolor{stringliteral}{"{}1-\/ Test GetRanking()"{}});}
+\DoxyCodeLine{122                 System.out.println(\textcolor{stringliteral}{"{}2-\/ Test GetRecords()"{}});}
+\DoxyCodeLine{123                 System.out.println(\textcolor{stringliteral}{"{}3-\/ Test AfegirTemps()"{}});}
+\DoxyCodeLine{124                 System.out.println(\textcolor{stringliteral}{"{}4-\/ Test GuardarIOrdenarRanking()"{}});}
+\DoxyCodeLine{125                 System.out.println(\textcolor{stringliteral}{"{}5-\/ Test SetRecords()"{}});}
+\DoxyCodeLine{126                 System.out.println(\textcolor{stringliteral}{"{}-\/1-\/ Salir"{}});}
+\DoxyCodeLine{127                 op = s.nextInt();}
+\DoxyCodeLine{128         \}}
+\DoxyCodeLine{129         }
+\DoxyCodeLine{130     }
+\DoxyCodeLine{131     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_af255d5b9a7522228bb8fa9b0c4826893}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_af255d5b9a7522228bb8fa9b0c4826893}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!testAfegirTemps@{testAfegirTemps}}
+\index{testAfegirTemps@{testAfegirTemps}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{testAfegirTemps()}{testAfegirTemps()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+test\+Afegir\+Temps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}}]{ranking,  }\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{pair }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Añade al ranking un nombre mas el tiempo que haya hecho 
+\begin{DoxyParams}{Parámetros}
+{\em ranking} & Ranking \\
+\hline
+{\em pair} & Pair$<$\+String,\+Double$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 37 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                                    \{}
+\DoxyCodeLine{38         ranking.afegirTemps(pair);}
+\DoxyCodeLine{39     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a065c0831bc556425bc475c406122656c}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a065c0831bc556425bc475c406122656c}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!testGetRanking@{testGetRanking}}
+\index{testGetRanking@{testGetRanking}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{testGetRanking()}{testGetRanking()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+test\+Get\+Ranking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}}]{ranking }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Imprime por pantalla elos valores del Ranking 
+\begin{DoxyParams}{Parámetros}
+{\em ranking} & Ranking \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 19 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                                        \{}
+\DoxyCodeLine{20         List<Pair> aux = ranking.getRanking();}
+\DoxyCodeLine{21         ListIterator<Pair> it = aux.listIterator();}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if}(it.hasNext()) \{}
+\DoxyCodeLine{23             \textcolor{keywordflow}{while} (it.hasNext()) \{}
+\DoxyCodeLine{24                 Pair aux2 = it.next();}
+\DoxyCodeLine{25                 System.out.println(aux2.getKey() + \textcolor{stringliteral}{"{} "{}} + aux2.getValue());}
+\DoxyCodeLine{26             \}}
+\DoxyCodeLine{27         \}}
+\DoxyCodeLine{28         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Aun no hay nada en el ranking"{}});}
+\DoxyCodeLine{29     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a23db2c27a675ccb3ed7b6ca71265bc92}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a23db2c27a675ccb3ed7b6ca71265bc92}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!testGetRecords@{testGetRecords}}
+\index{testGetRecords@{testGetRecords}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{testGetRecords()}{testGetRecords()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+test\+Get\+Records (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}}]{ranking }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Imprime por pantalla los valores de les 3 primeros puestos del ranking 
+\begin{DoxyParams}{Parámetros}
+{\em ranking} & Ranking \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 66 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                                                        \{}
+\DoxyCodeLine{67         List<Pair> aux = ranking.getRecords();}
+\DoxyCodeLine{68         ListIterator<Pair> it = aux.listIterator();}
+\DoxyCodeLine{69         \textcolor{keywordflow}{if}(it.hasNext()) \{}
+\DoxyCodeLine{70             \textcolor{keywordflow}{while} (it.hasNext()) \{}
+\DoxyCodeLine{71                 Pair aux2 = it.next();}
+\DoxyCodeLine{72                 System.out.println(aux2.getKey() + \textcolor{stringliteral}{"{} "{}} + aux2.getValue());}
+\DoxyCodeLine{73             \}}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Aun no hay nada en records"{}});}
+\DoxyCodeLine{76         }
+\DoxyCodeLine{77     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a99669c3dd866ad7782dcc1836469b760}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a99669c3dd866ad7782dcc1836469b760}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!testGuardarIOrdenarRanking@{testGuardarIOrdenarRanking}}
+\index{testGuardarIOrdenarRanking@{testGuardarIOrdenarRanking}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{testGuardarIOrdenarRanking()}{testGuardarIOrdenarRanking()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+test\+Guardar\+I\+Ordenar\+Ranking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}}]{ranking,  }\item[{String}]{nom,  }\item[{Double}]{temps }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Imprime por pantalla el valor del tiempo casilla Blanca 
+\begin{DoxyParams}{Parámetros}
+{\em ranking} & Ranking \\
+\hline
+{\em nom} & nombre a añadir al ranking \\
+\hline
+{\em temps} & tiempo a añadir al ranking \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 57 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                                                                              \{}
+\DoxyCodeLine{58         ranking.guardarRanking(nom, temps);}
+\DoxyCodeLine{59     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a2799e2631f3c9fea6025c8110ab62e04}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_ranking_a2799e2631f3c9fea6025c8110ab62e04}} 
+\index{Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}!testSetRecords@{testSetRecords}}
+\index{testSetRecords@{testSetRecords}!Dominio.Controladores.Tests.DriverRanking@{Dominio.Controladores.Tests.DriverRanking}}
+\doxysubsubsection{\texorpdfstring{testSetRecords()}{testSetRecords()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Ranking.\+test\+Set\+Records (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking}{Ranking}}}]{ranking }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Configura los records del ranking 
+\begin{DoxyParams}{Parámetros}
+{\em ranking} & Ranking \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 46 del archivo Driver\+Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                                        \{}
+\DoxyCodeLine{47         ranking.setRecords();   }
+\DoxyCodeLine{48     \};}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\+Tests/\mbox{\hyperlink{_driver_ranking_8java}{Driver\+Ranking.\+java}}\end{DoxyCompactItemize}

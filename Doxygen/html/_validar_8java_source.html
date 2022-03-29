@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente src/Dominio/Controladores/Validar.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   </div>
+   <div id="projectbrief">Kakuro - PROP Project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ce9b9e43f3ecf4c54b4b888d7672d63a.html">Dominio</a></li><li class="navelem"><a class="el" href="dir_e912ff623dc0459f90a60a5f09bfb195.html">Controladores</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Validar.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>Dominio.Controladores;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> Dominio.Clases.*;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_validar.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_dominio_1_1_controladores_1_1_validar.html">Validar</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_dominio_1_1_controladores_1_1_validar.html#a7a63a14681fb07781be07c871c5fa89e">   15</a></span>&#160;      <span class="keyword">public</span> Boolean <a class="code" href="class_dominio_1_1_controladores_1_1_validar.html#a7a63a14681fb07781be07c871c5fa89e">validar_kakuro</a>(<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html">kakuro</a> k){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;          <span class="keywordtype">int</span> n = k.<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ac42bc5b9309c8a39b89dc2e3d96d0736">getN</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;          <span class="keywordtype">int</span> m = k.<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#a3b1c31239eb59883266c7539ee626fb2">getM</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          <a class="code" href="class_dominio_1_1_clases_1_1_cell.html">Cell</a>[][]tablero = k.<a class="code" href="class_dominio_1_1_clases_1_1kakuro.html#ae7d318d4785d34eedff639e710263893">getTablero</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;          <a class="code" href="class_dominio_1_1_controladores_1_1_solve.html">Solve</a> s = <span class="keyword">new</span> <a class="code" href="class_dominio_1_1_controladores_1_1_solve.html">Solve</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          <span class="keywordflow">if</span>(s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve.html#a37198a9fd5735c221336a737ecfce631">solve</a>(0,0,k));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <span class="keywordflow">if</span>(s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve.html#a7b55b6589d41dea1441332f5de76817e">solve2</a>(n-1,m-1,k));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          <span class="keywordflow">if</span>(s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve.html#a2a084a073dc5e3656f29e3754fc637fb">solve3</a>(0,m-1,k));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          <span class="keywordflow">if</span>(s.<a class="code" href="class_dominio_1_1_controladores_1_1_solve.html#a54ab996d79714afeaf08d64287fbfa44">solve4</a>(n-1,0,k));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        <span class="keywordflow">if</span>(tablero[i][j].getClass().getSimpleName().equals(<span class="stringliteral">&quot;Blanca&quot;</span>)) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        <span class="keywordflow">if</span>(((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto() != ((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto2()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        <span class="keywordflow">if</span>(((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto() != ((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto3()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        <span class="keywordflow">if</span>(((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto() != ((<a class="code" href="class_dominio_1_1_clases_1_1_blanca.html">Blanca</a>) tablero[i][j]).getNumeroCorrecto4()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      }</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_html_a37198a9fd5735c221336a737ecfce631"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve.html#a37198a9fd5735c221336a737ecfce631">Dominio.Controladores.Solve.solve</a></div><div class="ttdeci">boolean solve(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_8java_source.html#l00035">Solve.java:35</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ac42bc5b9309c8a39b89dc2e3d96d0736"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ac42bc5b9309c8a39b89dc2e3d96d0736">Dominio.Clases.kakuro.getN</a></div><div class="ttdeci">int getN()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00064">kakuro.java:64</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_html_a54ab996d79714afeaf08d64287fbfa44"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve.html#a54ab996d79714afeaf08d64287fbfa44">Dominio.Controladores.Solve.solve4</a></div><div class="ttdeci">boolean solve4(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_8java_source.html#l00152">Solve.java:152</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html">Dominio.Clases.kakuro</a></div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00011">kakuro.java:11</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_validar_html_a7a63a14681fb07781be07c871c5fa89e"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_validar.html#a7a63a14681fb07781be07c871c5fa89e">Dominio.Controladores.Validar.validar_kakuro</a></div><div class="ttdeci">Boolean validar_kakuro(kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_validar_8java_source.html#l00015">Validar.java:15</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_html_a2a084a073dc5e3656f29e3754fc637fb"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve.html#a2a084a073dc5e3656f29e3754fc637fb">Dominio.Controladores.Solve.solve3</a></div><div class="ttdeci">boolean solve3(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_8java_source.html#l00114">Solve.java:114</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve.html">Dominio.Controladores.Solve</a></div><div class="ttdef"><b>Definition:</b> <a href="_solve_8java_source.html#l00010">Solve.java:10</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_blanca_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_blanca.html">Dominio.Clases.Blanca</a></div><div class="ttdef"><b>Definition:</b> <a href="_blanca_8java_source.html#l00008">Blanca.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_validar_html"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_validar.html">Dominio.Controladores.Validar</a></div><div class="ttdef"><b>Definition:</b> <a href="_validar_8java_source.html#l00008">Validar.java:8</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1_cell_html"><div class="ttname"><a href="class_dominio_1_1_clases_1_1_cell.html">Dominio.Clases.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00007">Cell.java:7</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_a3b1c31239eb59883266c7539ee626fb2"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#a3b1c31239eb59883266c7539ee626fb2">Dominio.Clases.kakuro.getM</a></div><div class="ttdeci">int getM()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00072">kakuro.java:72</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_clases_1_1kakuro_html_ae7d318d4785d34eedff639e710263893"><div class="ttname"><a href="class_dominio_1_1_clases_1_1kakuro.html#ae7d318d4785d34eedff639e710263893">Dominio.Clases.kakuro.getTablero</a></div><div class="ttdeci">Cell[][] getTablero()</div><div class="ttdef"><b>Definition:</b> <a href="kakuro_8java_source.html#l00057">kakuro.java:57</a></div></div>
+<div class="ttc" id="aclass_dominio_1_1_controladores_1_1_solve_html_a7b55b6589d41dea1441332f5de76817e"><div class="ttname"><a href="class_dominio_1_1_controladores_1_1_solve.html#a7b55b6589d41dea1441332f5de76817e">Dominio.Controladores.Solve.solve2</a></div><div class="ttdeci">boolean solve2(int row, int col, kakuro k)</div><div class="ttdef"><b>Definition:</b> <a href="_solve_8java_source.html#l00075">Solve.java:75</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,122 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Tests.\+Driver\+Solve}
+\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve}\index{Dominio.Controladores.Tests.DriverSolve@{Dominio.Controladores.Tests.DriverSolve}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_a02e767d8f41d18ff4df7cd2e735040d6}{test\+Validar}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)  throws Exception 
+\item 
+static void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_acfc0a94855df08f1ff69bbbec2f9e143}{main}} (String\mbox{[}$\,$\mbox{]} args)  throws Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver del Solver\+Valida \begin{DoxyAuthor}{Autor}
+Víctor Villarejo 
+\end{DoxyAuthor}
+
+
+Definición en la línea 16 del archivo Driver\+Solve.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_acfc0a94855df08f1ff69bbbec2f9e143}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_acfc0a94855df08f1ff69bbbec2f9e143}} 
+\index{Dominio.Controladores.Tests.DriverSolve@{Dominio.Controladores.Tests.DriverSolve}!main@{main}}
+\index{main@{main}!Dominio.Controladores.Tests.DriverSolve@{Dominio.Controladores.Tests.DriverSolve}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Dominio.\+Controladores.\+Tests.\+Driver\+Solve.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 34 del archivo Driver\+Solve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                              \{}
+\DoxyCodeLine{35         }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         Scanner s = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{38         }
+\DoxyCodeLine{39         System.out.println(\textcolor{stringliteral}{"{}1.Elegir kakuro"{}});}
+\DoxyCodeLine{40         System.out.println(\textcolor{stringliteral}{"{}-\/1.Salir"{}});}
+\DoxyCodeLine{41         }
+\DoxyCodeLine{42         LeerEscribir l = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} op = s.nextInt();}
+\DoxyCodeLine{44         kakuro k;}
+\DoxyCodeLine{45         SolveValida so = \textcolor{keyword}{new} SolveValida();}
+\DoxyCodeLine{46         }
+\DoxyCodeLine{47         \textcolor{keywordflow}{while}(op != -\/1) \{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{if}(op == 1) \{}
+\DoxyCodeLine{49                 k = l.leerkakurotxt();}
+\DoxyCodeLine{50                 }
+\DoxyCodeLine{51                 \textcolor{keywordtype}{int} op2;}
+\DoxyCodeLine{52                 System.out.println(\textcolor{stringliteral}{"{}1.Validar este kakuro"{}});}
+\DoxyCodeLine{53                 System.out.println(\textcolor{stringliteral}{"{}-\/1.Atrás"{}});}
+\DoxyCodeLine{54                 op2 = s.nextInt();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56                 \textcolor{keywordflow}{while}(op2 != -\/1) \{}
+\DoxyCodeLine{57                     }
+\DoxyCodeLine{58                     \textcolor{comment}{//Validar}}
+\DoxyCodeLine{59                     \textcolor{keywordflow}{if}(op2 == 1) \{}
+\DoxyCodeLine{60                         \textcolor{keywordtype}{int} sols;}
+\DoxyCodeLine{61                         sols = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_a02e767d8f41d18ff4df7cd2e735040d6}{testValidar}}(k);         }
+\DoxyCodeLine{62                         \textcolor{keywordflow}{if}(sols == 0)\{}
+\DoxyCodeLine{63                             System.out.println(\textcolor{stringliteral}{"{}Este Kakuro no tiene solución!"{}});}
+\DoxyCodeLine{64                             l.escribirkakuro(k, 0);}
+\DoxyCodeLine{65                             \}}
+\DoxyCodeLine{66                         \textcolor{keywordflow}{if}(sols == 1) \{}
+\DoxyCodeLine{67                             System.out.println(\textcolor{stringliteral}{"{}Este Kakuro tiene una solución única. "{}});}
+\DoxyCodeLine{68                             l.escribirkakuro(k, 1);}
+\DoxyCodeLine{69                             \}}
+\DoxyCodeLine{70                         \textcolor{keywordflow}{if}(sols==2)\{}
+\DoxyCodeLine{71                             System.out.println(\textcolor{stringliteral}{"{}Este Kakuro tiene más de una solución"{}});}
+\DoxyCodeLine{72                              l.escribirkakuro(k, 1);}
+\DoxyCodeLine{73                             \}}
+\DoxyCodeLine{74                         \}}
+\DoxyCodeLine{75                         System.out.println(\textcolor{stringliteral}{"{}1.Validar este kakuro"{}});}
+\DoxyCodeLine{76                         System.out.println(\textcolor{stringliteral}{"{}-\/1.Atrás"{}});}
+\DoxyCodeLine{77                         op2 = s.nextInt();}
+\DoxyCodeLine{78                         }
+\DoxyCodeLine{79                         \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81                         \}}
+\DoxyCodeLine{82                     }
+\DoxyCodeLine{83                 \}}
+\DoxyCodeLine{84     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_a02e767d8f41d18ff4df7cd2e735040d6}\label{class_dominio_1_1_controladores_1_1_tests_1_1_driver_solve_a02e767d8f41d18ff4df7cd2e735040d6}} 
+\index{Dominio.Controladores.Tests.DriverSolve@{Dominio.Controladores.Tests.DriverSolve}!testValidar@{testValidar}}
+\index{testValidar@{testValidar}!Dominio.Controladores.Tests.DriverSolve@{Dominio.Controladores.Tests.DriverSolve}}
+\doxysubsubsection{\texorpdfstring{testValidar()}{testValidar()}}
+{\footnotesize\ttfamily static int Dominio.\+Controladores.\+Tests.\+Driver\+Solve.\+test\+Validar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Valida y soluciona un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em k} & Kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el numero de soluciones que tiene el kakuro. 
+\end{DoxyReturn}
+
+
+Definición en la línea 23 del archivo Driver\+Solve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                              \{}
+\DoxyCodeLine{24         SolveValida s = \textcolor{keyword}{new} SolveValida();}
+\DoxyCodeLine{25         s.initialize(k);}
+\DoxyCodeLine{26         s.valida(0, 0, k);}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} num = s.getnumsolucions();}
+\DoxyCodeLine{28         s.solve(0, 0, k);}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} num;}
+\DoxyCodeLine{30     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\+Tests/\mbox{\hyperlink{_driver_solve_8java}{Driver\+Solve.\+java}}\end{DoxyCompactItemize}

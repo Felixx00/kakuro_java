@@ -1,0 +1,180 @@
+\hypertarget{class_dominio_1_1_clases_1_1_ranking}{}\doxysection{Referencia de la Clase Dominio.\+Clases.\+Ranking}
+\label{class_dominio_1_1_clases_1_1_ranking}\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aec8d36e4343b5710803e27b6b3c231f5}{get\+Ranking}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a01dbd6145c0d5e6f5fc9a8f59f745dd6}{afegir\+Temps}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} p)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aa18981653e3e4c7f0392b7e45d147510}{set\+Records}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_ac615cba70264e69b91761b4e65b44f89}{guardar\+Ranking}} (String nomJ, Double temps)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a4e6d08750ef68b579f9d130ae5980f51}{get\+Records}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{temps\+Per\+Usuari}} = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$()
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}} = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$(3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para los Rankings \begin{DoxyAuthor}{Autor}
+Rubén Montagut 
+\end{DoxyAuthor}
+
+
+Definición en la línea 9 del archivo Ranking.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_a01dbd6145c0d5e6f5fc9a8f59f745dd6}\label{class_dominio_1_1_clases_1_1_ranking_a01dbd6145c0d5e6f5fc9a8f59f745dd6}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!afegirTemps@{afegirTemps}}
+\index{afegirTemps@{afegirTemps}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{afegirTemps()}{afegirTemps()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Ranking.\+afegir\+Temps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}}]{p }\end{DoxyParamCaption})}
+
+Añade un usuario y un tiempo al ranking de un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em p} & Par con un usuario y un tiempo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 36 del archivo Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                     \{}
+\DoxyCodeLine{37         this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}}.add(p);}
+\DoxyCodeLine{38         Collections.sort(\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}});}
+\DoxyCodeLine{39         }
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_aec8d36e4343b5710803e27b6b3c231f5}\label{class_dominio_1_1_clases_1_1_ranking_aec8d36e4343b5710803e27b6b3c231f5}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!getRanking@{getRanking}}
+\index{getRanking@{getRanking}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{getRanking()}{getRanking()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Clases.\+Ranking.\+get\+Ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta los rankings de un kakuro \begin{DoxyReturn}{Devuelve}
+Devuelve la lista de usuarios y tiempo de un ranking 
+\end{DoxyReturn}
+
+
+Definición en la línea 27 del archivo Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                    \{}
+\DoxyCodeLine{28         Collections.sort(\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}});}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}};}
+\DoxyCodeLine{30     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_a4e6d08750ef68b579f9d130ae5980f51}\label{class_dominio_1_1_clases_1_1_ranking_a4e6d08750ef68b579f9d130ae5980f51}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!getRecords@{getRecords}}
+\index{getRecords@{getRecords}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Clases.\+Ranking.\+get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta los records de un kakuro \begin{DoxyReturn}{Devuelve}
+Devuelve la lista de pares de los mejores 3 valores 
+\end{DoxyReturn}
+
+
+Definición en la línea 73 del archivo Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                    \{}
+\DoxyCodeLine{74         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aa18981653e3e4c7f0392b7e45d147510}{setRecords}}();}
+\DoxyCodeLine{75         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}};}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_ac615cba70264e69b91761b4e65b44f89}\label{class_dominio_1_1_clases_1_1_ranking_ac615cba70264e69b91761b4e65b44f89}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!guardarRanking@{guardarRanking}}
+\index{guardarRanking@{guardarRanking}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{guardarRanking()}{guardarRanking()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Ranking.\+guardar\+Ranking (\begin{DoxyParamCaption}\item[{String}]{nomJ,  }\item[{Double}]{temps }\end{DoxyParamCaption})}
+
+Guarda en el ranking de un kakuro un nuevo valor 
+\begin{DoxyParams}{Parámetros}
+{\em nomJ} & Nombre de usuario \\
+\hline
+{\em temps} & Tiempo de resolver el kakuro \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 59 del archivo Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                           \{}
+\DoxyCodeLine{60         Pair p = \textcolor{keyword}{new} Pair();}
+\DoxyCodeLine{61         p.setKey(nomJ);}
+\DoxyCodeLine{62         p.setValue(temps);}
+\DoxyCodeLine{63         this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}}.add(p);}
+\DoxyCodeLine{64         Collections.sort(\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}});}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aa18981653e3e4c7f0392b7e45d147510}{setRecords}}();}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_aa18981653e3e4c7f0392b7e45d147510}\label{class_dominio_1_1_clases_1_1_ranking_aa18981653e3e4c7f0392b7e45d147510}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!setRecords@{setRecords}}
+\index{setRecords@{setRecords}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{setRecords()}{setRecords()}}
+{\footnotesize\ttfamily void Dominio.\+Clases.\+Ranking.\+set\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Modifica la lista de los tres mejores tiempos de un ranking 
+
+Definición en la línea 45 del archivo Ranking.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                              \{}
+\DoxyCodeLine{46         this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}}.clear();}
+\DoxyCodeLine{47         }
+\DoxyCodeLine{48         ListIterator<Pair> it = \mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}{tempsPerUsuari}}.listIterator();}
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (it.hasNext()) this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}}.add(it.next());}
+\DoxyCodeLine{50         \textcolor{keywordflow}{if} (it.hasNext()) this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}}.add(it.next());}
+\DoxyCodeLine{51         \textcolor{keywordflow}{if} (it.hasNext()) this.\mbox{\hyperlink{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}{records}}.add(it.next()); }
+\DoxyCodeLine{52     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}\label{class_dominio_1_1_clases_1_1_ranking_a93c3f9924ff02d27ad6eebe60890b0e2}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!records@{records}}
+\index{records@{records}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{records}{records}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Clases.\+Ranking.\+records = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$(3)\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de pares de los records de un kakuro 
+
+Definición en la línea 19 del archivo Ranking.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}\label{class_dominio_1_1_clases_1_1_ranking_aae8700591aac5c021c10d303dc5b7d5a}} 
+\index{Dominio.Clases.Ranking@{Dominio.Clases.Ranking}!tempsPerUsuari@{tempsPerUsuari}}
+\index{tempsPerUsuari@{tempsPerUsuari}!Dominio.Clases.Ranking@{Dominio.Clases.Ranking}}
+\doxysubsubsection{\texorpdfstring{tempsPerUsuari}{tempsPerUsuari}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Clases.\+Ranking.\+temps\+Per\+Usuari = new Array\+List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de pares de usuario y tiempo de resolver 
+
+Definición en la línea 14 del archivo Ranking.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Clases/\mbox{\hyperlink{_dominio_2_clases_2_ranking_8java}{Ranking.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,723 @@
+\hypertarget{class_dominio_1_1_ctrl_dominio}{}\doxysection{Referencia de la Clase Dominio.\+Ctrl\+Dominio}
+\label{class_dominio_1_1_ctrl_dominio}\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a90b3ddb855212a004329ac3352320a3a}{Ctrl\+Dominio}} ()
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ad0bd575f9d6de0a151dcdc233d7a9d72}{comprobar\+Usuario}} (String u, String p)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a0caea2120bd370f5fe83b418e24c88e3}{añadir\+Usuario}} (String u, String p)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a89d1c43cedffc43a2e3a7a07d1a26197}{eliminar\+Usuario}} (String u)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a5df22686a9d5d425fee79f9dad46deb0}{modificar\+Usuario\+Contraseña}} (String u, String np)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade9a1f12c3633cc4b43aa9f3d128f437}{tamaño\+Directorio}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_af93dab18abe939160e2d28adca93031a}{eliminarkakuro}} (int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a207cfc8a33cb7d5a34da0b9f2f60c24c}{leerkakurotxt}} (int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_aef9f3665e2283fdd6160c85d54a216b9}{generarkakuro}} (int n, int m, String dificultad)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a8afd7bbc6834cb122277b2b4a5bd708c}{guardarkakuro}} (List$<$ List$<$ String $>$$>$ matriz\+\_\+fichero, int file\+Count)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a4798b989f4754b75421d958be98fb02e}{ver\+Ranking}} (int id)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab8861308e143f2d3aea67a3b58152710}{partida}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id, int i, int j, int cambio)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_aede86a7a46399b29bfb47388d2926ef0}{guardar\+Partida}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id, long tiempo)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a458508b5edddd39c876bbc37033f5788}{kakuro\+Acabado}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ae6d16d84849005d540f46bc1b1701c3a}{guardar\+Ranking}} (int id\+Kakuro, String nomJ, Double temps)
+\item 
+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}} $>$ \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a44b9d08e4cb567aba924680ab48bfd82}{ver\+Records}} (int id\+Kakuro)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a06b534aa734115bba5de38976da28682}{validar}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+List$<$ List$<$ String $>$ $>$ \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ad5358eb6f898129211bbf2ca0db9591b}{getvalidartablero}} (List$<$ List$<$ String $>$$>$ matriz, int n, int m, int id)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a4b2ea0b8b44af0c469f254a4c51a9604}{hay\+Guardada}} ()
+\item 
+long \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a3c60e6b66c9f5cc5cace81c0b046ecc1}{cargar\+\_\+tiempo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia}{Ctrl\+Persistencia}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a8188b25e49122bfff77d90a8ae6ff311}{CP}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario}{Ctrl\+Usuario}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings}{Ctrl\+Rankings}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar}{Generar}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a76573d8a78703725fa7d3daec7b15ba3}{G}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir}{Leer\+Escribir}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida}{Partida}} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}{P}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para el Controlador de \mbox{\hyperlink{namespace_dominio}{Dominio}} y las funciones principales de la capa \begin{DoxyAuthor}{Autor}
+Fèlix Forroll 
+\end{DoxyAuthor}
+
+
+Definición en la línea 26 del archivo Ctrl\+Dominio.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a90b3ddb855212a004329ac3352320a3a}\label{class_dominio_1_1_ctrl_dominio_a90b3ddb855212a004329ac3352320a3a}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!CtrlDominio@{CtrlDominio}}
+\index{CtrlDominio@{CtrlDominio}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{CtrlDominio()}{CtrlDominio()}}
+{\footnotesize\ttfamily Dominio.\+Ctrl\+Dominio.\+Ctrl\+Dominio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creadora de la \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio}{Ctrl\+Dominio}} Crea instancias del Ctrl\+Persistencia, de usuarios y rankings 
+
+Definición en la línea 62 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                          \{}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a8188b25e49122bfff77d90a8ae6ff311}{CP}} = \textcolor{keyword}{new} CtrlPersistencia();}
+\DoxyCodeLine{64         System.out.println(\textcolor{stringliteral}{"{}Iniciando controlador de persistencia..."{}});}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}} = \textcolor{keyword}{new} CtrlUsuario();}
+\DoxyCodeLine{66         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a9edb777ffe834496119873c2391973ef}{cargar\_usuarios}}();}
+\DoxyCodeLine{67         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}} = \textcolor{keyword}{new} CtrlRankings();}
+\DoxyCodeLine{68         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a0ce24dd0c44361d1fd1fabe9661ee341}{cargar\_ranking}}();}
+\DoxyCodeLine{69     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a0caea2120bd370f5fe83b418e24c88e3}\label{class_dominio_1_1_ctrl_dominio_a0caea2120bd370f5fe83b418e24c88e3}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily boolean Dominio.\+Ctrl\+Dominio.\+añadir\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{p }\end{DoxyParamCaption})}
+
+Añade un usario al fichero \mbox{\hyperlink{usuarios_8txt}{usuarios.\+txt}} con su respectiva contraseña 
+\begin{DoxyParams}{Parámetros}
+{\em u} & Nombre de usuario a añadir \\
+\hline
+{\em p} & Contraseña para el usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Indica si se ha podido añadir el usuario correctamente o si ha fallado 
+\end{DoxyReturn}
+
+
+Definición en la línea 87 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                                      \{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aeb634549cb38fc2d8667020fb747bf48}{añadirUsuario}}(u,p);}
+\DoxyCodeLine{89     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a3c60e6b66c9f5cc5cace81c0b046ecc1}\label{class_dominio_1_1_ctrl_dominio_a3c60e6b66c9f5cc5cace81c0b046ecc1}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!cargar\_tiempo@{cargar\_tiempo}}
+\index{cargar\_tiempo@{cargar\_tiempo}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cargar\_tiempo()}{cargar\_tiempo()}}
+{\footnotesize\ttfamily long Dominio.\+Ctrl\+Dominio.\+cargar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lee el tiempo de la partida guardada \begin{DoxyReturn}{Devuelve}
+Tiempo de partida 
+\end{DoxyReturn}
+
+
+Definición en la línea 308 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{308                                   \{}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310             List<List<String>> matriz\_auxiliar = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{311                         }
+\DoxyCodeLine{312             \textcolor{keywordtype}{int} num\_kakuro = 0;}
+\DoxyCodeLine{313             }
+\DoxyCodeLine{314             matriz\_auxiliar = CtrlPersistencia.leerkakurotxt(num\_kakuro);}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316             \textcolor{comment}{//Pasa a int las dimensiones de la matriz}}
+\DoxyCodeLine{317             \textcolor{keywordtype}{int} n = Integer.parseInt(matriz\_auxiliar.get(0).get(0));}
+\DoxyCodeLine{318                         }
+\DoxyCodeLine{319             \textcolor{keywordtype}{long} x = Long.parseLong(matriz\_auxiliar.get(n+1).get(0));}
+\DoxyCodeLine{320           }
+\DoxyCodeLine{321             \textcolor{keywordflow}{return} x;    }
+\DoxyCodeLine{322       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ad0bd575f9d6de0a151dcdc233d7a9d72}\label{class_dominio_1_1_ctrl_dominio_ad0bd575f9d6de0a151dcdc233d7a9d72}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!comprobarUsuario@{comprobarUsuario}}
+\index{comprobarUsuario@{comprobarUsuario}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{comprobarUsuario()}{comprobarUsuario()}}
+{\footnotesize\ttfamily boolean Dominio.\+Ctrl\+Dominio.\+comprobar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{p }\end{DoxyParamCaption})}
+
+Comprueba que el usuario existe y tiene contraseña 
+\begin{DoxyParams}{Parámetros}
+{\em u} & Usuario a comprobar \\
+\hline
+{\em p} & Contraseña del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Informa si existe el usuario indicado con la contraseña indicada 
+\end{DoxyReturn}
+
+
+Definición en la línea 77 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                                         \{}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aa3ecefd2e724ea072bc7d514659f2495}{comprobarContraseña}}(u,p);}
+\DoxyCodeLine{79     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_af93dab18abe939160e2d28adca93031a}\label{class_dominio_1_1_ctrl_dominio_af93dab18abe939160e2d28adca93031a}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!eliminarkakuro@{eliminarkakuro}}
+\index{eliminarkakuro@{eliminarkakuro}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{eliminarkakuro()}{eliminarkakuro()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+eliminarkakuro (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Elimina un kakuro del repositorio 
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del kakuro a eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 121 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                                        \{}
+\DoxyCodeLine{122         CtrlPersistencia.eliminar\_kakuro(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{123     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a89d1c43cedffc43a2e3a7a07d1a26197}\label{class_dominio_1_1_ctrl_dominio_a89d1c43cedffc43a2e3a7a07d1a26197}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+eliminar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{u }\end{DoxyParamCaption})}
+
+Elimina un usuario del fichero \mbox{\hyperlink{usuarios_8txt}{usuarios.\+txt}} 
+\begin{DoxyParams}{Parámetros}
+{\em u} & Nombre de usuario a eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 95 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                                           \{}
+\DoxyCodeLine{96         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_abb649f847727091a6c91fa25690ebafb}{eliminarUsuario}}(u);}
+\DoxyCodeLine{97     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_aef9f3665e2283fdd6160c85d54a216b9}\label{class_dominio_1_1_ctrl_dominio_aef9f3665e2283fdd6160c85d54a216b9}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!generarkakuro@{generarkakuro}}
+\index{generarkakuro@{generarkakuro}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{generarkakuro()}{generarkakuro()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Dominio.\+Ctrl\+Dominio.\+generarkakuro (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{String}]{dificultad }\end{DoxyParamCaption})}
+
+Genera un kakuro con las dimensiones y dificultad indicadas 
+\begin{DoxyParams}{Parámetros}
+{\em n} & Tamaño de filas del kakuro \\
+\hline
+{\em m} & Tamaño de columnas del kakuro \\
+\hline
+{\em dificultad} & Dificultad para el kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna una matriz con un kakuro generado con los parámetros indicados 
+\end{DoxyReturn}
+
+
+Definición en la línea 141 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                                                                              \{}
+\DoxyCodeLine{142         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a76573d8a78703725fa7d3daec7b15ba3}{G}} = \textcolor{keyword}{new} Generar();}
+\DoxyCodeLine{143         ArrayList<kakuro> ak = \textcolor{keyword}{new} ArrayList<kakuro>();}
+\DoxyCodeLine{144         \textcolor{keywordtype}{boolean} x = \textcolor{keyword}{false};}
+\DoxyCodeLine{145         \textcolor{keywordflow}{while} (!x) \{}
+\DoxyCodeLine{146             x = \textcolor{keyword}{true};}
+\DoxyCodeLine{147            ExecutorService executorService = Executors.newSingleThreadExecutor();}
+\DoxyCodeLine{148            executorService.execute(() -\/>ak.add(\mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a76573d8a78703725fa7d3daec7b15ba3}{G}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac0fa07bd99eda95c8d2f246e65fcb94c}{generar}}(n,m,dificultad)));}
+\DoxyCodeLine{149            executorService.shutdown();}
+\DoxyCodeLine{150            \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{151                     \textcolor{keywordflow}{if} (!executorService.awaitTermination(2000, TimeUnit.MILLISECONDS)) \{}
+\DoxyCodeLine{152                         x = \textcolor{keyword}{false};}
+\DoxyCodeLine{153                         System.out.println(\textcolor{stringliteral}{"{}ERROR"{}});}
+\DoxyCodeLine{154                      \}}
+\DoxyCodeLine{155             \}\textcolor{keywordflow}{catch}(InterruptedException e)\{}
+\DoxyCodeLine{156                 }
+\DoxyCodeLine{157             \}}
+\DoxyCodeLine{158         \}}
+\DoxyCodeLine{159         kakuro k = ak.get(0);}
+\DoxyCodeLine{160         ak.clear();}
+\DoxyCodeLine{161         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{162         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ad3aabdb91a3b0230fefaba17de2ec57a}{convertirKakuroMatriz}}(k, 0);}
+\DoxyCodeLine{163     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ad5358eb6f898129211bbf2ca0db9591b}\label{class_dominio_1_1_ctrl_dominio_ad5358eb6f898129211bbf2ca0db9591b}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!getvalidartablero@{getvalidartablero}}
+\index{getvalidartablero@{getvalidartablero}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getvalidartablero()}{getvalidartablero()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Dominio.\+Ctrl\+Dominio.\+getvalidartablero (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Comprueba si se puede pedir pista para el kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em matriz} & Matriz del kakuro \\
+\hline
+{\em n} & Numero de filas \\
+\hline
+{\em m} & Numero de columnas \\
+\hline
+{\em id} & Identificador del kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna la matriz del kakuro 
+\end{DoxyReturn}
+
+
+Definición en la línea 276 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276                                                                                                   \{}
+\DoxyCodeLine{277         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{278         kakuro k = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz,n,m,\textcolor{keywordtype}{id});}
+\DoxyCodeLine{279         }
+\DoxyCodeLine{280         SolveValida v = \textcolor{keyword}{new} SolveValida();}
+\DoxyCodeLine{281         v.initialize(k);}
+\DoxyCodeLine{282         v.valida(0,0,k);}
+\DoxyCodeLine{283         \textcolor{keywordtype}{int} sol = v.getnumsolucions();}
+\DoxyCodeLine{284         \textcolor{keywordflow}{if} (sol == 1) \{}
+\DoxyCodeLine{285             v.solve(0,0,k);}
+\DoxyCodeLine{286             List<List<String>> auxmat = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_ad3aabdb91a3b0230fefaba17de2ec57a}{convertirKakuroMatriz}}(k, 1);}
+\DoxyCodeLine{287             \textcolor{keywordflow}{return} auxmat;}
+\DoxyCodeLine{288         \}}
+\DoxyCodeLine{289         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{290             List<List<String>> auxmat = \textcolor{keyword}{new} ArrayList<List<String>>();}
+\DoxyCodeLine{291             \textcolor{keywordflow}{return} auxmat;}
+\DoxyCodeLine{292         \}}
+\DoxyCodeLine{293     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a8afd7bbc6834cb122277b2b4a5bd708c}\label{class_dominio_1_1_ctrl_dominio_a8afd7bbc6834cb122277b2b4a5bd708c}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!guardarkakuro@{guardarkakuro}}
+\index{guardarkakuro@{guardarkakuro}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarkakuro()}{guardarkakuro()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+guardarkakuro (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz\+\_\+fichero,  }\item[{int}]{file\+Count }\end{DoxyParamCaption})}
+
+Guarda un kakuro en un fichero 
+\begin{DoxyParams}{Parámetros}
+{\em matriz\+\_\+fichero} & Matriz de un kakuro \\
+\hline
+{\em file\+Count} & Identificador para el nuevo kakuro \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 170 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{170                                                                                 \{}
+\DoxyCodeLine{171         CtrlPersistencia.guardarkakuro(matriz\_fichero, fileCount);}
+\DoxyCodeLine{172     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_aede86a7a46399b29bfb47388d2926ef0}\label{class_dominio_1_1_ctrl_dominio_aede86a7a46399b29bfb47388d2926ef0}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!guardarPartida@{guardarPartida}}
+\index{guardarPartida@{guardarPartida}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarPartida()}{guardarPartida()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+guardar\+Partida (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id,  }\item[{long}]{tiempo }\end{DoxyParamCaption})}
+
+Guarda el estado de una partida empezada 
+\begin{DoxyParams}{Parámetros}
+{\em matriz} & Matriz del kakuro actual \\
+\hline
+{\em n} & Numero de filas \\
+\hline
+{\em m} & Numero de columnas \\
+\hline
+{\em id} & Identificador del kakuro \\
+\hline
+{\em tiempo} & Tiempo que lleva jugando el kakuro \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 210 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210                                                                                               \{}
+\DoxyCodeLine{211         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{212         kakuro k = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz,n,m,\textcolor{keywordtype}{id});}
+\DoxyCodeLine{213         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_a57cd5aa46041d17861c35f2635516096}{guardar\_partida}}(k, tiempo);}
+\DoxyCodeLine{214     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ae6d16d84849005d540f46bc1b1701c3a}\label{class_dominio_1_1_ctrl_dominio_ae6d16d84849005d540f46bc1b1701c3a}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!guardarRanking@{guardarRanking}}
+\index{guardarRanking@{guardarRanking}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarRanking()}{guardarRanking()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+guardar\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro,  }\item[{String}]{nomJ,  }\item[{Double}]{temps }\end{DoxyParamCaption})}
+
+Guarda un ranking de un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em id\+Kakuro} & Identificador del kakuro \\
+\hline
+{\em nomJ} & Nombre del usuario que ha resuelto el kakuro \\
+\hline
+{\em temps} & Tiempo que ha tardado en resolver el kakuro \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 237 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237                                                                         \{}
+\DoxyCodeLine{238         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_a7f351236a0aeb52dc1424b762ae758ce}{guardarRanking}}(idKakuro, nomJ, temps);}
+\DoxyCodeLine{239     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a4b2ea0b8b44af0c469f254a4c51a9604}\label{class_dominio_1_1_ctrl_dominio_a4b2ea0b8b44af0c469f254a4c51a9604}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!hayGuardada@{hayGuardada}}
+\index{hayGuardada@{hayGuardada}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{hayGuardada()}{hayGuardada()}}
+{\footnotesize\ttfamily boolean Dominio.\+Ctrl\+Dominio.\+hay\+Guardada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Comprueba si hay una partida guardada \begin{DoxyReturn}{Devuelve}
+retorna cierto si la hay, false en caso contrario 
+\end{DoxyReturn}
+
+
+Definición en la línea 298 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{298                                  \{}
+\DoxyCodeLine{299         \textcolor{keywordflow}{return} CtrlPersistencia.hayGuardada();}
+\DoxyCodeLine{300     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a458508b5edddd39c876bbc37033f5788}\label{class_dominio_1_1_ctrl_dominio_a458508b5edddd39c876bbc37033f5788}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!kakuroAcabado@{kakuroAcabado}}
+\index{kakuroAcabado@{kakuroAcabado}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{kakuroAcabado()}{kakuroAcabado()}}
+{\footnotesize\ttfamily boolean Dominio.\+Ctrl\+Dominio.\+kakuro\+Acabado (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Comprueba si un kakuro esta acabado y correcto 
+\begin{DoxyParams}{Parámetros}
+{\em matriz} & Matriz del kakuro actual \\
+\hline
+{\em n} & Numero de filas \\
+\hline
+{\em m} & Numero de columnas \\
+\hline
+{\em id} & Identificador del kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Informa si el kakuro esta correctamente completado 
+\end{DoxyReturn}
+
+
+Definición en la línea 224 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{224                                                                                    \{}
+\DoxyCodeLine{225         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{226         kakuro k = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz,n,m,\textcolor{keywordtype}{id});}
+\DoxyCodeLine{227         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}{P}} = \textcolor{keyword}{new} Partida();}
+\DoxyCodeLine{228         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}{P}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a2d57af286dab142b09788224a4d9ddc3}{resuelto}}(k);}
+\DoxyCodeLine{229     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a207cfc8a33cb7d5a34da0b9f2f60c24c}\label{class_dominio_1_1_ctrl_dominio_a207cfc8a33cb7d5a34da0b9f2f60c24c}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!leerkakurotxt@{leerkakurotxt}}
+\index{leerkakurotxt@{leerkakurotxt}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{leerkakurotxt()}{leerkakurotxt()}}
+{\footnotesize\ttfamily List$<$List$<$String$>$ $>$ Dominio.\+Ctrl\+Dominio.\+leerkakurotxt (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Lee un kakuro de un fichero 
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del kakuro a leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna el kakuro en una matriz 
+\end{DoxyReturn}
+
+
+Definición en la línea 130 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130                                                     \{}
+\DoxyCodeLine{131         \textcolor{keywordflow}{return} CtrlPersistencia.leerkakurotxt(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{132     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a5df22686a9d5d425fee79f9dad46deb0}\label{class_dominio_1_1_ctrl_dominio_a5df22686a9d5d425fee79f9dad46deb0}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!modificarUsuarioContraseña@{modificarUsuarioContraseña}}
+\index{modificarUsuarioContraseña@{modificarUsuarioContraseña}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{modificarUsuarioContraseña()}{modificarUsuarioContraseña()}}
+{\footnotesize\ttfamily void Dominio.\+Ctrl\+Dominio.\+modificar\+Usuario\+Contraseña (\begin{DoxyParamCaption}\item[{String}]{u,  }\item[{String}]{np }\end{DoxyParamCaption})}
+
+Modifica la constraseña del usuario indicado 
+\begin{DoxyParams}{Parámetros}
+{\em u} & Nombre de usuario al que cambiar la constraseña \\
+\hline
+{\em np} & Nueva constraseña \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 104 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                                                 \{}
+\DoxyCodeLine{105         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}{CU}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aca7e7ee04195995f3c31315c97061d1e}{modificarUsuarioContraseña}}(u, np);}
+\DoxyCodeLine{106     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ab8861308e143f2d3aea67a3b58152710}\label{class_dominio_1_1_ctrl_dominio_ab8861308e143f2d3aea67a3b58152710}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!partida@{partida}}
+\index{partida@{partida}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{partida()}{partida()}}
+{\footnotesize\ttfamily boolean Dominio.\+Ctrl\+Dominio.\+partida (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{cambio }\end{DoxyParamCaption})}
+
+Comprueba si un cambio en un kakuro es correcto 
+\begin{DoxyParams}{Parámetros}
+{\em matriz} & Matriz con el kakuro \\
+\hline
+{\em n} & Numero de filas \\
+\hline
+{\em m} & Numero de columnas \\
+\hline
+{\em id} & Identificador del kakuro \\
+\hline
+{\em i} & Numero de fila a actualizar \\
+\hline
+{\em j} & Numero de columna a actualizar \\
+\hline
+{\em cambio} & Valor del numero que introduce \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna si ha podido introducir el numero correctamente o era inválido 
+\end{DoxyReturn}
+
+
+Definición en la línea 195 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{195                                                                                                       \{}
+\DoxyCodeLine{196         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{197         kakuro k = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz,n,m,\textcolor{keywordtype}{id});}
+\DoxyCodeLine{198         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}{P}} = \textcolor{keyword}{new} Partida();}
+\DoxyCodeLine{199         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}{P}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida_a9fc5799d7aa289df8fdc17e8aac51ba6}{partida}}(k, i,j,cambio);}
+\DoxyCodeLine{200     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ade9a1f12c3633cc4b43aa9f3d128f437}\label{class_dominio_1_1_ctrl_dominio_ade9a1f12c3633cc4b43aa9f3d128f437}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!tamañoDirectorio@{tamañoDirectorio}}
+\index{tamañoDirectorio@{tamañoDirectorio}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{tamañoDirectorio()}{tamañoDirectorio()}}
+{\footnotesize\ttfamily int Dominio.\+Ctrl\+Dominio.\+tamaño\+Directorio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Informa del tamaño del directorio Kakuros \begin{DoxyReturn}{Devuelve}
+Retorna el numero de elementos que hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 112 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                   \{}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{114     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a06b534aa734115bba5de38976da28682}\label{class_dominio_1_1_ctrl_dominio_a06b534aa734115bba5de38976da28682}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!validar@{validar}}
+\index{validar@{validar}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily int Dominio.\+Ctrl\+Dominio.\+validar (\begin{DoxyParamCaption}\item[{List$<$ List$<$ String $>$$>$}]{matriz,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Valida un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em matriz} & Matriz de un kakuro \\
+\hline
+{\em n} & Numero de filas \\
+\hline
+{\em m} & Numero de columnas \\
+\hline
+{\em id} & Identificador del kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna el numero de soluciones que tiene el kakuro 
+\end{DoxyReturn}
+
+
+Definición en la línea 258 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{258                                                                         \{}
+\DoxyCodeLine{259         \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}} = \textcolor{keyword}{new} LeerEscribir();}
+\DoxyCodeLine{260         kakuro k = \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}{LE}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir_aee3f3f783692c25fd2d9f03276822108}{crearMatriz}}(matriz,n,m,\textcolor{keywordtype}{id});}
+\DoxyCodeLine{261         }
+\DoxyCodeLine{262         SolveValida v = \textcolor{keyword}{new} SolveValida();}
+\DoxyCodeLine{263         v.initialize(k);}
+\DoxyCodeLine{264         \textcolor{keywordtype}{boolean} aux = v.valida(0,0,k);}
+\DoxyCodeLine{265         \textcolor{keywordflow}{return} v.getnumsolucions();}
+\DoxyCodeLine{266     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a4798b989f4754b75421d958be98fb02e}\label{class_dominio_1_1_ctrl_dominio_a4798b989f4754b75421d958be98fb02e}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!verRanking@{verRanking}}
+\index{verRanking@{verRanking}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{verRanking()}{verRanking()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Ctrl\+Dominio.\+ver\+Ranking (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Muestra el ranking de un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna una lista de pares indicando nombres de usuario que han resuelto un kakuro i el tiempo que han tardado 
+\end{DoxyReturn}
+
+
+Definición en la línea 179 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179                                          \{}
+\DoxyCodeLine{180         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_af0715bd84b04376918f604c712afe723}{verRanking}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{181     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a44b9d08e4cb567aba924680ab48bfd82}\label{class_dominio_1_1_ctrl_dominio_a44b9d08e4cb567aba924680ab48bfd82}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!verRecords@{verRecords}}
+\index{verRecords@{verRecords}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{verRecords()}{verRecords()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_pair}{Pair}}$>$ Dominio.\+Ctrl\+Dominio.\+ver\+Records (\begin{DoxyParamCaption}\item[{int}]{id\+Kakuro }\end{DoxyParamCaption})}
+
+Muestra los records de un kakuro 
+\begin{DoxyParams}{Parámetros}
+{\em id\+Kakuro} & Identificador de un kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Retorna los valores de los tres primeros tiempos del ranking 
+\end{DoxyReturn}
+
+
+Definición en la línea 246 del archivo Ctrl\+Dominio.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{246                                                \{}
+\DoxyCodeLine{247         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}{CR}}.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings_aac60cc224445b4ba5dccb4c168f182cf}{verRecords}}(idKakuro);}
+\DoxyCodeLine{248     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a8188b25e49122bfff77d90a8ae6ff311}\label{class_dominio_1_1_ctrl_dominio_a8188b25e49122bfff77d90a8ae6ff311}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!CP@{CP}}
+\index{CP@{CP}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{CP}{CP}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_persistencia_1_1_ctrl_persistencia}{Ctrl\+Persistencia}} Dominio.\+Ctrl\+Dominio.\+CP\hspace{0.3cm}{\ttfamily [private]}}
+
+Controlador de Persisténcia 
+
+Definición en la línea 31 del archivo Ctrl\+Dominio.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}\label{class_dominio_1_1_ctrl_dominio_ade791134b91707936af5986c8dca6da5}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!CR@{CR}}
+\index{CR@{CR}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{CR}{CR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_rankings}{Ctrl\+Rankings}} Dominio.\+Ctrl\+Dominio.\+CR\hspace{0.3cm}{\ttfamily [private]}}
+
+Controlador de Rankings 
+
+Definición en la línea 41 del archivo Ctrl\+Dominio.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}\label{class_dominio_1_1_ctrl_dominio_a586a22ba5b4c3517a26418366ab1a431}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!CU@{CU}}
+\index{CU@{CU}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{CU}{CU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario}{Ctrl\+Usuario}} Dominio.\+Ctrl\+Dominio.\+CU\hspace{0.3cm}{\ttfamily [private]}}
+
+Controlador d\textquotesingle{}usuari 
+
+Definición en la línea 36 del archivo Ctrl\+Dominio.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_a76573d8a78703725fa7d3daec7b15ba3}\label{class_dominio_1_1_ctrl_dominio_a76573d8a78703725fa7d3daec7b15ba3}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!G@{G}}
+\index{G@{G}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar}{Generar}} Dominio.\+Ctrl\+Dominio.\+G\hspace{0.3cm}{\ttfamily [private]}}
+
+Generar 
+
+Definición en la línea 46 del archivo Ctrl\+Dominio.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}\label{class_dominio_1_1_ctrl_dominio_ab06f24bf84bb197842faafd754dd10bd}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!LE@{LE}}
+\index{LE@{LE}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{LE}{LE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_leer_escribir}{Leer\+Escribir}} Dominio.\+Ctrl\+Dominio.\+LE\hspace{0.3cm}{\ttfamily [private]}}
+
+Leer\+Escribir 
+
+Definición en la línea 51 del archivo Ctrl\+Dominio.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}\label{class_dominio_1_1_ctrl_dominio_adfd5f11446f4152e0b58082d8e877156}} 
+\index{Dominio.CtrlDominio@{Dominio.CtrlDominio}!P@{P}}
+\index{P@{P}!Dominio.CtrlDominio@{Dominio.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_partida}{Partida}} Dominio.\+Ctrl\+Dominio.\+P\hspace{0.3cm}{\ttfamily [private]}}
+
+Partida 
+
+Definición en la línea 56 del archivo Ctrl\+Dominio.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\mbox{\hyperlink{_ctrl_dominio_8java}{Ctrl\+Dominio.\+java}}\end{DoxyCompactItemize}

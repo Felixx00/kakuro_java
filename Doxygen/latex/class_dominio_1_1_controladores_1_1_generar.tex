@@ -1,0 +1,514 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_generar}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Generar}
+\label{class_dominio_1_1_controladores_1_1_generar}\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac0fa07bd99eda95c8d2f246e65fcb94c}{generar}} (int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}, int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}, String dificultad)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}{comprobar\+Probabilidad}} (int f, int c)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}} (boolean\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} visitado, Array\+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} $>$ recorrido, int x, int y, int numero\+Blancas)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a79c69beccb631218d6bc7da6ed7d3f6a}{dist\+Correcta}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a5cac5dfe6b30c07c50f30a7ecfe40505}{definir\+Numeros}} ()
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a01c46ba8a8e118079ee0e006500a20c2}{numero\+Correcto}} (int num, int i, int j)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a23a476f44492ec36eba67caaccdb4b6e}{consultar\+JugableF}} (int x, int y)
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae245da7ac4472337644cee6b9ff979b4}{consultar\+JugableC}} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase encargada de las funciones relativas al caso de uno \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar}{Generar}} \begin{DoxyAuthor}{Autor}
+Martí Westermeyer y Fèlix Forroll 
+\end{DoxyAuthor}
+
+
+Definición en la línea 16 del archivo Generar.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}\label{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!comprobarProbabilidad@{comprobarProbabilidad}}
+\index{comprobarProbabilidad@{comprobarProbabilidad}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{comprobarProbabilidad()}{comprobarProbabilidad()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Generar.\+comprobar\+Probabilidad (\begin{DoxyParamCaption}\item[{int}]{f,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+obtiene la probabilidad de la celda dependiendo de ciertas limitaciones 
+\begin{DoxyParams}{Parámetros}
+{\em f} & Índice de fila \\
+\hline
+{\em c} & Índice de columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La probabilidad averiguada 
+\end{DoxyReturn}
+
+
+Definición en la línea 191 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{191                                                       \{}
+\DoxyCodeLine{192           \textcolor{keywordtype}{int} proB;}
+\DoxyCodeLine{193           \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/1 \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c-\/1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}})) \textcolor{keywordflow}{return} 100; }
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195           \textcolor{keywordflow}{if} (f >= 2 \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f-\/1][c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f-\/2][c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}))}
+\DoxyCodeLine{196               \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{197           \textcolor{keywordflow}{if} (c >= 2 \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c-\/1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c-\/2].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}))}
+\DoxyCodeLine{198               \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{199           \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{200               Random rr = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{201               proB = rr.nextInt(100) + 1;}
+\DoxyCodeLine{202               \textcolor{keywordflow}{return} proB;}
+\DoxyCodeLine{203           \}}
+\DoxyCodeLine{204       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_ae245da7ac4472337644cee6b9ff979b4}\label{class_dominio_1_1_controladores_1_1_generar_ae245da7ac4472337644cee6b9ff979b4}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!consultarJugableC@{consultarJugableC}}
+\index{consultarJugableC@{consultarJugableC}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{consultarJugableC()}{consultarJugableC()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Generar.\+consultar\+JugableC (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla Jugable de su respectiva columna 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la Jugable, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 327 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327                                                    \{}
+\DoxyCodeLine{328           \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = x; j >= 0; -\/-\/j) \{}
+\DoxyCodeLine{329               \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[j][y].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \textcolor{keywordflow}{return} j;}
+\DoxyCodeLine{330           \}}
+\DoxyCodeLine{331           \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{332       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a23a476f44492ec36eba67caaccdb4b6e}\label{class_dominio_1_1_controladores_1_1_generar_a23a476f44492ec36eba67caaccdb4b6e}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!consultarJugableF@{consultarJugableF}}
+\index{consultarJugableF@{consultarJugableF}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{consultarJugableF()}{consultarJugableF()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Generar.\+consultar\+JugableF (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Consulta la casilla Jugable de su respectiva fila 
+\begin{DoxyParams}{Parámetros}
+{\em x} & Índice de Fila \\
+\hline
+{\em y} & Índice de Columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Posición de la Jugable, o -\/1 si no hay 
+\end{DoxyReturn}
+
+
+Definición en la línea 314 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{314                                                    \{}
+\DoxyCodeLine{315           \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = y; i >= 0; -\/-\/i) \{}
+\DoxyCodeLine{316               \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[x][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{317           \}}
+\DoxyCodeLine{318           \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{319       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a5cac5dfe6b30c07c50f30a7ecfe40505}\label{class_dominio_1_1_controladores_1_1_generar_a5cac5dfe6b30c07c50f30a7ecfe40505}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!definirNumeros@{definirNumeros}}
+\index{definirNumeros@{definirNumeros}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{definirNumeros()}{definirNumeros()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Generar.\+definir\+Numeros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Asigna valor a las celdas Blancas comprobando que cumpla las normas de juego 
+
+Definición en la línea 258 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{258                                     \{}
+\DoxyCodeLine{259           Random rr = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{260           \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{261           \textcolor{keywordtype}{int} x= 0;}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263           num = rr.nextInt(9) + 1;}
+\DoxyCodeLine{264           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; i++) \{}
+\DoxyCodeLine{265               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 1; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; j++) \{}
+\DoxyCodeLine{266                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \{}
+\DoxyCodeLine{267                       \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a01c46ba8a8e118079ee0e006500a20c2}{numeroCorrecto}}(num,i,j)) \{}
+\DoxyCodeLine{268                           num = rr.nextInt(9) + 1;}
+\DoxyCodeLine{269                       \}}
+\DoxyCodeLine{270                       ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j]).setNumeroCorrecto(num);}
+\DoxyCodeLine{271                   \}}
+\DoxyCodeLine{272               \}}
+\DoxyCodeLine{273           \}}
+\DoxyCodeLine{274           \textcolor{keywordtype}{boolean} correcto;}
+\DoxyCodeLine{275           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; i++) \{}
+\DoxyCodeLine{276               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; j++) \{}
+\DoxyCodeLine{277                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \{}
+\DoxyCodeLine{278                       correcto = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j]).sumafila(\textcolor{keyword}{true});}
+\DoxyCodeLine{279                       correcto = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j]).sumacol(\textcolor{keyword}{true});}
+\DoxyCodeLine{280                   \}}
+\DoxyCodeLine{281               \}}
+\DoxyCodeLine{282           \}}
+\DoxyCodeLine{283       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a79c69beccb631218d6bc7da6ed7d3f6a}\label{class_dominio_1_1_controladores_1_1_generar_a79c69beccb631218d6bc7da6ed7d3f6a}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!distCorrecta@{distCorrecta}}
+\index{distCorrecta@{distCorrecta}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{distCorrecta()}{distCorrecta()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Generar.\+dist\+Correcta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba que no haya filas o columnas de blancas seguidas mayor que 9 \begin{DoxyReturn}{Devuelve}
+True si cumple esta distribución, en caso contrario false 
+\end{DoxyReturn}
+
+
+Definición en la línea 232 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232                                      \{}
+\DoxyCodeLine{233           \textcolor{keywordtype}{int} contadorF = 0;}
+\DoxyCodeLine{234           \textcolor{keywordtype}{int} contadorC = 0;}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; i++) \{}
+\DoxyCodeLine{237               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; j++) \{}
+\DoxyCodeLine{238                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++contadorF;}
+\DoxyCodeLine{239                   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}})) contadorF = 0;}
+\DoxyCodeLine{240                   \textcolor{keywordflow}{if} (contadorF > 9) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{241               \}}
+\DoxyCodeLine{242               contadorF = 0;}
+\DoxyCodeLine{243           \}}
+\DoxyCodeLine{244           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; i++) \{}
+\DoxyCodeLine{245               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; j++) \{}
+\DoxyCodeLine{246                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[j][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++contadorC;}
+\DoxyCodeLine{247                   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[j][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}})) contadorC = 0;}
+\DoxyCodeLine{248                   \textcolor{keywordflow}{if} (contadorC > 9) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{249               \}}
+\DoxyCodeLine{250               contadorC = 0;}
+\DoxyCodeLine{251           \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253           \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{254       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_ac0fa07bd99eda95c8d2f246e65fcb94c}\label{class_dominio_1_1_controladores_1_1_generar_ac0fa07bd99eda95c8d2f246e65fcb94c}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!generar@{generar}}
+\index{generar@{generar}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{generar()}{generar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} Dominio.\+Controladores.\+Generar.\+generar (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{String}]{dificultad }\end{DoxyParamCaption})}
+
+Genera un kakuro con ciertas limitaciones \begin{DoxyReturn}{Devuelve}
+kakuro inicialzado 
+\end{DoxyReturn}
+
+
+Definición en la línea 34 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                             \{}
+\DoxyCodeLine{35                 }
+\DoxyCodeLine{36             \textcolor{keywordtype}{int} numeroBlancas = 0;}
+\DoxyCodeLine{37             this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}} = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}};}
+\DoxyCodeLine{38             this.\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}} = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}};}
+\DoxyCodeLine{39             \textcolor{keywordtype}{int} porcentaje\_dificultad = 0;}
+\DoxyCodeLine{40             }
+\DoxyCodeLine{41             \textcolor{keywordflow}{if}(dificultad.equals(\textcolor{stringliteral}{"{}Fácil"{}})) \{}
+\DoxyCodeLine{42                 porcentaje\_dificultad = 20;}
+\DoxyCodeLine{43             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(dificultad.equals(\textcolor{stringliteral}{"{}Mediana"{}})) \{}
+\DoxyCodeLine{44                 porcentaje\_dificultad = 40;}
+\DoxyCodeLine{45             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(dificultad.equals(\textcolor{stringliteral}{"{}Difícil"{}})) \{}
+\DoxyCodeLine{46                 porcentaje\_dificultad = 60;}
+\DoxyCodeLine{47             \}}
+\DoxyCodeLine{48             }
+\DoxyCodeLine{49             }
+\DoxyCodeLine{50             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}];}
+\DoxyCodeLine{51             \textcolor{keywordtype}{boolean} conexo = \textcolor{keyword}{false};}
+\DoxyCodeLine{52             \textcolor{keywordtype}{boolean} distcorrecta = \textcolor{keyword}{false};}
+\DoxyCodeLine{53             String tipoCelda; }
+\DoxyCodeLine{54             \textcolor{keywordflow}{while} (!conexo || !distcorrecta) \{}
+\DoxyCodeLine{55                 numeroBlancas = 0;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 0; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{58                     \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[0][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{59                 \}}
+\DoxyCodeLine{60                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; ++f) \{}
+\DoxyCodeLine{61                     \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][0] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{62                 \}}
+\DoxyCodeLine{63                 \textcolor{keywordtype}{int} proB;}
+\DoxyCodeLine{64                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}\%2 == 0) \{ \textcolor{comment}{//par}}
+\DoxyCodeLine{65                     }
+\DoxyCodeLine{66                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 1; f < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2; ++f) \{}
+\DoxyCodeLine{67                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{68                             proB = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}{comprobarProbabilidad}}(f,c);}
+\DoxyCodeLine{69                             \textcolor{keywordflow}{if} (proB < porcentaje\_dificultad) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{70                             \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{71                         \}}
+\DoxyCodeLine{72                     \}}
+\DoxyCodeLine{73                     \textcolor{keywordtype}{int} aux = 2;}
+\DoxyCodeLine{74                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2+1; f < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; ++f) \{}
+\DoxyCodeLine{75                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{76                             tipoCelda = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f-\/aux][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/c].getClass().getSimpleName();}
+\DoxyCodeLine{77                             \textcolor{keywordflow}{if} (tipoCelda.equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{78                             \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{79                         \}}
+\DoxyCodeLine{80                         aux+=2;}
+\DoxyCodeLine{81                     \}}
+\DoxyCodeLine{82                     \textcolor{comment}{//fila medio}}
+\DoxyCodeLine{83                     \textcolor{keywordtype}{int} aux2;}
+\DoxyCodeLine{84                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}\%2 == 0) \{}
+\DoxyCodeLine{85                         aux = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2+1;}
+\DoxyCodeLine{86                         aux2 = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2;}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88                     \}}
+\DoxyCodeLine{89                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{90                         aux = (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}+1)/2;}
+\DoxyCodeLine{91                         aux2 = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2+1;}
+\DoxyCodeLine{92                     \}}
+\DoxyCodeLine{93                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < aux2; ++c) \{}
+\DoxyCodeLine{94                         proB = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}{comprobarProbabilidad}}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2,c);}
+\DoxyCodeLine{95                         \textcolor{keywordflow}{if} (proB < porcentaje\_dificultad) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{96                         \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{97                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2-\/1][c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2-\/1][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}))}
+\DoxyCodeLine{98                             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{99                     \}}
+\DoxyCodeLine{100                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}\%2 == 0) \{}
+\DoxyCodeLine{101                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2-\/1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2-\/2].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}) ||}
+\DoxyCodeLine{102                             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2-\/1][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2-\/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}))}
+\DoxyCodeLine{103                             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{104                         \textcolor{keywordflow}{else}  \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}/2] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{105                     \}}
+\DoxyCodeLine{106                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = aux; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{                    }
+\DoxyCodeLine{107                         tipoCelda = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/c].getClass().getSimpleName();}
+\DoxyCodeLine{108                         \textcolor{keywordflow}{if} (tipoCelda.equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{109                         \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{110                     \}}
+\DoxyCodeLine{111                 \}}
+\DoxyCodeLine{112                 }
+\DoxyCodeLine{113                 \textcolor{keywordflow}{else} \{ \textcolor{comment}{//impar}}
+\DoxyCodeLine{114                     }
+\DoxyCodeLine{115                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 1; f <= (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1)/2; ++f) \{}
+\DoxyCodeLine{116                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{117                             proB = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ac9c49b3fa6fbcba41857e35737787143}{comprobarProbabilidad}}(f,c);}
+\DoxyCodeLine{118                             \textcolor{keywordflow}{if} (proB < porcentaje\_dificultad) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{119                             \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{120                         \}}
+\DoxyCodeLine{121                     \}}
+\DoxyCodeLine{122                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{123                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1)/2-\/1][c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1)/2][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/c].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}}))}
+\DoxyCodeLine{124                                 \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1)/2][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{125                     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127                     \textcolor{keywordtype}{int} aux = 1;}
+\DoxyCodeLine{128                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1)/2+1; f < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; ++f) \{}
+\DoxyCodeLine{129                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++c) \{}
+\DoxyCodeLine{130                             tipoCelda = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f-\/aux][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/c].getClass().getSimpleName();}
+\DoxyCodeLine{131                             \textcolor{keywordflow}{if} (tipoCelda.equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}();}
+\DoxyCodeLine{132                             \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[f][c] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_negra}{Negra}}();}
+\DoxyCodeLine{133                         \}}
+\DoxyCodeLine{134                         aux+=2;}
+\DoxyCodeLine{135                     \}}
+\DoxyCodeLine{136                 \}}
+\DoxyCodeLine{137                 }
+\DoxyCodeLine{138                 \textcolor{keywordtype}{int} x = 0,y = 0;}
+\DoxyCodeLine{139                 \textcolor{keywordtype}{boolean} trobat = \textcolor{keyword}{false};}
+\DoxyCodeLine{140                 }
+\DoxyCodeLine{141                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; ++i ) \{}
+\DoxyCodeLine{142                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++j ) \{}
+\DoxyCodeLine{143                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \{}
+\DoxyCodeLine{144                             ++numeroBlancas;}
+\DoxyCodeLine{145                             \textcolor{keywordflow}{if} (!trobat) \{}
+\DoxyCodeLine{146                                 trobat = \textcolor{keyword}{true};}
+\DoxyCodeLine{147                                 x = i;}
+\DoxyCodeLine{148                                 y = j;}
+\DoxyCodeLine{149                             \}}
+\DoxyCodeLine{150                         \}}
+\DoxyCodeLine{151                     \}}
+\DoxyCodeLine{152                 \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154                 \textcolor{keywordtype}{boolean}[][] visitado = \textcolor{keyword}{new} \textcolor{keywordtype}{boolean}[\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}][\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}];}
+\DoxyCodeLine{155                 ArrayList<Cell> recorrido = \textcolor{keyword}{new} ArrayList<Cell>();}
+\DoxyCodeLine{156                 conexo = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}}(visitado,recorrido,x,y,numeroBlancas);}
+\DoxyCodeLine{157                 distcorrecta = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a79c69beccb631218d6bc7da6ed7d3f6a}{distCorrecta}}();}
+\DoxyCodeLine{158             \}}
+\DoxyCodeLine{159             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}; ++i ) \{}
+\DoxyCodeLine{160                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}; ++j ) \{}
+\DoxyCodeLine{161                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}})) \{}
+\DoxyCodeLine{162                         \textcolor{keywordflow}{if} (i == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1 \&\& j == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/1) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_no_jugable}{NoJugable}}();}
+\DoxyCodeLine{163                         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{164                             \textcolor{keywordflow}{if} (i == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}}-\/1) \{}
+\DoxyCodeLine{165                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j+1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}();}
+\DoxyCodeLine{166                                 \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_no_jugable}{NoJugable}}();}
+\DoxyCodeLine{167                             \}}
+\DoxyCodeLine{168                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}-\/1) \{}
+\DoxyCodeLine{169                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i+1][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}();}
+\DoxyCodeLine{170                                 \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_no_jugable}{NoJugable}}();}
+\DoxyCodeLine{171                             \}                    }
+\DoxyCodeLine{172                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i+1][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j+1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}();}
+\DoxyCodeLine{173                             \textcolor{keywordflow}{else} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1_no_jugable}{NoJugable}}();}
+\DoxyCodeLine{174                         \}}
+\DoxyCodeLine{175                     \}}
+\DoxyCodeLine{176                 \}}
+\DoxyCodeLine{177             \}}
+\DoxyCodeLine{178             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a5cac5dfe6b30c07c50f30a7ecfe40505}{definirNumeros}}();}
+\DoxyCodeLine{179             \textcolor{comment}{//System.out.println(validar\_kakuro());}}
+\DoxyCodeLine{180             \textcolor{keywordtype}{int} fileCount = CtrlPersistencia.tamañoDirectorio();}
+\DoxyCodeLine{181             \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k = \textcolor{keyword}{new} \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}},\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}{n}},\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}},numeroBlancas,fileCount);}
+\DoxyCodeLine{182             \textcolor{keywordflow}{return} k;}
+\DoxyCodeLine{183       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a01c46ba8a8e118079ee0e006500a20c2}\label{class_dominio_1_1_controladores_1_1_generar_a01c46ba8a8e118079ee0e006500a20c2}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!numeroCorrecto@{numeroCorrecto}}
+\index{numeroCorrecto@{numeroCorrecto}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{numeroCorrecto()}{numeroCorrecto()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Generar.\+numero\+Correcto (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba que el número introducido cumple las normas de juego 
+\begin{DoxyParams}{Parámetros}
+{\em num} & Nuevo número propuesto \\
+\hline
+{\em i} & Índice de fila \\
+\hline
+{\em j} & Índice de columna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el número se puede escribir en esa posicion, en caso contrario False 
+\end{DoxyReturn}
+
+
+Definición en la línea 292 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292                                                             \{}
+\DoxyCodeLine{293           \textcolor{keywordtype}{int} jugableF, jugableC;}
+\DoxyCodeLine{294           jugableF = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a23a476f44492ec36eba67caaccdb4b6e}{consultarJugableF}}(i,j);}
+\DoxyCodeLine{295           jugableC = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae245da7ac4472337644cee6b9ff979b4}{consultarJugableC}}(i,j);}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297           \textcolor{comment}{//fila}}
+\DoxyCodeLine{298           \textcolor{keywordflow}{if} (!((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][jugableF]).add\_setfila(num)) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300           \textcolor{comment}{//columna}}
+\DoxyCodeLine{301           \textcolor{keywordflow}{if} (!((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[jugableC][j]).add\_setcol(num)) \{}
+\DoxyCodeLine{302               ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}})\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[i][jugableF]).del\_setfila(num);}
+\DoxyCodeLine{303               \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{304           \}}
+\DoxyCodeLine{305           \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{306       \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}\label{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!rec@{rec}}
+\index{rec@{rec}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{rec()}{rec()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Generar.\+rec (\begin{DoxyParamCaption}\item[{boolean}]{visitado\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Array\+List$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} $>$}]{recorrido,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{numero\+Blancas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+D\+FS para comprobar que el kakuro es conexo 
+\begin{DoxyParams}{Parámetros}
+{\em visitado} & Matriz que marca las celdas ya visitadas \\
+\hline
+{\em recorrido} & Arraylist que contiene el contenido del recorrido realizado \\
+\hline
+{\em x} & Índice de fila \\
+\hline
+{\em y} & Índice de columna \\
+\hline
+{\em numero\+Blancas} & Número de blancas que dispone el tablero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el kakuro es conexo, en caso contrario False 
+\end{DoxyReturn}
+
+
+Definición en la línea 214 del archivo Generar.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{214                                                                                                             \{}
+\DoxyCodeLine{215           \textcolor{keywordflow}{if} (x >= 0 \&\& x < n \&\& y >= 0 \&\& y < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}{m}}) \{}
+\DoxyCodeLine{216               \textcolor{keywordflow}{if} (!visitado[x][y]) \{}
+\DoxyCodeLine{217                   visitado[x][y] = \textcolor{keyword}{true};}
+\DoxyCodeLine{218                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[x][y].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \{}
+\DoxyCodeLine{219                       recorrido.add(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[x][y]);}
+\DoxyCodeLine{220                       \textcolor{keywordflow}{if} (recorrido.size() == numeroBlancas) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{221                   \}}
+\DoxyCodeLine{222                   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}{tablero}}[x][y].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Negra"{}})) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{223                   \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}}(visitado, recorrido, x, y+1,numeroBlancas) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}}(visitado, recorrido, x, y-\/1,numeroBlancas) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}}(visitado, recorrido, x+1, y,numeroBlancas) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_generar_aa764227a4e059d4bf85d2d758e44d829}{rec}}(visitado, recorrido, x-\/1, y,numeroBlancas));}
+\DoxyCodeLine{224               \}}
+\DoxyCodeLine{225           \}}
+\DoxyCodeLine{226           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{227       \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}\label{class_dominio_1_1_controladores_1_1_generar_ae240500b7790583218324fff7dae07f5}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!m@{m}}
+\index{m@{m}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Generar.\+m\hspace{0.3cm}{\ttfamily [private]}}
+
+Número de columnas 
+
+Definición en la línea 28 del archivo Generar.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}\label{class_dominio_1_1_controladores_1_1_generar_a346356bdc86ad269a258e84b7d401586}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!n@{n}}
+\index{n@{n}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Generar.\+n\hspace{0.3cm}{\ttfamily [private]}}
+
+Número de filas 
+
+Definición en la línea 24 del archivo Generar.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}\label{class_dominio_1_1_controladores_1_1_generar_a91547e1d38f3d8580e6677fd11fd76e5}} 
+\index{Dominio.Controladores.Generar@{Dominio.Controladores.Generar}!tablero@{tablero}}
+\index{tablero@{tablero}!Dominio.Controladores.Generar@{Dominio.Controladores.Generar}}
+\doxysubsubsection{\texorpdfstring{tablero}{tablero}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Dominio.\+Controladores.\+Generar.\+tablero\hspace{0.3cm}{\ttfamily [private]}}
+
+Matriz de tipo Cell para la partida actual 
+
+Definición en la línea 20 del archivo Generar.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_dominio_2_controladores_2_generar_8java}{Generar.\+java}}\end{DoxyCompactItemize}

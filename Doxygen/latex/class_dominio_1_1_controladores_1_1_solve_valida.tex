@@ -1,0 +1,615 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_solve_valida}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Solve\+Valida}
+\label{class_dominio_1_1_controladores_1_1_solve_valida}\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a9b23824a0df2b65fa0f6736e861c68e0}{getnumsolucions}} ()
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_adb0a397b643431cd2e9cdd1a93fd0405}{initialize}} (\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}} (int row, int col, \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}} (int row, int col, \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{is\+Valid\+Row}} (int row, int col, int valor, \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{is\+Valid\+Col}} (int row, int col, int valor, \mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}} k)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a7569fdaa52cd1032764f1312c4536cde}{generate\+Lookup\+Table}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Set$<$ Integer $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}{get\+Sums}} (int sum, int number\+Of\+Cells)
+\item 
+static Set$<$ Integer $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a9a01282e6e14402a28810a98f26b68b9}{intersection}} (Set$<$ Integer $>$ one, Set$<$ Integer $>$ two)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}{numsolucions}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Hash\+Map$<$ Point, Set$<$ Integer $>$ $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ac22d77b25794252ea1d4532362d25cde}{Lookup\+Table}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para a las funciones destinadas a validar un kakuro \begin{DoxyAuthor}{Autor}
+Victor Villarejo 
+\end{DoxyAuthor}
+
+
+Definición en la línea 17 del archivo Solve\+Valida.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a7569fdaa52cd1032764f1312c4536cde}\label{class_dominio_1_1_controladores_1_1_solve_valida_a7569fdaa52cd1032764f1312c4536cde}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!generateLookupTable@{generateLookupTable}}
+\index{generateLookupTable@{generateLookupTable}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{generateLookupTable()}{generateLookupTable()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Solve\+Valida.\+generate\+Lookup\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Hace una llamada al Controlador de \mbox{\hyperlink{namespace_persistencia}{Persistencia}} para que genere la Look\+Up Table y la asigne. 
+
+Definición en la línea 392 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{392                                        \{}
+\DoxyCodeLine{393             \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ac22d77b25794252ea1d4532362d25cde}{LookupTable}} = CtrlPersistencia.generarLookupTable();}
+\DoxyCodeLine{394     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a9b23824a0df2b65fa0f6736e861c68e0}\label{class_dominio_1_1_controladores_1_1_solve_valida_a9b23824a0df2b65fa0f6736e861c68e0}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!getnumsolucions@{getnumsolucions}}
+\index{getnumsolucions@{getnumsolucions}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{getnumsolucions()}{getnumsolucions()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Solve\+Valida.\+getnumsolucions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta el numero de soluciones \begin{DoxyReturn}{Devuelve}
+número de soluciones 
+\end{DoxyReturn}
+
+
+Definición en la línea 48 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                  \{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}{numsolucions}};}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}\label{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!getSums@{getSums}}
+\index{getSums@{getSums}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{getSums()}{getSums()}}
+{\footnotesize\ttfamily static Set$<$Integer$>$ Dominio.\+Controladores.\+Solve\+Valida.\+get\+Sums (\begin{DoxyParamCaption}\item[{int}]{sum,  }\item[{int}]{number\+Of\+Cells }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Busca la entrada de la lookup table que contiene los posibles candidatos a número de un número y cierto número de casillas 
+\begin{DoxyParams}{Parámetros}
+{\em sum} & numero que queremos conseguir \\
+\hline
+{\em number\+Of\+Cells} & numero de celdas que disponemos para conseguirlos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La entrada de la lookup table que contiene los posibles candidatos a número 
+\end{DoxyReturn}
+
+
+Definición en la línea 370 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{370                                                                    \{}
+\DoxyCodeLine{371         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ac22d77b25794252ea1d4532362d25cde}{LookupTable}}.get(\textcolor{keyword}{new} Point(sum, numberOfCells));}
+\DoxyCodeLine{372     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_adb0a397b643431cd2e9cdd1a93fd0405}\label{class_dominio_1_1_controladores_1_1_solve_valida_adb0a397b643431cd2e9cdd1a93fd0405}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!initialize@{initialize}}
+\index{initialize@{initialize}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Solve\+Valida.\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Inicializa diversos atributos de las casillas blancas que son necesarias para el resto de la ejecución. 
+\begin{DoxyParams}{Parámetros}
+{\em el} & kakuro inicializado \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 55 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                      \{}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a7569fdaa52cd1032764f1312c4536cde}{generateLookupTable}}();}
+\DoxyCodeLine{57          \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{58          \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{59          \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{60         }
+\DoxyCodeLine{61         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}};++i) \{}
+\DoxyCodeLine{62             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}; ++j) \{}
+\DoxyCodeLine{63                 \textcolor{keywordtype}{int} totalValueH = 0;}
+\DoxyCodeLine{64                 \textcolor{keywordtype}{int} totalValueV = 0;}
+\DoxyCodeLine{65                 \textcolor{keywordtype}{int} celdasH = 1;}
+\DoxyCodeLine{66                 \textcolor{keywordtype}{int} celdasV = 1;}
+\DoxyCodeLine{67                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}}))\{}
+\DoxyCodeLine{68                     }
+\DoxyCodeLine{69                         \textcolor{comment}{//RECORRIDO HORIZONTAL}}
+\DoxyCodeLine{70                        \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} l = j + 1; l <= \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}-\/1; l++) \{}
+\DoxyCodeLine{71                            \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][l].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][l].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{72                            \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][l].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++celdasH;}
+\DoxyCodeLine{73                         \}}
+\DoxyCodeLine{74                        }
+\DoxyCodeLine{75                      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} o = j -\/ 1; o >= 0; o-\/-\/) \{}
+\DoxyCodeLine{76                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][o].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][o].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{77                                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][o].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \{}
+\DoxyCodeLine{78                                     totalValueH = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][o]).getnum\_Fila();}
+\DoxyCodeLine{79                                     \}}
+\DoxyCodeLine{80                                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81                                 \}}
+\DoxyCodeLine{82                           }
+\DoxyCodeLine{83                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][o].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++celdasH;}
+\DoxyCodeLine{84                                 \}}
+\DoxyCodeLine{85                                                      }
+\DoxyCodeLine{86                             ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][j]).setNumero\_fila(totalValueH);}
+\DoxyCodeLine{87                             ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][j]).setCeldas\_fila(celdasH);}
+\DoxyCodeLine{88                             }
+\DoxyCodeLine{89                             \textcolor{comment}{//RECORRIDO VERTICAL}}
+\DoxyCodeLine{90                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} l = i + 1; l <= \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}}-\/1; l++) \{}
+\DoxyCodeLine{91                                    \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[l][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[l][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{92                                    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[l][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++celdasV;}
+\DoxyCodeLine{93                                 \}}
+\DoxyCodeLine{94                             }
+\DoxyCodeLine{95                              \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} o = i -\/ 1; o >= 0; o-\/-\/) \{}
+\DoxyCodeLine{96                                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[o][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[o][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{97                                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[o][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}})) \{}
+\DoxyCodeLine{98                                             totalValueV = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_jugable}{Jugable}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[o][j]).getnum\_Columna();}
+\DoxyCodeLine{99                                                 \}}
+\DoxyCodeLine{100                                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101                                             \}}
+\DoxyCodeLine{102                                   }
+\DoxyCodeLine{103                                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[o][j].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) ++celdasV;}
+\DoxyCodeLine{104                                 \}}
+\DoxyCodeLine{105                                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][j]).setNumero\_columna(totalValueV);}
+\DoxyCodeLine{106                                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][j]).setCeldas\_columna(celdasV);}
+\DoxyCodeLine{107                         \}}
+\DoxyCodeLine{108                 \}}
+\DoxyCodeLine{109         \}}
+\DoxyCodeLine{110     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a9a01282e6e14402a28810a98f26b68b9}\label{class_dominio_1_1_controladores_1_1_solve_valida_a9a01282e6e14402a28810a98f26b68b9}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!intersection@{intersection}}
+\index{intersection@{intersection}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily static Set$<$Integer$>$ Dominio.\+Controladores.\+Solve\+Valida.\+intersection (\begin{DoxyParamCaption}\item[{Set$<$ Integer $>$}]{one,  }\item[{Set$<$ Integer $>$}]{two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Comprueba si dados dos sets hay algun numero que esta en ambos 
+\begin{DoxyParams}{Parámetros}
+{\em one} & primer set \\
+\hline
+{\em two} & segundo set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un set con los numeros que se encuentran en los sets dados 
+\end{DoxyReturn}
+
+
+Definición en la línea 379 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                                                                  \{}
+\DoxyCodeLine{380         Set<Integer> result = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{381         }
+\DoxyCodeLine{382         \textcolor{keywordflow}{for}(Integer value : one) \{}
+\DoxyCodeLine{383             \textcolor{keywordflow}{if}(two.contains(value))}
+\DoxyCodeLine{384                 result.add(value);}
+\DoxyCodeLine{385         \}}
+\DoxyCodeLine{386         }
+\DoxyCodeLine{387         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{388     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}\label{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!isValidCol@{isValidCol}}
+\index{isValidCol@{isValidCol}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{isValidCol()}{isValidCol()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Solve\+Valida.\+is\+Valid\+Col (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{valor,  }\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba si un numero cumple las restricciones del kakuro para una columna. 
+\begin{DoxyParams}{Parámetros}
+{\em row} & Índice de Fila. \\
+\hline
+{\em col} & Índice de Columna. \\
+\hline
+{\em k} & Kakuro a validar. \\
+\hline
+{\em valor} & Candidato a número para ser validado en la columna. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el valor es válido. False si no es válido. 
+\end{DoxyReturn}
+
+
+Definición en la línea 331 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{331                                                                  \{}
+\DoxyCodeLine{332         \textcolor{keywordtype}{int} sum = valor;}
+\DoxyCodeLine{333         \textcolor{keywordtype}{int} totalValue = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_columna();}
+\DoxyCodeLine{334         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{335         \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{336         \textcolor{keywordflow}{if} (totalValue == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{337         }
+\DoxyCodeLine{338         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = row -\/ 1; i >= 0; i-\/-\/) \{}
+\DoxyCodeLine{339             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{340             }
+\DoxyCodeLine{341             \textcolor{keywordflow}{if} (((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][col]).getNumeroCorrecto() == valor) \{}
+\DoxyCodeLine{342                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{343                 \}}
+\DoxyCodeLine{344             sum += ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[i][col]).getNumeroCorrecto();}
+\DoxyCodeLine{345             \}}
+\DoxyCodeLine{346         }
+\DoxyCodeLine{347         \textcolor{keywordflow}{if} (sum > totalValue) \{}
+\DoxyCodeLine{348             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{349         \}}
+\DoxyCodeLine{350        }
+\DoxyCodeLine{351         \textcolor{keywordflow}{if} (row == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}} -\/ 1) \{}
+\DoxyCodeLine{352             \textcolor{keywordflow}{if} (sum < totalValue) \{}
+\DoxyCodeLine{353                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{354             \}    }
+\DoxyCodeLine{355         \}}
+\DoxyCodeLine{356         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row+1][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row+1][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{357             \textcolor{keywordflow}{if} (sum < totalValue) \{}
+\DoxyCodeLine{358                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{359             \}}
+\DoxyCodeLine{360         \}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{363     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}\label{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!isValidRow@{isValidRow}}
+\index{isValidRow@{isValidRow}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{isValidRow()}{isValidRow()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Solve\+Valida.\+is\+Valid\+Row (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{valor,  }\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Comprueba si un numero cumple las restricciones del kakuro para una fila. 
+\begin{DoxyParams}{Parámetros}
+{\em row} & Índice de Fila. \\
+\hline
+{\em col} & Índice de Columna. \\
+\hline
+{\em k} & Kakuro a validar. \\
+\hline
+{\em valor} & Candidato a número para ser validado en la fila. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el valor es válido. False si no es válido. 
+\end{DoxyReturn}
+
+
+Definición en la línea 292 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{292                                                                    \{}
+\DoxyCodeLine{293             \textcolor{keywordtype}{int} sum = valor;}
+\DoxyCodeLine{294             \textcolor{keywordtype}{int} totalValue = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_fila();}
+\DoxyCodeLine{295             \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{296             \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{297             }
+\DoxyCodeLine{298             \textcolor{keywordflow}{if} (totalValue == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{299             }
+\DoxyCodeLine{300             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = col -\/ 1; i >= 0; i-\/-\/) \{}
+\DoxyCodeLine{301                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][i].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{302         }
+\DoxyCodeLine{303                 \textcolor{keywordflow}{if} (((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][i]).getNumeroCorrecto() == valor) \{}
+\DoxyCodeLine{304                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{305                 \}}
+\DoxyCodeLine{306                 sum +=  ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][i]).getNumeroCorrecto();}
+\DoxyCodeLine{307             \}}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309             \textcolor{keywordflow}{if} (col == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}-\/1) \{}
+\DoxyCodeLine{310                 \textcolor{keywordflow}{if} (sum < totalValue) \{}
+\DoxyCodeLine{311                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{312                 \}}
+\DoxyCodeLine{313                 }
+\DoxyCodeLine{314             \} }
+\DoxyCodeLine{315             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col+1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col+1].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{316                 \textcolor{keywordflow}{if} (sum < totalValue) \{}
+\DoxyCodeLine{317                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{318                 \}}
+\DoxyCodeLine{319             \}}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321            \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{322         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}\label{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!solve@{solve}}
+\index{solve@{solve}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Solve\+Valida.\+solve (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Soluciona el kakuro propuesto por parametro a partir de las dimensiones propuestas 
+\begin{DoxyParams}{Parámetros}
+{\em row} & Índice de Fila \\
+\hline
+{\em col} & Índice de Columna \\
+\hline
+{\em k} & Kakuro a solucionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el kakuro tenia solución. False si no tenia solución 
+\end{DoxyReturn}
+
+
+Definición en la línea 122 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122                                                      \{}
+\DoxyCodeLine{123         }
+\DoxyCodeLine{124     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{126     \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][]\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     }
+\DoxyCodeLine{129     Set<Integer> PosibleSumsH = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{130     Set<Integer> PosibleSumsV = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{131     }
+\DoxyCodeLine{132       \textcolor{keywordflow}{if} (row == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}}) \{}
+\DoxyCodeLine{133           k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a0f8fe86774daa432b91c38e669881f96}{setTablero}}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}});}
+\DoxyCodeLine{134         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136       }
+\DoxyCodeLine{137       \textcolor{keywordflow}{if} (col == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}) \{}
+\DoxyCodeLine{138         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}} (row + 1, 0,k);}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140       }
+\DoxyCodeLine{141       \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{142           \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}} (row, col + 1,k);}
+\DoxyCodeLine{143       \}}
+\DoxyCodeLine{144       }
+\DoxyCodeLine{145       \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Blanca"{}})) \{}
+\DoxyCodeLine{146     }
+\DoxyCodeLine{147             \textcolor{keywordtype}{int} totalValueH = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_fila();}
+\DoxyCodeLine{148             \textcolor{keywordtype}{int} totalValueV = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_columna();}
+\DoxyCodeLine{149             \textcolor{keywordtype}{int} celdasH = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getCeldas\_fila();}
+\DoxyCodeLine{150             \textcolor{keywordtype}{int} celdasV = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getCeldas\_columna();}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152            PosibleSumsH = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}{getSums}}(celdasH, totalValueH);}
+\DoxyCodeLine{153            PosibleSumsV = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}{getSums}}(celdasV, totalValueV);  }
+\DoxyCodeLine{154    }
+\DoxyCodeLine{155            \textcolor{keywordflow}{if}(PosibleSumsH.size() > 0 \&\& PosibleSumsV.size() > 0) \{}
+\DoxyCodeLine{156                Set<Integer> candidatos = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{157                candidatos = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a9a01282e6e14402a28810a98f26b68b9}{intersection}}(PosibleSumsH, PosibleSumsV);}
+\DoxyCodeLine{158                Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{159                     \textcolor{keywordflow}{while}(it.hasNext()) \{           }
+\DoxyCodeLine{160                         \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{161                              \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{    }
+\DoxyCodeLine{162                                 ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{163                                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{164                               \}}
+\DoxyCodeLine{165                         \}}
+\DoxyCodeLine{166                     \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168        }
+\DoxyCodeLine{169            \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(PosibleSumsH.size() == 0 \&\& PosibleSumsV.size() != 0)\{}
+\DoxyCodeLine{170                Set<Integer> candidatos = PosibleSumsV;}
+\DoxyCodeLine{171                Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{172                   \textcolor{keywordflow}{while}(it.hasNext()) \{}
+\DoxyCodeLine{173                       \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{174                      \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{    }
+\DoxyCodeLine{175                           ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{176                           \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{177                     }
+\DoxyCodeLine{178                     \}}
+\DoxyCodeLine{179                   \} }
+\DoxyCodeLine{180                 \}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182            \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(PosibleSumsH.size() != 0 \&\& PosibleSumsV.size() == 0) \{}
+\DoxyCodeLine{183                Set<Integer> candidatos = PosibleSumsH;}
+\DoxyCodeLine{184                Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{185                 \textcolor{keywordflow}{while}(it.hasNext()) \{}
+\DoxyCodeLine{186                     \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{187                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{     }
+\DoxyCodeLine{188                     ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{189                     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a74034848c964b5f8ed18208bb28d15d2}{solve}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{190                     \}}
+\DoxyCodeLine{191                 \} }
+\DoxyCodeLine{192             \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194       \}}
+\DoxyCodeLine{195       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{196     \}   }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}\label{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!valida@{valida}}
+\index{valida@{valida}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{valida()}{valida()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Solve\+Valida.\+valida (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro}{kakuro}}}]{k }\end{DoxyParamCaption})}
+
+Soluciona el kakuro propuesto por parámetro a partir de las dimensiones propuestas 
+\begin{DoxyParams}{Parámetros}
+{\em row} & Índice de Fila \\
+\hline
+{\em col} & Índice de Columna \\
+\hline
+{\em k} & Kakuro a validar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+True si el kakuro tenia una solución o varias. False si no tenia solución 
+\end{DoxyReturn}
+
+
+Definición en la línea 205 del archivo Solve\+Valida.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{205                                                   \{}
+\DoxyCodeLine{206         }
+\DoxyCodeLine{207      \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ac42bc5b9309c8a39b89dc2e3d96d0736}{getN}}();}
+\DoxyCodeLine{208      \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a3b1c31239eb59883266c7539ee626fb2}{getM}}();}
+\DoxyCodeLine{209      \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}}[][] \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}} = k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_ae7d318d4785d34eedff639e710263893}{getTablero}}();}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211     }
+\DoxyCodeLine{212     Set<Integer> PosibleSumsH = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{213     Set<Integer> PosibleSumsV = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{214     }
+\DoxyCodeLine{215     }
+\DoxyCodeLine{216       \textcolor{keywordflow}{if} (row == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}{n}}) \{}
+\DoxyCodeLine{217           ++\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}{numsolucions}};}
+\DoxyCodeLine{218           \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}{numsolucions}} == 2) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{219           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}{numsolucions}} == 1) \{}
+\DoxyCodeLine{220               k.\mbox{\hyperlink{class_dominio_1_1_clases_1_1kakuro_a0f8fe86774daa432b91c38e669881f96}{setTablero}}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}});}
+\DoxyCodeLine{221               \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{222           \}}
+\DoxyCodeLine{223     \}}
+\DoxyCodeLine{224       }
+\DoxyCodeLine{225       \textcolor{keywordflow}{if} (col == \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}{m}}) \{}
+\DoxyCodeLine{226         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}} (row + 1, 0,k);}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228       }
+\DoxyCodeLine{229       \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}Jugable"{}}) || \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col].getClass().getSimpleName().equals(\textcolor{stringliteral}{"{}NoJugable"{}})) \{}
+\DoxyCodeLine{230           \textcolor{keywordflow}{return} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}} (row, col + 1,k);}
+\DoxyCodeLine{231       \}}
+\DoxyCodeLine{232       }
+\DoxyCodeLine{233         \textcolor{keywordtype}{int} totalValueH = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_fila();}
+\DoxyCodeLine{234         \textcolor{keywordtype}{int} totalValueV = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getNumero\_columna();}
+\DoxyCodeLine{235         \textcolor{keywordtype}{int} celdasH = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getCeldas\_fila();}
+\DoxyCodeLine{236         \textcolor{keywordtype}{int} celdasV = ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).getCeldas\_columna();}
+\DoxyCodeLine{237         }
+\DoxyCodeLine{238            PosibleSumsH = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}{getSums}}(celdasH, totalValueH);}
+\DoxyCodeLine{239            PosibleSumsV = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad99f29c351ce2470c607238e80b23580}{getSums}}(celdasV, totalValueV);  }
+\DoxyCodeLine{240    }
+\DoxyCodeLine{241        \textcolor{keywordflow}{if}(PosibleSumsH.size() > 0 \&\& PosibleSumsV.size() > 0) \{}
+\DoxyCodeLine{242            Set<Integer> candidatos = \textcolor{keyword}{new} HashSet<Integer>();}
+\DoxyCodeLine{243            candidatos = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a9a01282e6e14402a28810a98f26b68b9}{intersection}}(PosibleSumsH, PosibleSumsV);}
+\DoxyCodeLine{244            Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{245                 \textcolor{keywordflow}{while}(it.hasNext()) \{           }
+\DoxyCodeLine{246                     \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{247                          \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{    }
+\DoxyCodeLine{248                             ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{249                             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{250                           \}}
+\DoxyCodeLine{251                     \}}
+\DoxyCodeLine{252                 \}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254      }
+\DoxyCodeLine{255        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(PosibleSumsH.size() == 0 \&\& PosibleSumsV.size() != 0)\{}
+\DoxyCodeLine{256            Set<Integer> candidatos = PosibleSumsV;}
+\DoxyCodeLine{257            Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{258               \textcolor{keywordflow}{while}(it.hasNext()) \{}
+\DoxyCodeLine{259                   \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{260                  \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{    }
+\DoxyCodeLine{261                       ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{262                       \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{263                 }
+\DoxyCodeLine{264                 \}}
+\DoxyCodeLine{265               \} }
+\DoxyCodeLine{266             \}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268        }
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(PosibleSumsH.size() != 0 \&\& PosibleSumsV.size() == 0) \{}
+\DoxyCodeLine{271            Set<Integer> candidatos = PosibleSumsH;}
+\DoxyCodeLine{272            Iterator <Integer> it = candidatos.iterator();}
+\DoxyCodeLine{273             \textcolor{keywordflow}{while}(it.hasNext()) \{}
+\DoxyCodeLine{274                 \textcolor{keywordtype}{int} num = it.next();}
+\DoxyCodeLine{275                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a8f9d13b297c9f87ea768f033355434f1}{isValidRow}}(row,col,num,k) \&\& \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_acc1ceef050f24c71802a617f12dce20e}{isValidCol}}(row,col,num,k)) \{     }
+\DoxyCodeLine{276                 ((\mbox{\hyperlink{class_dominio_1_1_clases_1_1_blanca}{Blanca}}) \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}{tablero}}[row][col]).setNumeroCorrecto(num);}
+\DoxyCodeLine{277                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_solve_valida_ad35257db31bf9ab943d674a88e1ae388}{valida}}(row, col + 1,k)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};  }
+\DoxyCodeLine{278                 \}}
+\DoxyCodeLine{279             \} }
+\DoxyCodeLine{280         \}}
+\DoxyCodeLine{281        }
+\DoxyCodeLine{282       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{283  \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_ac22d77b25794252ea1d4532362d25cde}\label{class_dominio_1_1_controladores_1_1_solve_valida_ac22d77b25794252ea1d4532362d25cde}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!LookupTable@{LookupTable}}
+\index{LookupTable@{LookupTable}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{LookupTable}{LookupTable}}
+{\footnotesize\ttfamily Hash\+Map$<$Point, Set$<$Integer$>$ $>$ Dominio.\+Controladores.\+Solve\+Valida.\+Lookup\+Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Estructura donde se almacenan todos los posibles candidatos a numero 
+
+Definición en la línea 32 del archivo Solve\+Valida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}\label{class_dominio_1_1_controladores_1_1_solve_valida_a386ccaf9a902210a7fced4a06fdc07ce}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!m@{m}}
+\index{m@{m}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Solve\+Valida.\+m\hspace{0.3cm}{\ttfamily [private]}}
+
+Número de columnas 
+
+Definición en la línea 27 del archivo Solve\+Valida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}\label{class_dominio_1_1_controladores_1_1_solve_valida_ab862a099431314179b9db31caa1c909a}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!n@{n}}
+\index{n@{n}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Solve\+Valida.\+n\hspace{0.3cm}{\ttfamily [private]}}
+
+Número de filas 
+
+Definición en la línea 22 del archivo Solve\+Valida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}\label{class_dominio_1_1_controladores_1_1_solve_valida_abff10c1a00e807b3d9eeba252cdf72c4}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!numsolucions@{numsolucions}}
+\index{numsolucions@{numsolucions}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{numsolucions}{numsolucions}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Solve\+Valida.\+numsolucions = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Número de soluciones 
+
+Definición en la línea 42 del archivo Solve\+Valida.\+java.
+
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}\label{class_dominio_1_1_controladores_1_1_solve_valida_a45cf0121b68f8f7bdc895ae3fe09731c}} 
+\index{Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}!tablero@{tablero}}
+\index{tablero@{tablero}!Dominio.Controladores.SolveValida@{Dominio.Controladores.SolveValida}}
+\doxysubsubsection{\texorpdfstring{tablero}{tablero}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1_cell}{Cell}} \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Dominio.\+Controladores.\+Solve\+Valida.\+tablero\hspace{0.3cm}{\ttfamily [private]}}
+
+Estructura que almacena el tablero del kakuro que se va a validar y solucionar 
+
+Definición en la línea 37 del archivo Solve\+Valida.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_solve_valida_8java}{Solve\+Valida.\+java}}\end{DoxyCompactItemize}

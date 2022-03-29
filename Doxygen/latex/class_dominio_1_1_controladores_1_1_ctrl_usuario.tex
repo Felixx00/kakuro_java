@@ -1,0 +1,314 @@
+\hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario}{}\doxysection{Referencia de la Clase Dominio.\+Controladores.\+Ctrl\+Usuario}
+\label{class_dominio_1_1_controladores_1_1_ctrl_usuario}\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a9edb777ffe834496119873c2391973ef}{cargar\+\_\+usuarios}} ()
+\item 
+int \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a17f14f6d73204eb949d6feef65006bdf}{get\+Num\+Usuarios}} ()
+\item 
+Hash\+Set$<$ \mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} $>$ \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_afb207e29878e826e0dd75b839a31fe76}{get\+Usuarios}} ()
+\item 
+\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}{get\+Usuario}} (String nombre)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_abb649f847727091a6c91fa25690ebafb}{eliminar\+Usuario}} (String nombre)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aeb634549cb38fc2d8667020fb747bf48}{añadir\+Usuario}} (String nombre, String contraseña)
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aa3ecefd2e724ea072bc7d514659f2495}{comprobar\+Contraseña}} (String nombre, String contraseña)
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_aca7e7ee04195995f3c31315c97061d1e}{modificar\+Usuario\+Contraseña}} (String nombre, String nueva\+Contraseña)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para las operaciones relacionadas con Usuarios \begin{DoxyAuthor}{Autor}
+Martí Westermeyer 
+\end{DoxyAuthor}
+
+
+Definición en la línea 15 del archivo Ctrl\+Usuario.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_aeb634549cb38fc2d8667020fb747bf48}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_aeb634549cb38fc2d8667020fb747bf48}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Ctrl\+Usuario.\+añadir\+Usuario (\begin{DoxyParamCaption}\item[{String}]{nombre,  }\item[{String}]{contraseña }\end{DoxyParamCaption})}
+
+Añade el Usuario pasado por parámetro 
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del Usuario \\
+\hline
+{\em contraseña} & Contraseña del Usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si el usuario se ha añadido correctamente 
+\end{DoxyReturn}
+
+
+Definición en la línea 91 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                                                    \{}
+\DoxyCodeLine{92         \textcolor{keywordtype}{boolean} ret = \textcolor{keyword}{false};}
+\DoxyCodeLine{93           Usuario aux = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}{getUsuario}}(nombre);}
+\DoxyCodeLine{94           \textcolor{keywordflow}{if} (aux == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{95               Usuario nuevo = \textcolor{keyword}{new} Usuario(nombre, contraseña);}
+\DoxyCodeLine{96               ret = usuarios.add(nuevo);}
+\DoxyCodeLine{97               \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = ret;}
+\DoxyCodeLine{98           \}}
+\DoxyCodeLine{99           \textcolor{keywordflow}{else} System.out.print(\textcolor{stringliteral}{"{}Ya existe ese Usuario"{}});}
+\DoxyCodeLine{100           \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}{end}}();}
+\DoxyCodeLine{101           \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{102           \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{103     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_a9edb777ffe834496119873c2391973ef}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_a9edb777ffe834496119873c2391973ef}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!cargar\_usuarios@{cargar\_usuarios}}
+\index{cargar\_usuarios@{cargar\_usuarios}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{cargar\_usuarios()}{cargar\_usuarios()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Usuario.\+cargar\+\_\+usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Guarda en el set los uusarios del txt 
+
+Definición en la línea 27 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                   \{}
+\DoxyCodeLine{28         }
+\DoxyCodeLine{29         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{30             List<List<String>> aux = CtrlPersistencia.cargarTablaUsuarios();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32             \textcolor{keywordflow}{for} (List<String> fila : aux) \{}
+\DoxyCodeLine{33                 usuarios.add(\textcolor{keyword}{new} Usuario(fila.get(0), fila.get(1)));}
+\DoxyCodeLine{34             \}}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36         \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{37             System.out.println(e);}
+\DoxyCodeLine{38         \} }
+\DoxyCodeLine{39         \textcolor{comment}{/*}}
+\DoxyCodeLine{40 \textcolor{comment}{        Iterator<Usuario> iter = usuarios.iterator();}}
+\DoxyCodeLine{41 \textcolor{comment}{        while (iter.hasNext()) System.out.println(iter.next().getUsuario());}}
+\DoxyCodeLine{42 \textcolor{comment}{        */}}
+\DoxyCodeLine{43     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_aa3ecefd2e724ea072bc7d514659f2495}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_aa3ecefd2e724ea072bc7d514659f2495}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!comprobarContraseña@{comprobarContraseña}}
+\index{comprobarContraseña@{comprobarContraseña}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{comprobarContraseña()}{comprobarContraseña()}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Ctrl\+Usuario.\+comprobar\+Contraseña (\begin{DoxyParamCaption}\item[{String}]{nombre,  }\item[{String}]{contraseña }\end{DoxyParamCaption})}
+
+Comprueba contraseña correcta 
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del Usuario \\
+\hline
+{\em contraseña} & Contraseña del Usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la contraseña es correcta, en caso contrario false 
+\end{DoxyReturn}
+
+
+Definición en la línea 110 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                                                          \{}
+\DoxyCodeLine{111       \textcolor{keywordtype}{boolean} ret = \textcolor{keyword}{false};}
+\DoxyCodeLine{112       Usuario aux = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}{getUsuario}}(nombre);}
+\DoxyCodeLine{113       \textcolor{keywordflow}{if} (aux != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{114           ret = aux.contraseñaCorrecta(contraseña);}
+\DoxyCodeLine{115       \}}
+\DoxyCodeLine{116       \textcolor{keywordflow}{else} System.out.print(\textcolor{stringliteral}{"{}No existe el usuario"{}});}
+\DoxyCodeLine{117       \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{118     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_abb649f847727091a6c91fa25690ebafb}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_abb649f847727091a6c91fa25690ebafb}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Usuario.\+eliminar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{nombre }\end{DoxyParamCaption})}
+
+Borra el Usuario pasado por parámetro 
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del Usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 76 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                                \{}
+\DoxyCodeLine{77       Usuario aux = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}{getUsuario}}(nombre);}
+\DoxyCodeLine{78       \textcolor{keywordflow}{if} (aux != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{79               \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = usuarios.remove(aux);}
+\DoxyCodeLine{80       \}}
+\DoxyCodeLine{81       \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No existe el usuario"{}});}
+\DoxyCodeLine{82       \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}{end}}();}
+\DoxyCodeLine{83       \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{84     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!end@{end}}
+\index{end@{end}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Usuario.\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Función para modificar el fichero si ha habido cambios 
+
+Definición en la línea 137 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137                        \{}
+\DoxyCodeLine{138         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}}) \{}
+\DoxyCodeLine{139             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{140                 CtrlPersistencia.guardarTablaUsuarios(usuarios);}
+\DoxyCodeLine{141             \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{142                 e.printStackTrace();}
+\DoxyCodeLine{143             \}}
+\DoxyCodeLine{144         \}}
+\DoxyCodeLine{145     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_a17f14f6d73204eb949d6feef65006bdf}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_a17f14f6d73204eb949d6feef65006bdf}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!getNumUsuarios@{getNumUsuarios}}
+\index{getNumUsuarios@{getNumUsuarios}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{getNumUsuarios()}{getNumUsuarios()}}
+{\footnotesize\ttfamily int Dominio.\+Controladores.\+Ctrl\+Usuario.\+get\+Num\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Devuelve el numero de usuarios en usuarios \begin{DoxyReturn}{Devuelve}
+el numero de usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea 49 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                 \{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} this.usuarios.size();}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!getUsuario@{getUsuario}}
+\index{getUsuario@{getUsuario}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{getUsuario()}{getUsuario()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}} Dominio.\+Controladores.\+Ctrl\+Usuario.\+get\+Usuario (\begin{DoxyParamCaption}\item[{String}]{nombre }\end{DoxyParamCaption})}
+
+Consulta un único Usuario 
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del Usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Usuario seleccionado 
+\end{DoxyReturn}
+
+
+Definición en la línea 65 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                              \{}
+\DoxyCodeLine{66       \textcolor{keywordflow}{for} (Usuario aux : usuarios) \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{if} (Objects.equals(aux.getUsuario(), nombre)) }
+\DoxyCodeLine{68           \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{69       \}}
+\DoxyCodeLine{70       \textcolor{keywordflow}{return} \textcolor{keyword}{null}; }
+\DoxyCodeLine{71     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_afb207e29878e826e0dd75b839a31fe76}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_afb207e29878e826e0dd75b839a31fe76}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!getUsuarios@{getUsuarios}}
+\index{getUsuarios@{getUsuarios}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{getUsuarios()}{getUsuarios()}}
+{\footnotesize\ttfamily Hash\+Set$<$\mbox{\hyperlink{class_dominio_1_1_clases_1_1_usuario}{Usuario}}$>$ Dominio.\+Controladores.\+Ctrl\+Usuario.\+get\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consulta los usuarios \begin{DoxyReturn}{Devuelve}
+Set de usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea 57 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                           \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} usuarios;}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_aca7e7ee04195995f3c31315c97061d1e}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_aca7e7ee04195995f3c31315c97061d1e}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!modificarUsuarioContraseña@{modificarUsuarioContraseña}}
+\index{modificarUsuarioContraseña@{modificarUsuarioContraseña}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{modificarUsuarioContraseña()}{modificarUsuarioContraseña()}}
+{\footnotesize\ttfamily void Dominio.\+Controladores.\+Ctrl\+Usuario.\+modificar\+Usuario\+Contraseña (\begin{DoxyParamCaption}\item[{String}]{nombre,  }\item[{String}]{nueva\+Contraseña }\end{DoxyParamCaption})}
+
+Modifica la contraseña del Usuario pasado por parámetro 
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del Usuario \\
+\hline
+{\em nueva\+Contraseña} & Nueva Contraseña del Usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 124 del archivo Ctrl\+Usuario.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                                                                   \{}
+\DoxyCodeLine{125           Usuario aux = \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a6de267f937d11555804bc3541f776745}{getUsuario}}(nombre);}
+\DoxyCodeLine{126           \textcolor{keywordflow}{if} (aux != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{127               aux.setContraseña(nuevaContraseña);}
+\DoxyCodeLine{128               \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{129           \}}
+\DoxyCodeLine{130           \textcolor{keywordflow}{else} System.out.println(\mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}});}
+\DoxyCodeLine{131           \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_ad41cdac678f714750efcfa6bb99134c9}{end}}();}
+\DoxyCodeLine{132           \mbox{\hyperlink{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}{dirty}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{133     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}\label{class_dominio_1_1_controladores_1_1_ctrl_usuario_a8a3218df50012caac733014199ec5548}} 
+\index{Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}!dirty@{dirty}}
+\index{dirty@{dirty}!Dominio.Controladores.CtrlUsuario@{Dominio.Controladores.CtrlUsuario}}
+\doxysubsubsection{\texorpdfstring{dirty}{dirty}}
+{\footnotesize\ttfamily boolean Dominio.\+Controladores.\+Ctrl\+Usuario.\+dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+Booleano para saber si se ha modificado la tabla 
+
+Definición en la línea 19 del archivo Ctrl\+Usuario.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dominio/\+Controladores/\mbox{\hyperlink{_ctrl_usuario_8java}{Ctrl\+Usuario.\+java}}\end{DoxyCompactItemize}

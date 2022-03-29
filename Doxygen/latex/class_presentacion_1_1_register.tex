@@ -1,0 +1,368 @@
+\hypertarget{class_presentacion_1_1_register}{}\doxysection{Referencia de la Clase Presentacion.\+Register}
+\label{class_presentacion_1_1_register}\index{Presentacion.Register@{Presentacion.Register}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_presentacion_1_1_register_ada0f525ec6832c388a72b26c423d4ed6}{Register}} (\mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion}{Ctrl\+Presentacion}} \mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}})
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_register_a02d326b29c04accd0892ad154a4e1f87}{Registrar\+Action\+Performed}} (Action\+Event e)
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_register_a822c7eeaf4804f7a57b59a794ab0c2f2}{retorno\+Action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_presentacion_1_1_register_a684b3cb1e53b21ab6f714e41d5f254e1}{initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+J\+Frame \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}
+\item 
+\mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion}{Ctrl\+Presentacion}} \mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{user\+Label}}
+\item 
+J\+Text\+Field \mbox{\hyperlink{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}{user\+Text}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{password\+Label}}
+\item 
+J\+Password\+Field \mbox{\hyperlink{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}{password\+Text}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{password\+Label2}}
+\item 
+J\+Password\+Field \mbox{\hyperlink{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}{password\+Text2}}
+\item 
+J\+Button \mbox{\hyperlink{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}{Registrar}}
+\item 
+Basic\+Arrow\+Button \mbox{\hyperlink{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}{retorno}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}{logo}}
+\item 
+J\+Label \mbox{\hyperlink{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}{fondo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase destinada a registrar un nuevo usuario \begin{DoxyAuthor}{Autor}
+Fèlix Forroll 
+\end{DoxyAuthor}
+
+
+Definición en la línea 31 del archivo Register.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_presentacion_1_1_register_ada0f525ec6832c388a72b26c423d4ed6}\label{class_presentacion_1_1_register_ada0f525ec6832c388a72b26c423d4ed6}} 
+\index{Presentacion.Register@{Presentacion.Register}!Register@{Register}}
+\index{Register@{Register}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily Presentacion.\+Register.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion}{Ctrl\+Presentacion}}}]{CP }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 50 del archivo Register.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                          \{}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52         this.\mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}} = \mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}};}
+\DoxyCodeLine{53         \mbox{\hyperlink{class_presentacion_1_1_register_a684b3cb1e53b21ab6f714e41d5f254e1}{initialize}}();}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{55         Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();}
+\DoxyCodeLine{56         \textcolor{keywordtype}{int} height = pantalla.height;}
+\DoxyCodeLine{57         \textcolor{keywordtype}{int} width = pantalla.width;}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setSize(width/2, height/2);}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setLocationRelativeTo(\textcolor{keyword}{null});}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{61         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setSize(\textcolor{keyword}{new} java.awt.Dimension(800, 600));}
+\DoxyCodeLine{62     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_presentacion_1_1_register_a684b3cb1e53b21ab6f714e41d5f254e1}\label{class_presentacion_1_1_register_a684b3cb1e53b21ab6f714e41d5f254e1}} 
+\index{Presentacion.Register@{Presentacion.Register}!initialize@{initialize}}
+\index{initialize@{initialize}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Presentacion.\+Register.\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 65 del archivo Register.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                               \{}
+\DoxyCodeLine{66         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}} = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"{}KAKURO"{}});}
+\DoxyCodeLine{67         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{68         JPanel panel = \textcolor{keyword}{new} JPanel();    }
+\DoxyCodeLine{69         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.getContentPane().add(panel);}
+\DoxyCodeLine{70         panel.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{71         \mbox{\hyperlink{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}{logo}} = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{72         \mbox{\hyperlink{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}{logo}}.setIcon(\textcolor{keyword}{new} javax.swing.ImageIcon(\textcolor{stringliteral}{"{}Presentacion/img/logo.png"{}}));}
+\DoxyCodeLine{73         \mbox{\hyperlink{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}{logo}}.setBounds(682, 26, 44, 53);}
+\DoxyCodeLine{74         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}{logo}});}
+\DoxyCodeLine{75         Image icon = Toolkit.getDefaultToolkit().getImage(\textcolor{stringliteral}{"{}Presentacion/img/icon.png"{}});}
+\DoxyCodeLine{76         \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.setIconImage(icon);}
+\DoxyCodeLine{77         }
+\DoxyCodeLine{78         \mbox{\hyperlink{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}{retorno}} = \textcolor{keyword}{new} BasicArrowButton(BasicArrowButton.WEST);}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}{retorno}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{80             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{81                 \mbox{\hyperlink{class_presentacion_1_1_register_a822c7eeaf4804f7a57b59a794ab0c2f2}{retornoActionPerformed}}(e);}
+\DoxyCodeLine{82             \}}
+\DoxyCodeLine{83         \});}
+\DoxyCodeLine{84         \mbox{\hyperlink{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}{retorno}}.setBounds(36, 30, 50, 25);}
+\DoxyCodeLine{85         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}{retorno}});}
+\DoxyCodeLine{86         }
+\DoxyCodeLine{87         \mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}} = \textcolor{keyword}{new} JLabel(\textcolor{stringliteral}{"{}Registro"{}});}
+\DoxyCodeLine{88         \mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}}.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{89         \mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}}.setFont(\textcolor{keyword}{new} Font(\textcolor{stringliteral}{"{}Segoe Print"{}}, Font.PLAIN, 36));}
+\DoxyCodeLine{90         \mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}}.setBounds(0, 31, 784, 54);}
+\DoxyCodeLine{91         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}{titulo}});}
+\DoxyCodeLine{92         }
+\DoxyCodeLine{93         \mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{userLabel}} = \textcolor{keyword}{new} JLabel(\textcolor{stringliteral}{"{}Usuario"{}});}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{userLabel}}.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{95         \mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{userLabel}}.setFont(\textcolor{keyword}{new} Font(\textcolor{stringliteral}{"{}Segoe Print"{}}, Font.PLAIN, 18));}
+\DoxyCodeLine{96         \mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{userLabel}}.setBounds(0, 125, 392, 25);}
+\DoxyCodeLine{97         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}{userLabel}});}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \mbox{\hyperlink{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}{userText}} = \textcolor{keyword}{new} JTextField(20);}
+\DoxyCodeLine{100         \mbox{\hyperlink{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}{userText}}.setBounds(331, 125, 392, 25);}
+\DoxyCodeLine{101         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}{userText}});}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{passwordLabel}} = \textcolor{keyword}{new} JLabel(\textcolor{stringliteral}{"{}Contraseña"{}});}
+\DoxyCodeLine{104         \mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{passwordLabel}}.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{105         \mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{passwordLabel}}.setFont(\textcolor{keyword}{new} Font(\textcolor{stringliteral}{"{}Segoe Print"{}}, Font.PLAIN, 18));}
+\DoxyCodeLine{106         \mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{passwordLabel}}.setBounds(0, 196, 392, 25);}
+\DoxyCodeLine{107         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}{passwordLabel}});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109         \mbox{\hyperlink{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}{passwordText}} = \textcolor{keyword}{new} JPasswordField(20);}
+\DoxyCodeLine{110         \mbox{\hyperlink{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}{passwordText}}.setBounds(331, 196, 392, 25); }
+\DoxyCodeLine{111         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}{passwordText}});}
+\DoxyCodeLine{112         }
+\DoxyCodeLine{113         \mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{passwordLabel2}} = \textcolor{keyword}{new} JLabel(\textcolor{stringliteral}{"{}Confirmar contraseña"{}});}
+\DoxyCodeLine{114         \mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{passwordLabel2}}.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{115         \mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{passwordLabel2}}.setFont(\textcolor{keyword}{new} Font(\textcolor{stringliteral}{"{}Segoe Print"{}}, Font.PLAIN, 18));}
+\DoxyCodeLine{116         \mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{passwordLabel2}}.setBounds(0, 262, 392, 25);}
+\DoxyCodeLine{117         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}{passwordLabel2}});}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         \mbox{\hyperlink{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}{passwordText2}} = \textcolor{keyword}{new} JPasswordField(20);}
+\DoxyCodeLine{120         \mbox{\hyperlink{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}{passwordText2}}.setBounds(331, 265, 392, 25);}
+\DoxyCodeLine{121         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}{passwordText2}});}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \mbox{\hyperlink{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}{Registrar}} = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"{}Registrar usuario"{}});}
+\DoxyCodeLine{124         \mbox{\hyperlink{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}{Registrar}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{125             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{126                 \mbox{\hyperlink{class_presentacion_1_1_register_a02d326b29c04accd0892ad154a4e1f87}{RegistrarActionPerformed}}(e);}
+\DoxyCodeLine{127             \}}
+\DoxyCodeLine{128         \});}
+\DoxyCodeLine{129         \mbox{\hyperlink{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}{Registrar}}.setBounds(316, 365, 150, 50);}
+\DoxyCodeLine{130         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}{Registrar}});}
+\DoxyCodeLine{131         }
+\DoxyCodeLine{132         \mbox{\hyperlink{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}{fondo}} = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{133         \mbox{\hyperlink{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}{fondo}}.setIcon(\textcolor{keyword}{new} javax.swing.ImageIcon(\textcolor{stringliteral}{"{}Presentacion/img/fondo.png"{}}));}
+\DoxyCodeLine{134         \mbox{\hyperlink{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}{fondo}}.setBounds(0, 0, 784, 561);}
+\DoxyCodeLine{135         panel.add(\mbox{\hyperlink{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}{fondo}});}
+\DoxyCodeLine{136     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_register_a02d326b29c04accd0892ad154a4e1f87}\label{class_presentacion_1_1_register_a02d326b29c04accd0892ad154a4e1f87}} 
+\index{Presentacion.Register@{Presentacion.Register}!RegistrarActionPerformed@{RegistrarActionPerformed}}
+\index{RegistrarActionPerformed@{RegistrarActionPerformed}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{RegistrarActionPerformed()}{RegistrarActionPerformed()}}
+{\footnotesize\ttfamily void Presentacion.\+Register.\+Registrar\+Action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 138 del archivo Register.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138                                                         \{}
+\DoxyCodeLine{139         String nombre = \mbox{\hyperlink{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}{userText}}.getText();}
+\DoxyCodeLine{140         String contraseña = String.valueOf(\mbox{\hyperlink{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}{passwordText}}.getPassword());}
+\DoxyCodeLine{141         String contraseña2 = String.valueOf(\mbox{\hyperlink{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}{passwordText2}}.getPassword());}
+\DoxyCodeLine{142         \textcolor{keywordflow}{if} (nombre.equals(\textcolor{stringliteral}{"{}"{}}) || contraseña.equals(\textcolor{stringliteral}{"{}"{}})) JOptionPane.showMessageDialog(\mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}, \textcolor{stringliteral}{"{}Rellena las casillas!"{}},}
+\DoxyCodeLine{143                 \textcolor{stringliteral}{"{}Error"{}}, JOptionPane.WARNING\_MESSAGE);}
+\DoxyCodeLine{144         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nombre.length() > 10) JOptionPane.showMessageDialog(\mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}, \textcolor{stringliteral}{"{}El nombre de usuario tiene un máximo de 10 carácteres!"{}},}
+\DoxyCodeLine{145                 \textcolor{stringliteral}{"{}Error"{}}, JOptionPane.WARNING\_MESSAGE);}
+\DoxyCodeLine{146         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{147             \textcolor{keywordflow}{if} (!(contraseña.equals(contraseña2))) JOptionPane.showMessageDialog(\mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}, \textcolor{stringliteral}{"{}No coinciden las Contraseñas!"{}},}
+\DoxyCodeLine{148                     \textcolor{stringliteral}{"{}Error"{}}, JOptionPane.WARNING\_MESSAGE);}
+\DoxyCodeLine{149             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{150                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}}.\mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion_ae29fdafc6dca2cbe3bc1685d4f791064}{añadirUsuario}}(nombre, contraseña)) \{}
+\DoxyCodeLine{151                     JOptionPane.showMessageDialog(\mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}, \textcolor{stringliteral}{"{}Usuario creado correctamente"{}});}
+\DoxyCodeLine{152                     SignIn SI = \textcolor{keyword}{new} SignIn(\mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}});}
+\DoxyCodeLine{153                     \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.dispose();}
+\DoxyCodeLine{154                 \}}
+\DoxyCodeLine{155                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{156                     JOptionPane.showMessageDialog(\mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}, \textcolor{stringliteral}{"{}Ya existe el Usuario!"{}},}
+\DoxyCodeLine{157                             \textcolor{stringliteral}{"{}Error"{}}, JOptionPane.WARNING\_MESSAGE);}
+\DoxyCodeLine{158                 \}}
+\DoxyCodeLine{159             \}}
+\DoxyCodeLine{160         \}}
+\DoxyCodeLine{161     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_presentacion_1_1_register_a822c7eeaf4804f7a57b59a794ab0c2f2}\label{class_presentacion_1_1_register_a822c7eeaf4804f7a57b59a794ab0c2f2}} 
+\index{Presentacion.Register@{Presentacion.Register}!retornoActionPerformed@{retornoActionPerformed}}
+\index{retornoActionPerformed@{retornoActionPerformed}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{retornoActionPerformed()}{retornoActionPerformed()}}
+{\footnotesize\ttfamily void Presentacion.\+Register.\+retorno\+Action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 162 del archivo Register.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162                                                       \{}
+\DoxyCodeLine{163          SignIn SI = \textcolor{keyword}{new} SignIn(\mbox{\hyperlink{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}{CP}});}
+\DoxyCodeLine{164          \mbox{\hyperlink{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}{frame}}.dispose();}
+\DoxyCodeLine{165     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}\label{class_presentacion_1_1_register_a1664214fc50d890ac941241e93e7bdc0}} 
+\index{Presentacion.Register@{Presentacion.Register}!CP@{CP}}
+\index{CP@{CP}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{CP}{CP}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_presentacion_1_1_ctrl_presentacion}{Ctrl\+Presentacion}} Presentacion.\+Register.\+CP\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 34 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}\label{class_presentacion_1_1_register_a9c1c024511d53bb0d36dd53691868c00}} 
+\index{Presentacion.Register@{Presentacion.Register}!fondo@{fondo}}
+\index{fondo@{fondo}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{fondo}{fondo}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+fondo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 46 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}\label{class_presentacion_1_1_register_abab51873a7d446db3e477afa481c2ff6}} 
+\index{Presentacion.Register@{Presentacion.Register}!frame@{frame}}
+\index{frame@{frame}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily J\+Frame Presentacion.\+Register.\+frame\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 33 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}\label{class_presentacion_1_1_register_a67921bdd687fdcdf5c77284c27c445ac}} 
+\index{Presentacion.Register@{Presentacion.Register}!logo@{logo}}
+\index{logo@{logo}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{logo}{logo}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+logo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 45 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}\label{class_presentacion_1_1_register_a1c8b7a095fd82bef39605eac6b54ed6b}} 
+\index{Presentacion.Register@{Presentacion.Register}!passwordLabel@{passwordLabel}}
+\index{passwordLabel@{passwordLabel}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{passwordLabel}{passwordLabel}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+password\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 39 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}\label{class_presentacion_1_1_register_a770ce1522447ca168de5df21f85e3492}} 
+\index{Presentacion.Register@{Presentacion.Register}!passwordLabel2@{passwordLabel2}}
+\index{passwordLabel2@{passwordLabel2}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{passwordLabel2}{passwordLabel2}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+password\+Label2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 41 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}\label{class_presentacion_1_1_register_a74785f097935ff9f14ce2e64f695fcc3}} 
+\index{Presentacion.Register@{Presentacion.Register}!passwordText@{passwordText}}
+\index{passwordText@{passwordText}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{passwordText}{passwordText}}
+{\footnotesize\ttfamily J\+Password\+Field Presentacion.\+Register.\+password\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 40 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}\label{class_presentacion_1_1_register_afd075dfe0f80d96bd242697ad81f88eb}} 
+\index{Presentacion.Register@{Presentacion.Register}!passwordText2@{passwordText2}}
+\index{passwordText2@{passwordText2}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{passwordText2}{passwordText2}}
+{\footnotesize\ttfamily J\+Password\+Field Presentacion.\+Register.\+password\+Text2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 42 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}\label{class_presentacion_1_1_register_aa9467b98d86f360838916b16e48fff2b}} 
+\index{Presentacion.Register@{Presentacion.Register}!Registrar@{Registrar}}
+\index{Registrar@{Registrar}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{Registrar}{Registrar}}
+{\footnotesize\ttfamily J\+Button Presentacion.\+Register.\+Registrar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 43 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}\label{class_presentacion_1_1_register_add5ccfe5620e4d21ebffda65b238cffc}} 
+\index{Presentacion.Register@{Presentacion.Register}!retorno@{retorno}}
+\index{retorno@{retorno}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{retorno}{retorno}}
+{\footnotesize\ttfamily Basic\+Arrow\+Button Presentacion.\+Register.\+retorno\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 44 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}\label{class_presentacion_1_1_register_abc7de6b79506a3af34e8b374353a9ae5}} 
+\index{Presentacion.Register@{Presentacion.Register}!titulo@{titulo}}
+\index{titulo@{titulo}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{titulo}{titulo}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+titulo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 36 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}\label{class_presentacion_1_1_register_ab14d01da5f36883cdcb5f611d6e01650}} 
+\index{Presentacion.Register@{Presentacion.Register}!userLabel@{userLabel}}
+\index{userLabel@{userLabel}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{userLabel}{userLabel}}
+{\footnotesize\ttfamily J\+Label Presentacion.\+Register.\+user\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 37 del archivo Register.\+java.
+
+\mbox{\Hypertarget{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}\label{class_presentacion_1_1_register_a29a31de1fd41a612e74ef4d6255bd291}} 
+\index{Presentacion.Register@{Presentacion.Register}!userText@{userText}}
+\index{userText@{userText}!Presentacion.Register@{Presentacion.Register}}
+\doxysubsubsection{\texorpdfstring{userText}{userText}}
+{\footnotesize\ttfamily J\+Text\+Field Presentacion.\+Register.\+user\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 38 del archivo Register.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Presentacion/\mbox{\hyperlink{_register_8java}{Register.\+java}}\end{DoxyCompactItemize}
